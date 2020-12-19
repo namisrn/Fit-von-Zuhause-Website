@@ -1,0 +1,62 @@
+@font-face {
+  /* Definieren lokal Font*/
+  /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+  font-family: "OpenSans-Light";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans-Light.woff") format("woff"),
+    url("../Font/OpenSans-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+}
+body {
+  font-family: "OpenSans-Light", "arial";
+  margin: 0;
+  padding: 0;
+  background-color: var(--hellGrau);
+}
+header {
+  position: relative;
+  border: 2px dashed yellow;
+}
+.headerImg {
+  width: 100%;
+  height: 100hv;
+}
+
+.headerTitle {
+  z-index: 99;
+  color: var(--hellGrau);
+  border: 2px dashed red;
+}
+
+.trainerTitle {
+  text-align: center;
+  font-size: 4em;
+}
+
+.trainers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .trainer1Section,
+.trainer2Section,
+.trainer3Section,
+.trainer4Section,
+.trainer5Section,
+.trainer6Section {
+  flex: 1 0 30%;
+  margin: 5px;
+  height: 100px;
+} */
+
+img > .trainers {
+  border-radius: 50em;
+}
