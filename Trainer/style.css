@@ -1,0 +1,161 @@
+/* Definieren lokal Font*/
+/*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans-Light.woff") format("woff"),
+    url("../Font/OpenSans-Light.woff2") format("woff2");
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--hellGrau);
+  font-family: "OpenSans-Light";
+
+  /* overflow: hidden; */
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  top: 25%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+  /* border: 1px dashed red; */
+}
+
+.websiteTitle {
+  font-size: 5em;
+  font-weight: 900;
+}
+
+.websiteBeschreibung {
+  font-size: 3em;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 3em;
+}
+
+.trainerTitle {
+  text-align: center;
+  font-size: 4em;
+}
+
+.trainers {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5em 0;
+  border: 1px dashed red;
+}
+
+.trainer1Section,
+.trainer2Section,
+.trainer3Section,
+.trainer4Section,
+.trainer5Section,
+.trainer6Section {
+  text-align: center;
+  padding: 1em;
+}
+
+.trBeschreibung {
+  position: relative;
+  width: 93.7%;
+
+  background-color: var(--grau);
+}
+
+.trainer1MehrDetail {
+  width: 93.7%;
+  display: none;
+}
+
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 3em;
+}
+
+.logoContainer img {
+  width: 7em;
+}
+
+.footerContainer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  flex-flow: row;
+}
+
+.footerContent > * {
+  margin-right: 1.25em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+  text-align: center;
+  color: var(--grau);
+}
