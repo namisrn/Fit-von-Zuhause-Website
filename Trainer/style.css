@@ -75,6 +75,14 @@ header > img {
   font-size: 4em;
 }
 
+.line {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid black;
+  position: absolute;
+  text-align: center;
+}
+
 .trainers {
   position: relative;
   display: flex;
@@ -92,6 +100,7 @@ header > img {
 .trainer6Section {
   text-align: center;
   padding: 1em;
+  flex-basis: 30%;
 }
 
 .trBeschreibung {
