@@ -51,7 +51,7 @@ header > img {
   display: flex;
   justify-content: space-between;
   font-weight: bolder;
-  top: 25%;
+  top: 24%;
   margin: 0 10%;
   z-index: 5;
   color: var(--hellGrau);
@@ -59,12 +59,12 @@ header > img {
 }
 
 .websiteTitle {
-  font-size: 5em;
+  font-size: 5vw;
   font-weight: bolder;
 }
 
 .websiteBeschreibung {
-  font-size: 3em;
+  font-size: 2.5vw;
   font-weight: 600;
   font-style: italic;
   padding-top: 3em;
@@ -75,7 +75,7 @@ header > img {
 
 .trainerTitle {
   text-align: center;
-  font-size: 4em;
+  font-size: 5vw;
   /* border: 1px dashed red; */
 }
 
@@ -85,7 +85,7 @@ header > img {
 
 .line {
   position: absolute;
-  width: 200px;
+  width: 15vw;
   border-bottom: 2px solid var(--schwarz);
   left: 50%;
   transform: translate(-50%, -50%);
@@ -96,7 +96,7 @@ header > img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5em 0;
+  padding: 5% 0;
   /* border: 1px dashed red; */
 }
 
@@ -105,9 +105,11 @@ header > img {
 }
 
 .trainers img {
-  display: block;
-  width: 100%;
+  /* display: block; */
+  /* width: 80%; */
+  width: 25vw;
   height: auto;
+  border-radius: 10px;
 }
 
 .trainer1Section,
@@ -117,9 +119,10 @@ header > img {
 .trainer5Section,
 .trainer6Section {
   position: relative;
+  width: 80%;
   text-align: center;
-  flex-basis: 30%;
   transition: transform 0.2s;
+  border-radius: 10px;
 }
 
 .trainerOverlay {
@@ -130,8 +133,9 @@ header > img {
   background-color: var(--grau);
   color: var(--hellGrau);
   overflow: hidden;
-  width: 100%;
+  /* width: 80%; */
   height: 0;
+  border-radius: 10px;
   transition: 0.5s ease;
 }
 
@@ -141,7 +145,7 @@ header > img {
 .trainer4Section:hover .trainerOverlay,
 .trainer5Section:hover .trainerOverlay,
 .trainer6Section:hover .trainerOverlay {
-  height: 50%;
+  height: 60%;
 }
 .trainer1Section:hover,
 .trainer2Section:hover,
@@ -149,7 +153,10 @@ header > img {
 .trainer4Section:hover,
 .trainer5Section:hover,
 .trainer6Section:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 2, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 2, 0.2); */
+  box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+    0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+
   transform: scale(1.05);
   z-index: 90;
   cursor: pointer;
@@ -164,11 +171,11 @@ header > img {
 .trainer6MehrDetail {
   position: absolute;
   width: 90%;
-  line-height: 2em;
   top: 50%;
   left: 50%;
+  font-size: 1vw;
+  text-align: justify;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 .trainer1MehrDetail span,
 .trainer2MehrDetail span,
@@ -176,9 +183,8 @@ header > img {
 .trainer4MehrDetail span,
 .trainer5MehrDetail span,
 .trainer6MehrDetail span {
-  font-size: 2em;
+  font-size: 2vw;
   font-weight: bold;
-  letter-spacing: 5px;
 }
 /********************* /MAIN *********************/
 
@@ -188,9 +194,6 @@ footer {
   background-color: var(--schwarz);
 }
 .footerContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   text-align: center;
   padding: 3em;
 }
@@ -213,12 +216,8 @@ footer {
 
 .footerContent {
   display: flex;
-  flex-flow: row;
+  justify-content: space-evenly;
   align-items: center;
-}
-
-.footerContent > * {
-  margin-right: 1.25em;
 }
 
 .footerContent h2 {
@@ -236,12 +235,211 @@ footer {
 .footerUnten {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0 3em;
-  /* padding-bottom: 1em; */
-  /* text-align: center; */
+  padding-bottom: 1em;
   color: var(--grau);
 }
 
 .footerUnten p {
-  padding: 0 2rem;
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+@media screen and (min-width: 1151px) {
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    /* flex-basis: 30%; */
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  /* header {
+    height: 45vh;
+  }
+  header img {
+    height: 45vh;
+  } */
+
+  .websiteTitle {
+    font-size: 7vw;
+  }
+  .websiteBeschreibung {
+    font-size: 3vw;
+  }
+
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    flex-basis: 20vw;
+  }
+  .footerUnten p {
+    font-size: 1.5vw;
+  }
+  .footerUnten h4 {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 60vh;
+  }
+  header img {
+    height: 60vh;
+  }
+
+  .websiteTitle {
+    font-size: 5vw;
+  }
+
+  .trainerTitle {
+    font-size: 7vw;
+  }
+
+  .line {
+    width: 20vw;
+  }
+
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    flex-basis: 40vw;
+  }
+  .trainers img {
+    width: 40vw;
+  }
+  .trainer1MehrDetail,
+  .trainer2MehrDetail,
+  .trainer3MehrDetail,
+  .trainer4MehrDetail,
+  .trainer5MehrDetail,
+  .trainer6MehrDetail {
+    font-size: 1.5vw;
+  }
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 2.5vw;
+  }
+  .footerUnten p {
+    font-size: 2vw;
+  }
+  .footerUnten h4 {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 746px) {
+  header {
+    height: 100vh;
+  }
+  header img {
+    height: 100vh;
+  }
+
+  .websiteTitle {
+    font-size: 7vw;
+  }
+  .websiteBeschreibung {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    height: 30vh;
+  }
+  header img {
+    height: 30vh;
+  }
+
+  .websiteTitle {
+    font-size: 8vw;
+  }
+  .websiteBeschreibung {
+    font-size: 3.5vw;
+  }
+
+  .trainerTitle {
+    font-size: 10vw;
+  }
+
+  .line {
+    width: 25vw;
+  }
+
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    flex-basis: 80vw;
+  }
+  .trainers img {
+    width: 80vw;
+  }
+
+  .trainer1MehrDetail,
+  .trainer2MehrDetail,
+  .trainer3MehrDetail,
+  .trainer4MehrDetail,
+  .trainer5MehrDetail,
+  .trainer6MehrDetail {
+    font-size: 3vw;
+  }
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 4vw;
+  }
+
+  .logoContainer img {
+    width: 6em;
+  }
+  .box img {
+    margin: 0.6em;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
+  .footerContent li {
+    font-size: 4vw;
+    line-height: 4vh;
+  }
+
+  .footerUnten p {
+    font-size: 3vw;
+  }
+  .footerUnten h4 {
+    font-size: 3vw;
+  }
 }
