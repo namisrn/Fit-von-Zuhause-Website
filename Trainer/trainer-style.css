@@ -1,0 +1,434 @@
+@font-face {
+  /* Definieren lokal Font*/
+  /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+  font-family: "OpenSans-Light";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans-Light.woff") format("woff"),
+    url("../Font/OpenSans-Light.woff2") format("woff2");
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--hellGrau);
+  font-family: "OpenSans-Light";
+}
+/********************* HEADER *********************/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  top: 25%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+}
+
+.websiteTitle {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 2.5vw;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 3em;
+}
+/********************* /HEADER *********************/
+
+/********************* MAIN *********************/
+
+.trainerTitle {
+  text-align: center;
+  font-size: 5vw;
+}
+
+.trainerTitle p {
+  color: var(--schwarz);
+}
+
+.line {
+  position: absolute;
+  width: 15vw;
+  border-bottom: 2px solid var(--schwarz);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trainers {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5% 0;
+}
+
+.trainers > div {
+  margin: 10px;
+}
+
+.trainers img {
+  width: 25vw;
+  height: auto;
+  border-radius: 10px;
+}
+
+.trainer1Section,
+.trainer2Section,
+.trainer3Section,
+.trainer4Section,
+.trainer5Section,
+.trainer6Section {
+  position: relative;
+  width: 25vw;
+  text-align: center;
+  transition: transform 0.2s;
+  border-radius: 10px;
+}
+
+.trainerOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--grau);
+  color: var(--hellGrau);
+  overflow: hidden;
+  height: 0;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.trainer1Section:hover .trainerOverlay,
+.trainer2Section:hover .trainerOverlay,
+.trainer3Section:hover .trainerOverlay,
+.trainer4Section:hover .trainerOverlay,
+.trainer5Section:hover .trainerOverlay,
+.trainer6Section:hover .trainerOverlay {
+  height: 60%;
+}
+.trainer1Section:hover,
+.trainer2Section:hover,
+.trainer3Section:hover,
+.trainer4Section:hover,
+.trainer5Section:hover,
+.trainer6Section:hover {
+  box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+    0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+
+  transform: scale(1.05);
+  z-index: 90;
+  cursor: pointer;
+  height: 50%;
+}
+
+.trainer1MehrDetail,
+.trainer2MehrDetail,
+.trainer3MehrDetail,
+.trainer4MehrDetail,
+.trainer5MehrDetail,
+.trainer6MehrDetail {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  font-size: 1vw;
+  text-align: justify;
+  transform: translate(-50%, -50%);
+}
+.trainer1MehrDetail span,
+.trainer2MehrDetail span,
+.trainer3MehrDetail span,
+.trainer4MehrDetail span,
+.trainer5MehrDetail span,
+.trainer6MehrDetail span {
+  font-size: 2vw;
+  font-weight: bold;
+}
+/********************* /MAIN *********************/
+
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  text-align: center;
+  padding: 3em;
+}
+
+.logoContainer img {
+  width: 7em;
+}
+
+.footerContainer ul {
+  list-style: none;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerContent h2 {
+  padding-bottom: 1em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+  margin: 1em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3em;
+  padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten p {
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+/*-_-_-_- Mobile-Geräten -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
+  }
+  header img {
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 3.5vmin;
+  }
+
+  .trainerTitle {
+    font-size: 7vmin;
+  }
+
+  .line {
+    width: 25vw;
+  }
+
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    flex-basis: 80vw;
+  }
+  .trainers img {
+    width: 80vw;
+  }
+
+  .trainer1MehrDetail,
+  .trainer2MehrDetail,
+  .trainer3MehrDetail,
+  .trainer4MehrDetail,
+  .trainer5MehrDetail,
+  .trainer6MehrDetail {
+    font-size: 3vw;
+  }
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 4vw;
+  }
+
+  .logoContainer img {
+    width: 6em;
+  }
+  .box img {
+    margin: 0.6em;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
+  .footerContent li {
+    font-size: 4vw;
+    line-height: 4vh;
+  }
+
+  .footerUnten p {
+    font-size: 3vw;
+  }
+  .footerUnten h4 {
+    font-size: 3vw;
+  }
+}
+
+/*-_-_-_- iPad,Tablets-Geräten -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 55vmin;
+  }
+  header img {
+    height: 55vmin;
+  }
+
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 8vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    flex-basis: 40vw;
+  }
+  .trainer1MehrDetail,
+  .trainer2MehrDetail,
+  .trainer3MehrDetail,
+  .trainer4MehrDetail,
+  .trainer5MehrDetail,
+  .trainer6MehrDetail {
+    font-size: 1.7vw;
+  }
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 3vw;
+  }
+
+  .trainers img {
+    width: 40vw;
+  }
+}
+
+/*-_-_-_- Kleine Bildschirm, Laptops -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
+
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .trainerTitle {
+    font-size: 7vmin;
+  }
+
+  .line {
+    width: 20vw;
+  }
+
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 2.5vw;
+  }
+  .footerUnten p {
+    font-size: 2vw;
+  }
+  .footerUnten h4 {
+    font-size: 2vw;
+  }
+}
+
+/*-_-_-_- Desktop-klein-Bildschirm -_-_-_-*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  header {
+    height: 60vmin;
+  }
+  header img {
+    height: 60vmin;
+  }
+
+  .footerUnten p {
+    font-size: 1.5vw;
+  }
+  .footerUnten h4 {
+    font-size: 1.5vw;
+  }
+}
