@@ -22,8 +22,6 @@
 body {
   background-color: var(--hellGrau);
   font-family: "OpenSans-Light";
-
-  /* overflow: hidden; */
 }
 /********************* HEADER *********************/
 header {
@@ -51,11 +49,10 @@ header > img {
   display: flex;
   justify-content: space-between;
   font-weight: bolder;
-  top: 24%;
+  top: 25%;
   margin: 0 10%;
   z-index: 5;
   color: var(--hellGrau);
-  /* border: 1px dashed red; */
 }
 
 .websiteTitle {
@@ -76,7 +73,6 @@ header > img {
 .trainerTitle {
   text-align: center;
   font-size: 5vw;
-  /* border: 1px dashed red; */
 }
 
 .trainerTitle p {
@@ -97,7 +93,6 @@ header > img {
   flex-wrap: wrap;
   justify-content: center;
   padding: 5% 0;
-  /* border: 1px dashed red; */
 }
 
 .trainers > div {
@@ -105,8 +100,6 @@ header > img {
 }
 
 .trainers img {
-  /* display: block; */
-  /* width: 80%; */
   width: 25vw;
   height: auto;
   border-radius: 10px;
@@ -119,7 +112,7 @@ header > img {
 .trainer5Section,
 .trainer6Section {
   position: relative;
-  width: 80%;
+  width: 25vw;
   text-align: center;
   transition: transform 0.2s;
   border-radius: 10px;
@@ -133,7 +126,6 @@ header > img {
   background-color: var(--grau);
   color: var(--hellGrau);
   overflow: hidden;
-  /* width: 80%; */
   height: 0;
   border-radius: 10px;
   transition: 0.5s ease;
@@ -153,7 +145,6 @@ header > img {
 .trainer4Section:hover,
 .trainer5Section:hover,
 .trainer6Section:hover {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 2, 0.2); */
   box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
     0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
 
@@ -221,7 +212,7 @@ footer {
 }
 
 .footerContent h2 {
-  padding-bottom: 1rem;
+  padding-bottom: 1em;
 }
 
 .box a {
@@ -255,137 +246,26 @@ footer {
 
 /********************* RESPONSIVE DESIGN *********************/
 
-@media screen and (min-width: 1151px) {
-  .trainer1Section,
-  .trainer2Section,
-  .trainer3Section,
-  .trainer4Section,
-  .trainer5Section,
-  .trainer6Section {
-    /* flex-basis: 30%; */
-    width: 25vw;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  /* header {
-    height: 45vh;
+/*-_-_-_- Mobile-Geräten -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
   }
   header img {
-    height: 45vh;
-  } */
-
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 15%;
+  }
   .websiteTitle {
-    font-size: 7vw;
+    font-size: 7vmin;
   }
   .websiteBeschreibung {
-    font-size: 3vw;
-  }
-
-  .trainer1Section,
-  .trainer2Section,
-  .trainer3Section,
-  .trainer4Section,
-  .trainer5Section,
-  .trainer6Section {
-    flex-basis: 20vw;
-  }
-  .footerUnten p {
-    font-size: 1.5vw;
-  }
-  .footerUnten h4 {
-    font-size: 1.5vw;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  header {
-    height: 60vh;
-  }
-  header img {
-    height: 60vh;
-  }
-
-  .websiteTitle {
-    font-size: 5vw;
+    font-size: 3.5vmin;
   }
 
   .trainerTitle {
-    font-size: 7vw;
-  }
-
-  .line {
-    width: 20vw;
-  }
-
-  .trainer1Section,
-  .trainer2Section,
-  .trainer3Section,
-  .trainer4Section,
-  .trainer5Section,
-  .trainer6Section {
-    flex-basis: 40vw;
-  }
-  .trainers img {
-    width: 40vw;
-  }
-  .trainer1MehrDetail,
-  .trainer2MehrDetail,
-  .trainer3MehrDetail,
-  .trainer4MehrDetail,
-  .trainer5MehrDetail,
-  .trainer6MehrDetail {
-    font-size: 1.5vw;
-  }
-  .trainer1MehrDetail span,
-  .trainer2MehrDetail span,
-  .trainer3MehrDetail span,
-  .trainer4MehrDetail span,
-  .trainer5MehrDetail span,
-  .trainer6MehrDetail span {
-    font-size: 2.5vw;
-  }
-  .footerUnten p {
-    font-size: 2vw;
-  }
-  .footerUnten h4 {
-    font-size: 2vw;
-  }
-}
-
-@media screen and (max-width: 746px) {
-  header {
-    height: 100vh;
-  }
-  header img {
-    height: 100vh;
-  }
-
-  .websiteTitle {
-    font-size: 7vw;
-  }
-  .websiteBeschreibung {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  header {
-    height: 30vh;
-  }
-  header img {
-    height: 30vh;
-  }
-
-  .websiteTitle {
-    font-size: 8vw;
-  }
-  .websiteBeschreibung {
-    font-size: 3.5vw;
-  }
-
-  .trainerTitle {
-    font-size: 10vw;
+    font-size: 7vmin;
   }
 
   .line {
@@ -441,5 +321,114 @@ footer {
   }
   .footerUnten h4 {
     font-size: 3vw;
+  }
+}
+
+/*-_-_-_- iPad,Tablets-Geräten -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 55vmin;
+  }
+  header img {
+    height: 55vmin;
+  }
+
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 8vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .trainer1Section,
+  .trainer2Section,
+  .trainer3Section,
+  .trainer4Section,
+  .trainer5Section,
+  .trainer6Section {
+    flex-basis: 40vw;
+  }
+  .trainer1MehrDetail,
+  .trainer2MehrDetail,
+  .trainer3MehrDetail,
+  .trainer4MehrDetail,
+  .trainer5MehrDetail,
+  .trainer6MehrDetail {
+    font-size: 1.7vw;
+  }
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 3vw;
+  }
+
+  .trainers img {
+    width: 40vw;
+  }
+}
+
+/*-_-_-_- Kleine Bildschirm, Laptops -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
+
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .trainerTitle {
+    font-size: 7vmin;
+  }
+
+  .line {
+    width: 20vw;
+  }
+
+  .trainer1MehrDetail span,
+  .trainer2MehrDetail span,
+  .trainer3MehrDetail span,
+  .trainer4MehrDetail span,
+  .trainer5MehrDetail span,
+  .trainer6MehrDetail span {
+    font-size: 2.5vw;
+  }
+  .footerUnten p {
+    font-size: 2vw;
+  }
+  .footerUnten h4 {
+    font-size: 2vw;
+  }
+}
+
+/*-_-_-_- Desktop-klein-Bildschirm -_-_-_-*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  header {
+    height: 60vmin;
+  }
+  header img {
+    height: 60vmin;
+  }
+
+  .footerUnten p {
+    font-size: 1.5vw;
+  }
+  .footerUnten h4 {
+    font-size: 1.5vw;
   }
 }
