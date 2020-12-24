@@ -22,8 +22,6 @@
 body {
   background-color: var(--hellGrau);
   font-family: "OpenSans-Light";
-
-  /* overflow: hidden; */
 }
 /********************* HEADER *********************/
 header {
@@ -55,16 +53,15 @@ header > img {
   margin: 0 10%;
   z-index: 5;
   color: var(--hellGrau);
-  /* border: 1px dashed red; */
 }
 
 .websiteTitle {
-  font-size: 5em;
+  font-size: 5vw;
   font-weight: bolder;
 }
 
 .websiteBeschreibung {
-  font-size: 3em;
+  font-size: 2.5vw;
   font-weight: 600;
   font-style: italic;
   padding-top: 3em;
@@ -75,8 +72,7 @@ header > img {
 
 .trainerTitle {
   text-align: center;
-  font-size: 4em;
-  /* border: 1px dashed red; */
+  font-size: 5vw;
 }
 
 .trainerTitle p {
@@ -85,7 +81,7 @@ header > img {
 
 .line {
   position: absolute;
-  width: 200px;
+  width: 15vw;
   border-bottom: 2px solid var(--schwarz);
   left: 50%;
   transform: translate(-50%, -50%);
@@ -99,9 +95,6 @@ footer {
   background-color: var(--schwarz);
 }
 .footerContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   text-align: center;
   padding: 3em;
 }
@@ -124,16 +117,12 @@ footer {
 
 .footerContent {
   display: flex;
-  flex-flow: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.footerContent > * {
-  margin-right: 1.25em;
-}
-
 .footerContent h2 {
-  padding-bottom: 1rem;
+  padding-bottom: 1em;
 }
 
 .box a {
@@ -147,12 +136,39 @@ footer {
 .footerUnten {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0 3em;
-  /* padding-bottom: 1em; */
-  /* text-align: center; */
+  padding-bottom: 1em;
   color: var(--grau);
 }
 
 .footerUnten p {
-  padding: 0 2rem;
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+}
+
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+/*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
+Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
 }
