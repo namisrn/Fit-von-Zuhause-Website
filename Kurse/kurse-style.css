@@ -66,6 +66,7 @@ header > img {
   font-style: italic;
   padding-top: 3em;
 }
+
 /********************* /HEADER *********************/
 
 /********************* MAIN *********************/
@@ -81,10 +82,164 @@ header > img {
 
 .line {
   position: absolute;
-  width: 15vw;
+  width: 8vw;
   border-bottom: 2px solid var(--schwarz);
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.kursContainer {
+  /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+  width: 122vmin;
+  margin: 2vmin auto;
+  align-items: center;
+
+  grid-template-areas:
+    "body body fatburn"
+    "body body zumba"
+    "yoga sixpack sixpack"
+    "step sixpack sixpack"
+    "backwork backwork tourde"
+    "backwork backwork booty";
+}
+/*-- 3 größe Kacheln --*/
+.BodyKurs,
+.SixpackKurs,
+.BackworkKurs {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 10px;
+  background-color: var(--blau);
+  transition: transform 0.2s;
+}
+.BodyKurs img,
+.SixpackKurs img,
+.BackworkKurs img {
+  width: 80vmin;
+  border-radius: 10px;
+}
+
+/*-- 6 kleine Kacheln --*/
+.FatburnKurs,
+.ZumbaKurs,
+.YogaKurs,
+.StepKurs,
+.TourdeKurs,
+.BootyKurs {
+  position: relative;
+  width: 39vmin;
+  height: 39vmin;
+  border-radius: 10px;
+  background-color: var(--grau);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.FatburnKurs img,
+.ZumbaKurs img,
+.YogaKurs img,
+.StepKurs img,
+.TourdeKurs img,
+.BootyKurs img {
+  width: 39vmin;
+  border-radius: 10px;
+}
+
+.BodyKurs h1,
+.SixpackKurs h1,
+.BackworkKurs h1,
+.FatburnKurs h1,
+.ZumbaKurs h1,
+.YogaKurs h1,
+.StepKurs h1,
+.TourdeKurs h1,
+.BootyKurs h1 {
+  position: absolute;
+  text-align: start;
+  padding-left: 3vmin;
+  bottom: 1vmin;
+  color: var(--hellGrau);
+  font-size: 8vmin;
+}
+
+/*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
+.BodyKurs:hover,
+.SixpackKurs:hover,
+.BackworkKurs:hover,
+.FatburnKurs:hover,
+.ZumbaKurs:hover,
+.YogaKurs:hover,
+.StepKurs:hover,
+.TourdeKurs:hover,
+.BootyKurs:hover {
+  box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+    0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+  transform: scale(1.05);
+  z-index: 9;
+  cursor: pointer;
+}
+
+.overlay {
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  border-radius: 10px;
+  color: var(--hellGrau);
+  transition: 0.3s all;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  cursor: pointer;
+}
+.overlay:hover {
+  opacity: 1;
+}
+
+picture:hover {
+  filter: blur(5px);
+}
+
+/*definieren BodyKurs grid-area-name,*/
+.BodyKurs {
+  grid-area: body;
+}
+/*definieren SixpackKurs grid-area-name*/
+.SixpackKurs {
+  grid-area: sixpack;
+}
+/*definieren BackworkKurs grid-area-name*/
+.BackworkKurs {
+  grid-area: backwork;
+}
+/*definieren FatburnKurs grid-area-name, img und title und hover*/
+.FatburnKurs {
+  grid-area: fatburn;
+}
+/*definieren ZumbaKurs grid-area-name, img und title und hover*/
+.ZumbaKurs {
+  grid-area: zumba;
+}
+/*definieren YogaKurs grid-area-name, img und title und hover*/
+.YogaKurs {
+  grid-area: yoga;
+}
+/*definieren StepKurs grid-area-name, img und title und hover*/
+.StepKurs {
+  grid-area: step;
+}
+/*definieren TourdeKurs grid-area-name, img und title und hover*/
+.TourdeKurs {
+  grid-area: tourde;
+}
+/*definieren BootyKurs grid-area-name, und hover*/
+.BootyKurs {
+  grid-area: booty;
 }
 
 /********************* /MAIN *********************/
@@ -158,17 +313,287 @@ footer {
 
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
+  }
+  header img {
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 3.5vmin;
+  }
+
+  .kursContainer {
+    /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    padding: 5vmin 0;
+  }
+
+  .BodyKurs,
+  .SixpackKurs,
+  .BackworkKurs,
+  .FatburnKurs,
+  .ZumbaKurs,
+  .YogaKurs,
+  .StepKurs,
+  .TourdeKurs,
+  .BootyKurs {
+    position: relative;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 10px;
+    background-color: var(--grau);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .BodyKurs img,
+  .SixpackKurs img,
+  .BackworkKurs img,
+  .FatburnKurs img,
+  .ZumbaKurs img,
+  .YogaKurs img,
+  .StepKurs img,
+  .TourdeKurs img,
+  .BootyKurs img {
+    width: 80vmin;
+    border-radius: 10px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
+  .footerContent li {
+    font-size: 4vw;
+    line-height: 4vh;
+  }
+
+  .footerUnten p {
+    font-size: 3vw;
+  }
+  .footerUnten h4 {
+    font-size: 3vw;
+  }
 }
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
+
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .kursContainer {
+    /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+    display: grid;
+    /* justify-content: space-evenly; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+    width: 90vmin;
+    margin: 2vmin auto;
+    align-items: center;
+
+    grid-template-areas:
+      "body fatburn"
+      "yoga  zumba"
+      "sixpack step"
+      "backwork tourde "
+      "booty  .";
+  }
+  .BodyKurs,
+  .SixpackKurs,
+  .BackworkKurs,
+  .FatburnKurs,
+  .ZumbaKurs,
+  .YogaKurs,
+  .StepKurs,
+  .TourdeKurs,
+  .BootyKurs {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+    background-color: var(--grau);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .BodyKurs img,
+  .SixpackKurs img,
+  .BackworkKurs img,
+  .FatburnKurs img,
+  .ZumbaKurs img,
+  .YogaKurs img,
+  .StepKurs img,
+  .TourdeKurs img,
+  .BootyKurs img {
+    width: 15em;
+    border-radius: 10px;
+  }
+
+  .BodyKurs h1,
+  .SixpackKurs h1,
+  .BackworkKurs h1,
+  .FatburnKurs h1,
+  .ZumbaKurs h1,
+  .YogaKurs h1,
+  .StepKurs h1,
+  .TourdeKurs h1,
+  .BootyKurs h1 {
+    position: absolute;
+    text-align: start;
+    padding-left: 2vmin;
+    bottom: 1vmin;
+    color: var(--hellGrau);
+    font-size: 6vmin;
+  }
+
+  .overlay {
+    width: 15em;
+    height: 15em;
+  }
+
+  /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
+  .BodyKurs:hover,
+  .SixpackKurs:hover,
+  .BackworkKurs:hover,
+  .FatburnKurs:hover,
+  .ZumbaKurs:hover,
+  .YogaKurs:hover,
+  .StepKurs:hover,
+  .TourdeKurs:hover,
+  .BootyKurs:hover {
+    box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+      0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+    transform: scale(1.05);
+    z-index: 9;
+    cursor: pointer;
+  }
 }
 
 /*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-}
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
 
-/*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
-Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .kursContainer {
+    /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+    display: grid;
+    /* justify-content: space-evenly; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+    width: 90vmin;
+    margin: 2vmin auto;
+    align-items: center;
+
+    grid-template-areas:
+      "body fatburn yoga"
+      "zumba sixpack step"
+      "backwork tourde booty";
+  }
+  .BodyKurs,
+  .SixpackKurs,
+  .BackworkKurs,
+  .FatburnKurs,
+  .ZumbaKurs,
+  .YogaKurs,
+  .StepKurs,
+  .TourdeKurs,
+  .BootyKurs {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+    background-color: var(--grau);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .BodyKurs img,
+  .SixpackKurs img,
+  .BackworkKurs img,
+  .FatburnKurs img,
+  .ZumbaKurs img,
+  .YogaKurs img,
+  .StepKurs img,
+  .TourdeKurs img,
+  .BootyKurs img {
+    width: 15em;
+    border-radius: 10px;
+  }
+
+  .BodyKurs h1,
+  .SixpackKurs h1,
+  .BackworkKurs h1,
+  .FatburnKurs h1,
+  .ZumbaKurs h1,
+  .YogaKurs h1,
+  .StepKurs h1,
+  .TourdeKurs h1,
+  .BootyKurs h1 {
+    position: absolute;
+    text-align: start;
+    padding-left: 1vmin;
+    bottom: 1vmin;
+    color: var(--hellGrau);
+    font-size: 6vmin;
+  }
+
+  .overlay {
+    width: 15em;
+    height: 15em;
+  }
+
+  /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
+  .BodyKurs:hover,
+  .SixpackKurs:hover,
+  .BackworkKurs:hover,
+  .FatburnKurs:hover,
+  .ZumbaKurs:hover,
+  .YogaKurs:hover,
+  .StepKurs:hover,
+  .TourdeKurs:hover,
+  .BootyKurs:hover {
+    box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+      0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+    transform: scale(1.05);
+    z-index: 9;
+    cursor: pointer;
+  }
 }
