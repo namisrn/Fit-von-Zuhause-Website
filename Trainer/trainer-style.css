@@ -87,6 +87,7 @@ header > img {
   transform: translate(-50%, -50%);
 }
 
+/* In diesem Section gibt es 6 kästchen, um die Trainer vorzustellen*/
 .trainers {
   position: relative;
   display: flex;
@@ -104,7 +105,7 @@ header > img {
   height: auto;
   border-radius: 10px;
 }
-
+/*Trainers-kästchen container*/
 .trainer1Section,
 .trainer2Section,
 .trainer3Section,
@@ -130,7 +131,7 @@ header > img {
   border-radius: 10px;
   transition: 0.5s ease;
 }
-
+/*Hoverover-Effekt bei trainer kästchen - Kommt die Trainers Beschreibung hoch*/
 .trainer1Section:hover .trainerOverlay,
 .trainer2Section:hover .trainerOverlay,
 .trainer3Section:hover .trainerOverlay,
@@ -139,6 +140,8 @@ header > img {
 .trainer6Section:hover .trainerOverlay {
   height: 60%;
 }
+
+/*Hoverover-Effekt bei trainer kästchen - 3 schichtige Shatten*/
 .trainer1Section:hover,
 .trainer2Section:hover,
 .trainer3Section:hover,
@@ -149,7 +152,7 @@ header > img {
     0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
 
   transform: scale(1.05);
-  z-index: 90;
+  z-index: 9;
   cursor: pointer;
   height: 50%;
 }
@@ -168,6 +171,7 @@ header > img {
   text-align: justify;
   transform: translate(-50%, -50%);
 }
+
 .trainer1MehrDetail span,
 .trainer2MehrDetail span,
 .trainer3MehrDetail span,
@@ -246,7 +250,7 @@ footer {
 
 /********************* RESPONSIVE DESIGN *********************/
 
-/*-_-_-_- Mobile-Geräten -_-_-_-*/
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {
   header {
     height: 45vmin;
@@ -324,7 +328,7 @@ footer {
   }
 }
 
-/*-_-_-_- iPad,Tablets-Geräten -_-_-_-*/
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
   header {
     height: 55vmin;
@@ -373,7 +377,7 @@ footer {
   }
 }
 
-/*-_-_-_- Kleine Bildschirm, Laptops -_-_-_-*/
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header {
     height: 65vmin;
@@ -416,7 +420,8 @@ footer {
   }
 }
 
-/*-_-_-_- Desktop-klein-Bildschirm -_-_-_-*/
+/*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
+Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   header {
     height: 60vmin;
