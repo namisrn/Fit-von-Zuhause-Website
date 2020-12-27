@@ -69,6 +69,37 @@ header > img {
 
 /********************* /HEADER *********************/
 
+/********************* MAIN - TEST *********************/
+nav ul {
+  display: flex;
+  position: sticky;
+  width: 40%;
+  height: 30%;
+  background: var(--grau);
+  filter: opacity(5px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px dashed red;
+}
+
+nav li {
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
+  color: var(--schwarz);
+  margin: 0 40px;
+}
+
+nav img {
+  position: relative;
+  width: 150px;
+  /* height: 100px; */
+  /* background-color: var(--schwarz); */
+}
+/********************* /MAIN - TEST *********************/
+
 /********************* MAIN *********************/
 
 .trainerTitle {
@@ -109,13 +140,14 @@ header > img {
 }
 /*-- 3 größe Kacheln --*/
 .BodyKurs,
+.bodyKursContainer,
 .SixpackKurs,
 .BackworkKurs {
   position: relative;
   width: 80vmin;
   height: 80vmin;
   border-radius: 10px;
-  background-color: var(--blau);
+  background-color: var(--schwarz);
   transition: transform 0.2s;
 }
 .BodyKurs img,
@@ -150,15 +182,7 @@ header > img {
   border-radius: 10px;
 }
 
-.BodyKurs h1,
-.SixpackKurs h1,
-.BackworkKurs h1,
-.FatburnKurs h1,
-.ZumbaKurs h1,
-.YogaKurs h1,
-.StepKurs h1,
-.TourdeKurs h1,
-.BootyKurs h1 {
+.container h1 {
   position: absolute;
   text-align: start;
   padding-left: 3vmin;
@@ -168,47 +192,51 @@ header > img {
 }
 
 /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
-.BodyKurs:hover,
-.SixpackKurs:hover,
-.BackworkKurs:hover,
-.FatburnKurs:hover,
-.ZumbaKurs:hover,
-.YogaKurs:hover,
-.StepKurs:hover,
-.TourdeKurs:hover,
-.BootyKurs:hover {
+.container:hover {
   box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
     0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
   transform: scale(1.05);
-  z-index: 9;
+  z-index: 2;
   cursor: pointer;
+}
+.container:hover img {
+  filter: blur(5px);
+  transition: 0.3s all;
 }
 
 .overlay {
-  width: 80vmin;
-  height: 80vmin;
   position: absolute;
+  width: 100%;
+  height: 100%;
   text-align: center;
   bottom: 0;
+  vertical-align: middle;
   border-radius: 10px;
   color: var(--hellGrau);
-  transition: 0.3s all;
-  background: rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  cursor: pointer;
+  background-color: rgba(40, 40, 40, 0.5);
+  display: none;
 }
-.overlay:hover {
-  opacity: 1;
+.container:hover .overlay {
+  display: block;
+  transition: 0.3s all;
 }
 
-picture:hover {
-  filter: blur(5px);
+.text-Overlay {
+  position: relative;
+  top: 33%;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+.text-Overlay span {
+  display: block;
+  font-size: 1vw;
 }
 
 /*definieren BodyKurs grid-area-name,*/
 .BodyKurs {
   grid-area: body;
 }
+
 /*definieren SixpackKurs grid-area-name*/
 .SixpackKurs {
   grid-area: sixpack;
@@ -339,15 +367,7 @@ footer {
     padding: 5vmin 0;
   }
 
-  .BodyKurs,
-  .SixpackKurs,
-  .BackworkKurs,
-  .FatburnKurs,
-  .ZumbaKurs,
-  .YogaKurs,
-  .StepKurs,
-  .TourdeKurs,
-  .BootyKurs {
+  .container {
     position: relative;
     width: 80vmin;
     height: 80vmin;
@@ -356,15 +376,16 @@ footer {
     text-align: center;
     transition: transform 0.2s;
   }
-  .BodyKurs img,
-  .SixpackKurs img,
-  .BackworkKurs img,
-  .FatburnKurs img,
-  .ZumbaKurs img,
-  .YogaKurs img,
-  .StepKurs img,
-  .TourdeKurs img,
-  .BootyKurs img {
+
+  .text-Overlay {
+    top: 36%;
+    font-size: 15vw;
+  }
+  .text-Overlay span {
+    font-size: 5vw;
+  }
+
+  .container img {
     width: 80vmin;
     border-radius: 10px;
   }
@@ -423,15 +444,7 @@ footer {
       "backwork tourde "
       "booty  .";
   }
-  .BodyKurs,
-  .SixpackKurs,
-  .BackworkKurs,
-  .FatburnKurs,
-  .ZumbaKurs,
-  .YogaKurs,
-  .StepKurs,
-  .TourdeKurs,
-  .BootyKurs {
+  .container {
     position: relative;
     width: 15em;
     height: 15em;
@@ -440,28 +453,12 @@ footer {
     text-align: center;
     transition: transform 0.2s;
   }
-  .BodyKurs img,
-  .SixpackKurs img,
-  .BackworkKurs img,
-  .FatburnKurs img,
-  .ZumbaKurs img,
-  .YogaKurs img,
-  .StepKurs img,
-  .TourdeKurs img,
-  .BootyKurs img {
+  .container img {
     width: 15em;
     border-radius: 10px;
   }
 
-  .BodyKurs h1,
-  .SixpackKurs h1,
-  .BackworkKurs h1,
-  .FatburnKurs h1,
-  .ZumbaKurs h1,
-  .YogaKurs h1,
-  .StepKurs h1,
-  .TourdeKurs h1,
-  .BootyKurs h1 {
+  .container h1 {
     position: absolute;
     text-align: start;
     padding-left: 2vmin;
@@ -475,16 +472,16 @@ footer {
     height: 15em;
   }
 
+  .text-Overlay {
+    top: 30%;
+    font-size: 9vw;
+  }
+  .text-Overlay span {
+    font-size: 3vw;
+  }
+
   /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
-  .BodyKurs:hover,
-  .SixpackKurs:hover,
-  .BackworkKurs:hover,
-  .FatburnKurs:hover,
-  .ZumbaKurs:hover,
-  .YogaKurs:hover,
-  .StepKurs:hover,
-  .TourdeKurs:hover,
-  .BootyKurs:hover {
+  .container:hover {
     box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
       0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
     transform: scale(1.05);
@@ -528,15 +525,7 @@ footer {
       "zumba sixpack step"
       "backwork tourde booty";
   }
-  .BodyKurs,
-  .SixpackKurs,
-  .BackworkKurs,
-  .FatburnKurs,
-  .ZumbaKurs,
-  .YogaKurs,
-  .StepKurs,
-  .TourdeKurs,
-  .BootyKurs {
+  .container {
     position: relative;
     width: 15em;
     height: 15em;
@@ -545,28 +534,12 @@ footer {
     text-align: center;
     transition: transform 0.2s;
   }
-  .BodyKurs img,
-  .SixpackKurs img,
-  .BackworkKurs img,
-  .FatburnKurs img,
-  .ZumbaKurs img,
-  .YogaKurs img,
-  .StepKurs img,
-  .TourdeKurs img,
-  .BootyKurs img {
+  .container img {
     width: 15em;
     border-radius: 10px;
   }
 
-  .BodyKurs h1,
-  .SixpackKurs h1,
-  .BackworkKurs h1,
-  .FatburnKurs h1,
-  .ZumbaKurs h1,
-  .YogaKurs h1,
-  .StepKurs h1,
-  .TourdeKurs h1,
-  .BootyKurs h1 {
+  .container h1 {
     position: absolute;
     text-align: start;
     padding-left: 1vmin;
@@ -581,15 +554,7 @@ footer {
   }
 
   /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
-  .BodyKurs:hover,
-  .SixpackKurs:hover,
-  .BackworkKurs:hover,
-  .FatburnKurs:hover,
-  .ZumbaKurs:hover,
-  .YogaKurs:hover,
-  .StepKurs:hover,
-  .TourdeKurs:hover,
-  .BootyKurs:hover {
+  .container:hover {
     box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
       0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
     transform: scale(1.05);
