@@ -1,0 +1,429 @@
+@font-face {
+  /* Definieren lokal Font*/
+  /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+  font-family: "OpenSans-Light";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans-Light.woff") format("woff"),
+    url("../Font/OpenSans-Light.woff2") format("woff2");
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+  --hellBlau: #3b88c6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--hellGrau);
+  font-family: "OpenSans-Light";
+}
+/********************* HEADER *********************/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: block;
+  top: 50%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+}
+
+.websiteTitle {
+  font-size: 7vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 3vw;
+  font-style: italic;
+  padding-top: 1em;
+}
+
+/********************* /HEADER *********************/
+
+/********************* MAIN *********************/
+.uebersichtcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: var(--hellBlau);
+  transform: skewY(-6deg);
+}
+.uebersichtcontainer p {
+  font-size: 1.5vw;
+}
+.uebersichtcontainer img {
+  width: 5.5vw;
+}
+
+.erklaerungsContainer {
+  display: flex;
+  margin: 7vw 10vw;
+  color: var(--schwarz);
+}
+.erklaerungsContainer h2 {
+  font-size: 1.5vw;
+  padding-bottom: 1vw;
+}
+.erklaerungsContainer p {
+  font-size: 1vw;
+  padding: 0 1vw;
+}
+.kursErklaerung,
+.warumDiesenKurs {
+  margin: 0 4vw;
+  padding: 1vw;
+  background-color: var(--hellBlau);
+  border-radius: 10px;
+  text-align: justify;
+  transition: transform 0.2s;
+}
+.kursErklaerung:hover,
+.warumDiesenKurs:hover {
+  box-shadow: 0 0px 15.4px rgba(0, 0, 0, 0.411);
+  transform: scale(1.05);
+}
+
+.vorschauContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2vw 8vw;
+}
+
+.vorschauVideos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.vorschauVideos video {
+  border-radius: 10px;
+  width: 25vw;
+  transition: transform 0.2s;
+}
+.vorschauVideos video:hover {
+  box-shadow: 0 0px 15.4px rgba(0, 0, 0, 0.411);
+  transform: scale(1.05);
+}
+.andereProgrammeContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2vw 8vw;
+}
+.programmeTitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.programmeTitle div {
+  border-radius: 10px;
+  width: 14vw;
+  height: 7vw;
+  margin: 0 1vw;
+  transition: transform 0.2s;
+
+  background: var(--blau);
+}
+.programmeTitle a {
+  text-decoration: none;
+  color: var(--hellGrau);
+  font-size: 3vw;
+  padding-top: 1vw;
+  display: block;
+}
+
+.programmeTitle div:hover {
+  box-shadow: 0 0px 15.4px rgba(0, 0, 0, 0.411);
+  transform: scale(1.05);
+}
+.vorschauContainer p,
+.andereProgrammeContainer p {
+  font-size: 2vw;
+  margin: 2vw 0;
+}
+/********************* /MAIN *********************/
+
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  text-align: center;
+  padding: 3em;
+}
+
+.logoContainer img {
+  width: 7em;
+}
+
+.footerContainer ul {
+  list-style: none;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerContent h2 {
+  padding-bottom: 1em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+  margin: 1em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3em;
+  padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten p {
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
+  }
+  header img {
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 40%;
+  }
+
+  .uebersichtcontainer p {
+    font-size: 3.5vw;
+  }
+  .uebersichtcontainer img {
+    width: 8.5vw;
+  }
+
+  .erklaerungsContainer {
+    flex-direction: column;
+  }
+  .erklaerungsContainer h2 {
+    font-size: 4.5vw;
+    padding: 1vw 2vw;
+  }
+  .erklaerungsContainer p {
+    font-size: 4vw;
+    padding: 2vw 5vw;
+  }
+  .kursErklaerung,
+  .warumDiesenKurs {
+    margin: 5vw 0;
+  }
+
+  .vorschauVideos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vorschauVideos video {
+    border-radius: 10px;
+    width: 80vw;
+    margin: 3vw 0;
+  }
+
+  .andereProgrammeContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .programmeTitle {
+    flex-direction: column;
+    align-items: center;
+  }
+  .programmeTitle div {
+    width: 80vw;
+    height: 30vw;
+    margin: 2vw 0;
+  }
+  .programmeTitle a {
+    font-size: 20vw;
+  }
+
+  .vorschauContainer p,
+  .andereProgrammeContainer p {
+    font-size: 9vw;
+    margin: 5vw 0;
+  }
+}
+
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 50vmin;
+  }
+  header img {
+    height: 50vmin;
+  }
+  .titleContainer {
+    top: 20%;
+  }
+  .uebersichtcontainer p {
+    font-size: 3vw;
+  }
+  .uebersichtcontainer img {
+    width: 7vw;
+  }
+  .erklaerungsContainer {
+    margin: 4vw 1vw;
+  }
+  .erklaerungsContainer h2 {
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+  .erklaerungsContainer p {
+    font-size: 3vw;
+    padding: 1vw;
+  }
+  .kursErklaerung,
+  .warumDiesenKurs {
+    margin: 5vw 2vw;
+  }
+
+  .vorschauVideos {
+    flex-wrap: wrap;
+  }
+  .vorschauVideos video {
+    border-radius: 10px;
+    width: 40vw;
+  }
+
+  .programmeTitle {
+    flex-wrap: wrap;
+  }
+  .programmeTitle div {
+    width: 40vw;
+    height: 20vw;
+    margin: 1vw;
+  }
+  .programmeTitle a {
+    font-size: 11vw;
+  }
+
+  .vorschauContainer p,
+  .andereProgrammeContainer p {
+    font-size: 9vw;
+    margin: 5vw 0;
+  }
+}
+
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 80vmin;
+  }
+  header img {
+    height: 80vmin;
+  }
+  .titleContainer {
+    top: 35%;
+  }
+  .uebersichtcontainer p {
+    font-size: 3vw;
+  }
+  .uebersichtcontainer img {
+    width: 5vw;
+  }
+
+  .erklaerungsContainer {
+    margin: 4vw 1vw;
+  }
+  .erklaerungsContainer h2 {
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+  .erklaerungsContainer p {
+    font-size: 3vw;
+    padding: 1vw;
+  }
+  .kursErklaerung,
+  .warumDiesenKurs {
+    margin: 5vw 2vw;
+  }
+
+  .vorschauVideos {
+    flex-wrap: wrap;
+  }
+  .vorschauVideos video {
+    border-radius: 10px;
+    width: 40vw;
+  }
+
+  .programmeTitle {
+    flex-wrap: wrap;
+  }
+  .programmeTitle div {
+    width: 40vw;
+    height: 20vw;
+    margin: 1vw;
+  }
+  .programmeTitle a {
+    font-size: 11vw;
+  }
+
+  .vorschauContainer p,
+  .andereProgrammeContainer p {
+    font-size: 9vw;
+    margin: 5vw 0;
+  }
+}
