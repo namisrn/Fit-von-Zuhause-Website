@@ -106,12 +106,7 @@ header > img {
   border-radius: 10px;
 }
 /*Trainers-kästchen container*/
-.trainer1Section,
-.trainer2Section,
-.trainer3Section,
-.trainer4Section,
-.trainer5Section,
-.trainer6Section {
+.trainerSection {
   position: relative;
   width: 25vw;
   text-align: center;
@@ -132,22 +127,12 @@ header > img {
   transition: 0.5s ease;
 }
 /*Hoverover-Effekt bei trainer kästchen - Kommt die Trainers Beschreibung hoch*/
-.trainer1Section:hover .trainerOverlay,
-.trainer2Section:hover .trainerOverlay,
-.trainer3Section:hover .trainerOverlay,
-.trainer4Section:hover .trainerOverlay,
-.trainer5Section:hover .trainerOverlay,
-.trainer6Section:hover .trainerOverlay {
+.trainerSection:hover .trainerOverlay {
   height: 60%;
 }
 
 /*Hoverover-Effekt bei trainer kästchen - 3 schichtige Shatten*/
-.trainer1Section:hover,
-.trainer2Section:hover,
-.trainer3Section:hover,
-.trainer4Section:hover,
-.trainer5Section:hover,
-.trainer6Section:hover {
+.trainerSection:hover {
   box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
     0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
 
@@ -157,12 +142,7 @@ header > img {
   height: 50%;
 }
 
-.trainer1MehrDetail,
-.trainer2MehrDetail,
-.trainer3MehrDetail,
-.trainer4MehrDetail,
-.trainer5MehrDetail,
-.trainer6MehrDetail {
+.trainerMehrDetail {
   position: absolute;
   width: 90%;
   top: 50%;
@@ -172,12 +152,7 @@ header > img {
   transform: translate(-50%, -50%);
 }
 
-.trainer1MehrDetail span,
-.trainer2MehrDetail span,
-.trainer3MehrDetail span,
-.trainer4MehrDetail span,
-.trainer5MehrDetail span,
-.trainer6MehrDetail span {
+.trainerMehrDetail span {
   font-size: 2vw;
   font-weight: bold;
 }
@@ -276,32 +251,17 @@ footer {
     width: 25vw;
   }
 
-  .trainer1Section,
-  .trainer2Section,
-  .trainer3Section,
-  .trainer4Section,
-  .trainer5Section,
-  .trainer6Section {
+  .trainerSection {
     flex-basis: 80vw;
   }
   .trainers img {
     width: 80vw;
   }
 
-  .trainer1MehrDetail,
-  .trainer2MehrDetail,
-  .trainer3MehrDetail,
-  .trainer4MehrDetail,
-  .trainer5MehrDetail,
-  .trainer6MehrDetail {
+  .trainerMehrDetail {
     font-size: 3vw;
   }
-  .trainer1MehrDetail span,
-  .trainer2MehrDetail span,
-  .trainer3MehrDetail span,
-  .trainer4MehrDetail span,
-  .trainer5MehrDetail span,
-  .trainer6MehrDetail span {
+  .trainerMehrDetail span {
     font-size: 4vw;
   }
 
@@ -347,28 +307,13 @@ footer {
     font-size: 4vmin;
   }
 
-  .trainer1Section,
-  .trainer2Section,
-  .trainer3Section,
-  .trainer4Section,
-  .trainer5Section,
-  .trainer6Section {
+  .trainerSection {
     flex-basis: 40vw;
   }
-  .trainer1MehrDetail,
-  .trainer2MehrDetail,
-  .trainer3MehrDetail,
-  .trainer4MehrDetail,
-  .trainer5MehrDetail,
-  .trainer6MehrDetail {
+  .trainerMehrDetail {
     font-size: 1.7vw;
   }
-  .trainer1MehrDetail span,
-  .trainer2MehrDetail span,
-  .trainer3MehrDetail span,
-  .trainer4MehrDetail span,
-  .trainer5MehrDetail span,
-  .trainer6MehrDetail span {
+  .trainerMehrDetail span {
     font-size: 3vw;
   }
 
@@ -404,12 +349,7 @@ footer {
     width: 20vw;
   }
 
-  .trainer1MehrDetail span,
-  .trainer2MehrDetail span,
-  .trainer3MehrDetail span,
-  .trainer4MehrDetail span,
-  .trainer5MehrDetail span,
-  .trainer6MehrDetail span {
+  .trainerMehrDetail span {
     font-size: 2.5vw;
   }
   .footerUnten p {

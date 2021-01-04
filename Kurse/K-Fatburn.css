@@ -13,6 +13,7 @@
   --hellGrau: #d6d6d6;
   --blau: #034078;
   --hellBlau: #3b88c6;
+  --rot: #9a2828;
 }
 
 * {
@@ -72,7 +73,8 @@ header > img {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  background-color: var(--hellBlau);
+  background-color: var(--rot);
+  color: var(--hellGrau);
   transform: skewY(-6deg);
 }
 .uebersichtcontainer p {
@@ -85,7 +87,7 @@ header > img {
 .erklaerungsContainer {
   display: flex;
   margin: 7vw 10vw;
-  color: var(--schwarz);
+  color: var(--hellGrau);
 }
 .erklaerungsContainer h2 {
   font-size: 1.5vw;
@@ -99,7 +101,7 @@ header > img {
 .warumDiesenKurs {
   margin: 0 4vw;
   padding: 1vw;
-  background-color: var(--hellBlau);
+  background-color: var(--rot);
   border-radius: 10px;
   text-align: justify;
   transition: transform 0.2s;
