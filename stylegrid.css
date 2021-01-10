@@ -3,78 +3,23 @@ body{
     margin: 0px;
     text-align: center;
 }
-#content{
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-    grid-template-areas:
-        ". . . . header header header header header header . login . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". headline headline .  . homepic homepic homepic homepic . headline2 headline2 .  ."
-        ". headline headline .  . homepic homepic homepic homepic . headline2 headline2 .  ."
-        ". . . .  . homepic homepic homepic homepic . . . . ."
-        ". . . .  . homepic homepic homepic homepic . . . . ."
-        ". . . .  . homepic homepic homepic homepic . . . . ."
-        ". . . .  . homepic homepic homepic homepic . . . . ."
-        ". . . .  . homepic homepic homepic homepic . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene . . ."
-        ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
-        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
-        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . kurse kurse kurse kurse kurse kurse . . . ."
-        ". . . . . . . kurse2 kurse2 kurse2 kurse2 . . ."
-        ". . . . . . . . . . . . . ."
-        ". kurspic1 kurspic1 kurspic1 kurspic1 kurstext1 kurstext1 kurstext1 . kurspic2 kurspic2 kurspic2 kurspic2 ."
-        ". kurspic1 kurspic1 kurspic1 kurspic1 . . . . kurspic2 kurspic2 kurspic2 kurspic2 ."
-        ". . kurstext3 kurstext3 kurstext3 kurspic3 kurspic3 kurspic3 kurspic3 . kurstext2 kurstext2 kurstext2 ."
-        ". . . . . . . . . . . . . ."
-        ". . . . abos abos abos abos abos abos . . . ."
-        ". . . . . . . . . . . . . ."
-        ". standard_abo standard_abo standard_abo standard_abo . . . . ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-      
 
-        "footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-        ". . . . . . nav . main main . . . ."
-        ". . . . . . section . aside  aside  . . . ."
-        ;
+/*Flex Eienschaften ganze Seite */
+#content{
+    display: flex;
+    flex-direction: column;
 }
+
+/*Einstellen für alle Kinder der Seite */
 #content > *{
    /* background: #3bbced; */
     padding: 0px;
 }
+
+
+
+/*Grid Definieren und Einstellen, erster Teil *HOME***/
+
 header{
     grid-area: header;
 }
@@ -95,26 +40,147 @@ homepic{
     grid-area: homepic;
 }
 
+#home {
+
+    background-image: url("/pictures/Bildmittel.jpg");
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+    ". . . . header header header header header header . login . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". headline headline .  . homepic homepic homepic homepic . headline2 headline2 .  ."
+    ". headline headline .  . homepic homepic homepic homepic . headline2 headline2 .  ."
+    ". . . .  . homepic homepic homepic homepic . . . . ."
+    ". . . .  . homepic homepic homepic homepic . . . . ."
+    ". . . .  . homepic homepic homepic homepic . . . . ."
+    ". . . .  . homepic homepic homepic homepic . . . . ."
+    ". . . .  . homepic homepic homepic homepic . . . . ."
+    ". . . . . . . . . . . . . .";
+}
+
+
+
+
+/*Grid Definieren und Einstellen, zweiter Teil *ABOUTUS***/
 
 ceopic{
-    grid-area:ceoPic
+    grid-area:ceoPic;
 }
+
+ueberuns{
+    grid-area: ueberuns;
+}
+
+aboutus_text{
+    grid-area: aboutus_text;
+
+}
+
+#aboutus{
+    background-image: url("/pictures/Bildgroß.jpg");
+    
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    grid-template-areas:
+        ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+        ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+        ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . .";
+
+}
+
+/*Grid Definieren und Einstellen, dritter Teil *INDIVIDUELLE PLAENE***/
+
 ind_plaene{
-    grid-area:ind_plaene
+    grid-area:ind_plaene;
 }
 ind_plaene2{
-    grid-area:ind_plaene2
+    grid-area:ind_plaene2;
 }
+bmi_calc{
+    grid-area:bmi_calc;
+    background:#ffffff7a ;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+ernaehrungbox{
+    grid-area: ernaehrungbox;
+    background:#ffffff7a ;
+    border-radius: 10px;
+}
+
+#plaene{
+
+    background-image: url("/pictures/Bildmittel.jpg");
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+    ". . . ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene . . ."
+        ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . .";
+
+}
+
+/*Grid Definieren und Einstellen, vierter Teil *Kurse***/
+
 kurse{
-    grid-area:kurse
+    grid-area:kurse;
 }
 kurse2{
-    grid-area:kurse2
+    grid-area:kurse2;
 }
 kurspic1{
     border-radius: 10px;
-    grid-area:kurspic1
+    grid-area:kurspic1;
 }
+
 kurstext1{
     background:#ffffff7a ;
     grid-area:kurstext1;
@@ -125,7 +191,7 @@ kurstext1{
 }
 kurspic2{
     border-radius: 10px;
-    grid-area:kurspic2
+    grid-area:kurspic2;
 }
 kurstext2{
     grid-area:kurstext2;
@@ -139,7 +205,7 @@ kurstext2{
 }
 kurspic3{
     border-radius: 10px;
-    grid-area:kurspic3
+    grid-area:kurspic3;
 }
 
 kurstext3{
@@ -151,13 +217,45 @@ kurstext3{
     margin-top: 25px;
     margin-bottom: 75px;
 }
+
+
+#kurse {
+    background-image: url("/pictures/Bildgroß.jpg");
+    
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    grid-template-areas:
+    ". . . . kurse kurse kurse kurse kurse kurse . . . ."
+    ". . . . . . . kurse2 kurse2 kurse2 kurse2 . . ."
+    ". . . . . . . . . . . . . ."
+    ". kurspic1 kurspic1 kurspic1 kurspic1 kurstext1 kurstext1 kurstext1 . kurspic2 kurspic2 kurspic2 kurspic2 ."
+    ". kurspic1 kurspic1 kurspic1 kurspic1 . . . . kurspic2 kurspic2 kurspic2 kurspic2 ."
+    ". . kurstext3 kurstext3 kurstext3 kurspic3 kurspic3 kurspic3 kurspic3 . kurstext2 kurstext2 kurstext2 ."
+    ". . . . . . . . . . . . . .";
+
+}
+
+
+/*Grid Definieren und Einstellen, fünfter Teil *Abos***/
+
 abos{
-    grid-area: abos;
+    grid-area:abos;
 }
 
 standard_abo{
     grid-area: standard_abo;
-    border: 1px solid red;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 ult_abo{
@@ -170,52 +268,107 @@ prof_abo{
     border: 1px solid red;
 }
 
+#abosection{
+    background-image: url("/pictures/Bildgroß.jpg");
+    
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
 
-main{
-    grid-area: main;
-}
-aside{
-    grid-area: aside;
-}
-ueberuns{
-    grid-area: ueberuns;
-}
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
 
-aboutus_text{
-    grid-area: aboutus_text;
-
-}
-
-bmi_calc{
-    grid-area:bmi_calc;
-    background:#ffffff7a ;
-    border-radius: 10px;
-    text-align: center;
-    padding-top: 20px;
-}
-ernaehrungbox{
-    grid-area: ernaehrungbox;
-    background:#ffffff7a ;
-    border-radius: 10px;
+    grid-template-areas:
+   
+    ". . . . abos abos abos abos abos . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". standard_abo standard_abo standard_abo standard_abo . . . . ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . .";
 
 }
-nav{
-    grid-area: nav;
+
+
+/*Grid Definieren und Einstellen, fünfter Teil *Kontakt***/
+kontakt{
+    grid-area:kontakt;
 }
-section{
-    grid-area: section;
+
+name{
+    grid-area:name;
 }
+
+mail{
+    grid-area:mail;
+}
+
+message{
+    grid-area:message;
+}
+
+footer{
+    grid-area: footer;
+}
+
+#kontaktus{
+    background-image: url("/pictures/Bildgroß.jpg");
+    
+    background-position: center center;
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    grid-template-areas:
+    ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . name name name name name ."
+    ". . . . . . . . mail mail mail mail mail ."
+    ". . . . . . . . message message message message message ."
+    ". . . . . . . . message message message message message ."
+    ". . . . . . . . message message message message message ."
+    ". . . . . . . . message message message message message ."
+    ". . . . . . . . message message message message message ."
+    ". . . . . . . . . . . . . ."
+    "footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+    "footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+    ;
+}
+
+
+
+
+
 footer{
     grid-area: footer;
 }
 
 
-#content {
-background-image: url(/pictures/background.jpg);
+#content  {
+/*background-image: url(/pictures/background.jpg);
 background-position: top left;
-background-size: cover;
+background-size: cover;*/
 margin-top: 0px;
 margin-bottom: 0px;
+display: flex;
+flex-direction: column;
 
 
 /**srcset Alternative für css finden */
@@ -290,6 +443,7 @@ p{
 }
 
 /**Navigationslistenelemente */
+
 nav ul li a{
     font-family: 'OpenSans', sans-serif;
     font-weight: 400;
@@ -305,6 +459,7 @@ background: #161616;
 }
 
 /**Logopositonierung*/
+
 #logo {
     position: absolute;
     padding-left:44% ;
@@ -314,6 +469,7 @@ background: #161616;
 }
 
 /**Logopositonierung*/
+
 #logo img{
 width: 100px;
 height:100px;
@@ -331,7 +487,9 @@ float:right;
 padding-right: 16px;
 }
 
+
 header{
+   
     position: fixed;
     border-radius: 10px;
     height: 62px;
@@ -341,6 +499,7 @@ header{
     background:#ffffff7a ;
     z-index: 100;
 }
+
 a {
 text-decoration: none;  /*Ankertags nicht mehr unterstrichen*/
 }
@@ -360,3 +519,24 @@ margin-left: 16px;
 width: 100%;
 height: auto;
 }
+
+background{
+    position: absolute;
+    z-index: -100;
+   
+    height: 800px;
+   
+
+   
+} 
+
+
+
+
+
+
+
+
+
+
+

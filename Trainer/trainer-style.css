@@ -1,0 +1,571 @@
+@font-face {
+  /* Definieren lokal Font*/
+  /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+  font-family: "OpenSans";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans.woff") format("woff"),
+    url("../Font/OpenSans.woff2") format("woff2");
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+  --hellBlau: #3b88c6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--hellGrau);
+  font-family: "OpenSans";
+}
+
+/********************* Navigation *********************/
+.hamburgerMenuContainer {
+  display: none;
+}
+
+nav {
+  margin: 1.5em 30em;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* border: 3px dotted red; */
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+  opacity: 0.8;
+
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+.navContainer a {
+  color: #1b1b1b;
+}
+
+.logoContaienr img {
+  width: 130px;
+  height: 120px;
+}
+.anmeldungsContainer {
+  height: 50px;
+  color: #d6d6d6;
+  border-radius: 10px;
+  background-color: #034078;
+  margin: 12px 0 0 25px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+.anmeldungsContainer a {
+  padding-top: 7px;
+  color: #d6d6d6;
+}
+.anmeldungsContainer a:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+nav li {
+  margin: 0 2em;
+  text-decoration: none;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.3s all;
+  border-radius: 5px;
+}
+
+.linksMenuContainer a:hover,
+.rechtsMenuContainer a:hover {
+  transition: 0.3s;
+  color: var(--hellGrau);
+  background-color: var(--blau);
+}
+
+/********************* /Navigation *********************/
+
+/********************* HEADER *********************/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  top: 25%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+}
+
+.websiteTitle {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 2.5vw;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 3em;
+}
+/********************* /HEADER *********************/
+
+/********************* MAIN *********************/
+
+.trainerTitle {
+  text-align: center;
+  font-size: 5vw;
+}
+
+.trainerTitle p {
+  color: var(--schwarz);
+}
+
+.line {
+  position: absolute;
+  width: 15vw;
+  border-bottom: 2px solid var(--schwarz);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* In diesem Section gibt es 6 kästchen, um die Trainer vorzustellen*/
+.trainers {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5% 0;
+}
+
+.trainers > div {
+  margin: 10px;
+}
+
+.trainers img {
+  width: 25vw;
+  height: auto;
+  border-radius: 10px;
+}
+/*Trainers-kästchen container*/
+.trainerSection {
+  position: relative;
+  width: 25vw;
+  text-align: center;
+  transition: transform 0.2s;
+  border-radius: 10px;
+}
+
+.trainerOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--grau);
+  color: var(--hellGrau);
+  overflow: hidden;
+  height: 0;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+/*Hoverover-Effekt bei trainer kästchen - Kommt die Trainers Beschreibung hoch*/
+.trainerSection:hover .trainerOverlay {
+  height: 60%;
+}
+
+/*Hoverover-Effekt bei trainer kästchen - 3 schichtige Shatten*/
+.trainerSection:hover {
+  box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+    0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+
+  transform: scale(1.05);
+  z-index: 9;
+  cursor: pointer;
+  height: 50%;
+}
+
+.trainerMehrDetail {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  font-size: 1vw;
+  text-align: justify;
+  transform: translate(-50%, -50%);
+}
+
+.trainerMehrDetail span {
+  font-size: 2vw;
+  font-weight: bold;
+}
+/********************* /MAIN *********************/
+
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  text-align: center;
+  padding: 3em;
+}
+
+.logoContainer img {
+  width: 7em;
+}
+
+.footerContainer ul {
+  list-style: none;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerContent h2 {
+  padding-bottom: 1em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+  margin: 1em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3em;
+  padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten p {
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+@media screen and (max-width: 1023px) {
+  .navContainer,
+  .anmeldungsContainer {
+    display: none;
+  }
+  .hamburgerMenuContainer {
+    display: block;
+  }
+  header,
+  main,
+  footer {
+    position: relative;
+    top: 10vh;
+  }
+
+  .hLine {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    margin: 0;
+    display: block;
+    position: fixed;
+    height: 10vh;
+    background-color: var(--schwarz);
+
+    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
+  }
+
+  nav img {
+    position: absolute;
+    height: 10vh;
+    margin-left: 1em;
+    z-index: 999;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    position: fixed;
+    background-color: var(--schwarz);
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(50px at 90% -10%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 0.4s ease-out;
+    pointer-events: none;
+  }
+  .hamburgerMenu.open {
+    clip-path: circle(1200px at 90% 60%);
+    -webkit-clip-path: circle(1200px at 90% 60%);
+    pointer-events: all;
+  }
+
+  .hamburgerMenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .hamburgerMenu li a:hover {
+    text-decoration: underline;
+  }
+
+  .hamburgerMenu li:nth-child(1) {
+    transition: all 0.5s ease 0.15s;
+  }
+  .hamburgerMenu li:nth-child(2) {
+    transition: all 0.5s ease 0.25s;
+  }
+  .hamburgerMenu li:nth-child(3) {
+    transition: all 0.5s ease 0.35s;
+  }
+  .hamburgerMenu li:nth-child(4) {
+    transition: all 0.5s ease 0.45s;
+  }
+  .hamburgerMenu li:nth-child(5) {
+    transition: all 0.5s ease 0.55s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+
+  #anmeldungbtn {
+    background: green;
+    padding: 1em;
+    border-radius: 10px;
+  }
+}
+/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
+  }
+  header img {
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 3.5vmin;
+  }
+
+  .trainerTitle {
+    font-size: 7vmin;
+  }
+
+  .line {
+    width: 25vw;
+  }
+
+  .trainerSection {
+    flex-basis: 80vw;
+  }
+  .trainers img {
+    width: 80vw;
+  }
+
+  .trainerMehrDetail {
+    font-size: 3vw;
+  }
+  .trainerMehrDetail span {
+    font-size: 4vw;
+  }
+
+  .logoContainer img {
+    width: 6em;
+  }
+  .box img {
+    margin: 0.6em;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
+  .footerContent li {
+    font-size: 4vw;
+    line-height: 4vh;
+  }
+
+  .footerUnten p {
+    font-size: 3vw;
+  }
+  .footerUnten h4 {
+    font-size: 3vw;
+  }
+}
+
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 55vmin;
+  }
+  header img {
+    height: 55vmin;
+  }
+
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 8vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .trainerSection {
+    flex-basis: 40vw;
+  }
+  .trainerMehrDetail {
+    font-size: 1.7vw;
+  }
+  .trainerMehrDetail span {
+    font-size: 3vw;
+  }
+
+  .trainers img {
+    width: 40vw;
+  }
+}
+
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
+
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .trainerTitle {
+    font-size: 7vmin;
+  }
+
+  .line {
+    width: 20vw;
+  }
+
+  .trainerMehrDetail span {
+    font-size: 2.5vw;
+  }
+  .footerUnten p {
+    font-size: 2vw;
+  }
+  .footerUnten h4 {
+    font-size: 2vw;
+  }
+}
+
+/*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
+Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  header {
+    height: 60vmin;
+  }
+  header img {
+    height: 60vmin;
+  }
+
+  .footerUnten p {
+    font-size: 1.5vw;
+  }
+  .footerUnten h4 {
+    font-size: 1.5vw;
+  }
+}

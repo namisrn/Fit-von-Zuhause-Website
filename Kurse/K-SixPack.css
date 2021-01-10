@@ -1,0 +1,629 @@
+@font-face {
+  /* Definieren lokal Font*/
+  /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+  font-family: "OpenSans";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans.woff") format("woff"),
+    url("../Font/OpenSans.woff2") format("woff2");
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+  --hellBlau: #3b88c6;
+  --rot: #9a2828;
+  --weiß: #f4f6f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--hellGrau);
+  font-family: "OpenSans";
+}
+
+/********************* Navigation *********************/
+.hamburgerMenuContainer {
+  display: none;
+}
+
+nav {
+  margin: 1.5em 30em;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* border: 3px dotted red; */
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+  opacity: 0.8;
+
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+.navContainer a {
+  color: #1b1b1b;
+}
+
+.logoContaienr img {
+  width: 130px;
+  height: 120px;
+}
+.anmeldungsContainer {
+  height: 50px;
+  color: #d6d6d6;
+  border-radius: 10px;
+  background-color: #034078;
+  margin: 12px 0 0 25px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+.anmeldungsContainer a {
+  padding-top: 7px;
+  color: #d6d6d6;
+}
+.anmeldungsContainer a:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+nav li {
+  margin: 0 2em;
+  text-decoration: none;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.3s all;
+  border-radius: 5px;
+}
+
+.linksMenuContainer a:hover,
+.rechtsMenuContainer a:hover {
+  transition: 0.3s;
+  color: var(--hellGrau);
+  background-color: var(--blau);
+}
+
+/********************* /Navigation *********************/
+
+/********************* HEADER *********************/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: block;
+  top: 50%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+}
+
+.websiteTitle {
+  font-size: 7vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 3vw;
+  font-style: italic;
+  padding-top: 1em;
+}
+
+/********************* /HEADER *********************/
+
+/********************* MAIN *********************/
+.uebersichtcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: var(--weiß);
+  color: var(--schwarz);
+  transform: skewY(-6deg);
+}
+.uebersichtcontainer p {
+  font-size: 1.5vw;
+}
+.uebersichtcontainer img {
+  width: 5.5vw;
+}
+
+.erklaerungsContainer {
+  display: flex;
+  margin: 7vw 10vw;
+  color: var(--schwarz);
+}
+.erklaerungsContainer h2 {
+  font-size: 1.5vw;
+  padding-bottom: 1vw;
+}
+.erklaerungsContainer p {
+  font-size: 1vw;
+  padding: 0 1vw;
+}
+.kursErklaerung,
+.warumDiesenKurs {
+  margin: 0 4vw;
+  padding: 1vw;
+  background-color: var(--weiß);
+  border-radius: 10px;
+  text-align: justify;
+  transition: transform 0.2s;
+}
+.kursErklaerung:hover,
+.warumDiesenKurs:hover {
+  box-shadow: 0 0px 15.4px rgba(0, 0, 0, 0.411);
+  transform: scale(1.05);
+}
+
+.vorschauContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2vw 8vw;
+}
+
+.vorschauVideos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.vorschauVideos video {
+  border-radius: 10px;
+  width: 25vw;
+  transition: transform 0.2s;
+}
+.vorschauVideos video:hover {
+  box-shadow: 0 0px 15.4px rgba(0, 0, 0, 0.411);
+  transform: scale(1.05);
+}
+.andereProgrammeContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1vw 8vw;
+  background-color: #b7b7b7;
+  margin: 2vw 0;
+}
+.programmeTitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.programmeTitle div {
+  border-radius: 10px;
+  width: 14vw;
+  height: 7vw;
+  margin: 0 1vw;
+  transition: transform 0.2s;
+
+  background: var(--blau);
+}
+.programmeTitle a {
+  text-decoration: none;
+  color: var(--hellGrau);
+  font-size: 3vw;
+  padding-top: 1vw;
+  display: block;
+}
+
+.programmeTitle div:hover {
+  box-shadow: 0 0px 15.4px rgba(0, 0, 0, 0.411);
+  transform: scale(1.05);
+}
+.vorschauContainer p {
+  font-size: 2vw;
+  margin: 2vw;
+}
+.andereProgrammeContainer p {
+  font-size: 2vw;
+  margin: 0vw 0 1vw 0;
+}
+
+/********************* /MAIN *********************/
+
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  text-align: center;
+  padding: 3em;
+}
+
+.logoContainer img {
+  width: 7em;
+}
+
+.footerContainer ul {
+  list-style: none;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerContent h2 {
+  padding-bottom: 1em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+  margin: 1em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3em;
+  padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten p {
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+@media screen and (max-width: 1023px) {
+  .navContainer,
+  .anmeldungsContainer {
+    display: none;
+  }
+  .hamburgerMenuContainer {
+    display: block;
+  }
+  header,
+  main,
+  footer {
+    position: relative;
+    top: 10vh;
+  }
+
+  .hLine {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    margin: 0;
+    display: block;
+    position: fixed;
+    height: 10vh;
+    background-color: var(--schwarz);
+
+    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
+  }
+
+  nav img {
+    position: absolute;
+    height: 10vh;
+    margin-left: 1em;
+    z-index: 999;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    position: fixed;
+    background-color: var(--schwarz);
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(50px at 90% -10%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 0.4s ease-out;
+    pointer-events: none;
+  }
+  .hamburgerMenu.open {
+    clip-path: circle(1200px at 90% 60%);
+    -webkit-clip-path: circle(1200px at 90% 60%);
+    pointer-events: all;
+  }
+
+  .hamburgerMenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .hamburgerMenu li a:hover {
+    text-decoration: underline;
+  }
+
+  .hamburgerMenu li:nth-child(1) {
+    transition: all 0.5s ease 0.15s;
+  }
+  .hamburgerMenu li:nth-child(2) {
+    transition: all 0.5s ease 0.25s;
+  }
+  .hamburgerMenu li:nth-child(3) {
+    transition: all 0.5s ease 0.35s;
+  }
+  .hamburgerMenu li:nth-child(4) {
+    transition: all 0.5s ease 0.45s;
+  }
+  .hamburgerMenu li:nth-child(5) {
+    transition: all 0.5s ease 0.55s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+
+  #anmeldungbtn {
+    background: green;
+    padding: 1em;
+    border-radius: 10px;
+  }
+}
+/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+
+/*-_-_-_- bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
+  }
+  header img {
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 40%;
+  }
+
+  .uebersichtcontainer p {
+    font-size: 3.5vw;
+  }
+  .uebersichtcontainer img {
+    width: 8.5vw;
+  }
+
+  .erklaerungsContainer {
+    flex-direction: column;
+  }
+  .erklaerungsContainer h2 {
+    font-size: 4.5vw;
+    padding: 1vw 2vw;
+  }
+  .erklaerungsContainer p {
+    font-size: 4vw;
+    padding: 2vw 5vw;
+  }
+  .kursErklaerung,
+  .warumDiesenKurs {
+    margin: 5vw 0;
+  }
+
+  .vorschauVideos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vorschauVideos video {
+    border-radius: 10px;
+    width: 80vw;
+    margin: 3vw 0;
+  }
+
+  .andereProgrammeContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .programmeTitle {
+    flex-direction: column;
+    align-items: center;
+  }
+  .programmeTitle div {
+    width: 50vw;
+    height: 20vw;
+    margin: 2vw 0;
+  }
+  .programmeTitle a {
+    font-size: 12vw;
+  }
+
+  .vorschauContainer p,
+  .andereProgrammeContainer p {
+    font-size: 9vw;
+    margin: 5vw 0;
+  }
+}
+
+/*-_-_-_- bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 50vmin;
+  }
+  header img {
+    height: 50vmin;
+  }
+  .titleContainer {
+    top: 20%;
+  }
+  .uebersichtcontainer p {
+    font-size: 3vw;
+  }
+  .uebersichtcontainer img {
+    width: 7vw;
+  }
+  .erklaerungsContainer {
+    margin: 4vw 1vw;
+  }
+  .erklaerungsContainer h2 {
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+  .erklaerungsContainer p {
+    font-size: 3vw;
+    padding: 1vw;
+  }
+  .kursErklaerung,
+  .warumDiesenKurs {
+    margin: 5vw 2vw;
+  }
+
+  .vorschauVideos {
+    flex-wrap: wrap;
+  }
+  .vorschauVideos video {
+    border-radius: 10px;
+    width: 40vw;
+  }
+
+  .programmeTitle {
+    flex-wrap: wrap;
+  }
+  .programmeTitle div {
+    width: 30vw;
+    height: 15vw;
+    margin: 1vw;
+  }
+  .programmeTitle a {
+    font-size: 8vw;
+  }
+
+  .vorschauContainer p,
+  .andereProgrammeContainer p {
+    font-size: 6vw;
+    margin: 5vw 0;
+  }
+}
+
+/*-_-_-_-bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 80vmin;
+  }
+  header img {
+    height: 80vmin;
+  }
+  .titleContainer {
+    top: 35%;
+  }
+  .uebersichtcontainer p {
+    font-size: 3vw;
+  }
+  .uebersichtcontainer img {
+    width: 5vw;
+  }
+
+  .erklaerungsContainer {
+    margin: 4vw 1vw;
+  }
+  .erklaerungsContainer h2 {
+    font-size: 3vw;
+    padding: 1vw 2vw;
+  }
+  .erklaerungsContainer p {
+    font-size: 3vw;
+    padding: 1vw;
+  }
+  .kursErklaerung,
+  .warumDiesenKurs {
+    margin: 5vw 2vw;
+  }
+
+  .vorschauVideos {
+    flex-wrap: wrap;
+  }
+  .vorschauVideos video {
+    border-radius: 10px;
+    width: 40vw;
+  }
+
+  .programmeTitle {
+    flex-wrap: wrap;
+  }
+  .programmeTitle div {
+    width: 25vw;
+    height: 12vw;
+    margin: 1vw;
+  }
+  .programmeTitle a {
+    font-size: 7vw;
+  }
+
+  .vorschauContainer p,
+  .andereProgrammeContainer p {
+    font-size: 6vw;
+    margin: 5vw 0;
+  }
+}

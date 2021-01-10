@@ -1,0 +1,738 @@
+@font-face {
+  /* Definieren lokal Font*/
+  /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+  font-family: "OpenSans";
+  src: url("../Font/OpenSans-Light.ttf"),
+    url("../Font/OpenSans.woff") format("woff"),
+    url("../Font/OpenSans.woff2") format("woff2");
+}
+:root {
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+  --hellBlau: #3b88c6;
+  --rot: #9a2828;
+  --weiß: #f4f6f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--hellGrau);
+  font-family: "OpenSans";
+}
+
+/********************* Navigation *********************/
+.hamburgerMenuContainer {
+  display: none;
+}
+
+nav {
+  margin: 1.5em 30em;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* border: 3px dotted red; */
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+  opacity: 0.8;
+
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+.navContainer a {
+  color: #1b1b1b;
+}
+
+.logoContaienr img {
+  width: 130px;
+  height: 120px;
+}
+.anmeldungsContainer {
+  height: 50px;
+  color: #d6d6d6;
+  border-radius: 10px;
+  background-color: #034078;
+  margin: 12px 0 0 25px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+.anmeldungsContainer a {
+  padding-top: 7px;
+  color: #d6d6d6;
+}
+.anmeldungsContainer a:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+nav li {
+  margin: 0 2em;
+  text-decoration: none;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.3s all;
+  border-radius: 5px;
+}
+
+.linksMenuContainer a:hover,
+.rechtsMenuContainer a:hover {
+  transition: 0.3s;
+  color: var(--hellGrau);
+  background-color: var(--blau);
+}
+
+/********************* /Navigation *********************/
+
+/********************* HEADER *********************/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  top: 25%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+}
+
+.websiteTitle {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 2.5vw;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 3em;
+}
+
+/********************* /HEADER *********************/
+
+/********************* MAIN *********************/
+
+.trainerTitle {
+  text-align: center;
+  font-size: 5vw;
+}
+
+.trainerTitle p {
+  color: var(--schwarz);
+}
+
+.line {
+  position: absolute;
+  width: 8vw;
+  border-bottom: 2px solid var(--schwarz);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kursContainer {
+  /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+  width: 122vmin;
+  margin: 2vmin auto;
+  align-items: center;
+
+  grid-template-areas:
+    "body body fatburn"
+    "body body zumba"
+    "yoga sixpack sixpack"
+    "step sixpack sixpack"
+    "backwork backwork tourde"
+    "backwork backwork booty";
+}
+/*-- 3 größe Kacheln --*/
+.BodyKurs,
+.bodyKursContainer,
+.SixpackKurs,
+.BackworkKurs {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 10px;
+  background-color: var(--schwarz);
+  transition: transform 0.2s;
+}
+.BodyKurs img,
+.SixpackKurs img,
+.BackworkKurs img {
+  width: 80vmin;
+  border-radius: 10px;
+}
+
+/*-- 6 kleine Kacheln --*/
+.FatburnKurs,
+.ZumbaKurs,
+.YogaKurs,
+.StepKurs,
+.TourdeKurs,
+.BootyKurs {
+  position: relative;
+  width: 39vmin;
+  height: 39vmin;
+  border-radius: 10px;
+  background-color: var(--grau);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.FatburnKurs img,
+.ZumbaKurs img,
+.YogaKurs img,
+.StepKurs img,
+.TourdeKurs img,
+.BootyKurs img {
+  width: 39vmin;
+  border-radius: 10px;
+}
+
+.container h1 {
+  position: absolute;
+  text-align: start;
+  padding-left: 3vmin;
+  bottom: 1vmin;
+  color: var(--hellGrau);
+  font-size: 8vmin;
+}
+
+/*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
+.container:hover {
+  box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+    0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+  transform: scale(1.05);
+  z-index: 2;
+  cursor: pointer;
+}
+.container:hover img {
+  filter: blur(5px);
+  transition: 0.3s all;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  bottom: 0;
+  vertical-align: middle;
+  border-radius: 10px;
+  color: var(--hellGrau);
+  background-color: rgba(40, 40, 40, 0.5);
+  display: none;
+}
+.container:hover .overlay {
+  display: block;
+  transition: 0.3s all;
+}
+
+.text-Overlay {
+  position: relative;
+  top: 33%;
+  font-size: 5vw;
+  font-weight: bolder;
+}
+.text-Overlay span {
+  display: block;
+  font-size: 1vw;
+}
+
+/*definieren BodyKurs grid-area-name,*/
+.BodyKurs {
+  grid-area: body;
+}
+
+/*definieren SixpackKurs grid-area-name*/
+.SixpackKurs {
+  grid-area: sixpack;
+}
+/*definieren BackworkKurs grid-area-name*/
+.BackworkKurs {
+  grid-area: backwork;
+}
+/*definieren FatburnKurs grid-area-name, img und title und hover*/
+.FatburnKurs {
+  grid-area: fatburn;
+}
+/*definieren ZumbaKurs grid-area-name, img und title und hover*/
+.ZumbaKurs {
+  grid-area: zumba;
+}
+/*definieren YogaKurs grid-area-name, img und title und hover*/
+.YogaKurs {
+  grid-area: yoga;
+}
+/*definieren StepKurs grid-area-name, img und title und hover*/
+.StepKurs {
+  grid-area: step;
+}
+/*definieren TourdeKurs grid-area-name, img und title und hover*/
+.TourdeKurs {
+  grid-area: tourde;
+}
+/*definieren BootyKurs grid-area-name, und hover*/
+.BootyKurs {
+  grid-area: booty;
+}
+
+/********************* /MAIN *********************/
+
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  text-align: center;
+  padding: 3em;
+}
+
+.logoContainer img {
+  width: 7em;
+}
+
+.footerContainer ul {
+  list-style: none;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerContent h2 {
+  padding-bottom: 1em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+  margin: 1em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3em;
+  padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten p {
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+
+/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+@media screen and (max-width: 1023px) {
+  .navContainer,
+  .anmeldungsContainer {
+    display: none;
+  }
+  .hamburgerMenuContainer {
+    display: block;
+  }
+  header,
+  main,
+  footer {
+    position: relative;
+    top: 10vh;
+  }
+
+  .hLine {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    margin: 0;
+    display: block;
+    position: fixed;
+    height: 10vh;
+    background-color: var(--schwarz);
+
+    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
+  }
+
+  nav img {
+    position: absolute;
+    height: 10vh;
+    margin-left: 1em;
+    z-index: 999;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    position: fixed;
+    background-color: var(--schwarz);
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(50px at 90% -10%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 0.4s ease-out;
+
+    /* Die Linke, die in HamburgerMenu sind, werden durch dieser Code nich klickbar bis auf die HamburgerMenu öffen ist */
+    pointer-events: none;
+  }
+  .hamburgerMenu.open {
+    clip-path: circle(1200px at 90% 60%);
+    -webkit-clip-path: circle(1200px at 90% 60%);
+
+    /* Alle linke, die HamburgerMenu sind, sind jetzt klickbar, da der Menü öffen ist*/
+    pointer-events: all;
+  }
+
+  .hamburgerMenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  /* Damit die linke mit kleine Verzögerung bzw. Animation ausführen können, blenden wir erstmal die opacity der Linke aus. */
+  .hamburgerMenu li {
+    opacity: 0;
+  }
+
+  /* Dann wird hier verschiede trasition-zeit eingeführt, damit jeder Link mit kleine Verzögerung auftaucht.*/
+  .hamburgerMenu li:nth-child(1) {
+    transition: all 0.5s ease 0.15s;
+  }
+  .hamburgerMenu li:nth-child(2) {
+    transition: all 0.5s ease 0.25s;
+  }
+  .hamburgerMenu li:nth-child(3) {
+    transition: all 0.5s ease 0.35s;
+  }
+  .hamburgerMenu li:nth-child(4) {
+    transition: all 0.5s ease 0.45s;
+  }
+  .hamburgerMenu li:nth-child(5) {
+    transition: all 0.5s ease 0.55s;
+  }
+
+  /* Am Ende wir mit hilfe von diese Zeile und JS-QuellCode alle link aufgetaucht. */
+  li.fade {
+    opacity: 1;
+  }
+
+  .hamburgerMenu li a:hover {
+    text-decoration: underline;
+  }
+  #anmeldungbtn {
+    background: green;
+    padding: 1em;
+    border-radius: 10px;
+  }
+}
+/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+
+/*-_-_-_- Auflösung bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  header {
+    height: 45vmin;
+  }
+  header img {
+    height: 45vmin;
+  }
+  .titleContainer {
+    top: 15%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 3.5vmin;
+  }
+
+  .kursContainer {
+    /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    padding: 5vmin 0;
+  }
+
+  .container {
+    position: relative;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 10px;
+    background-color: var(--grau);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .text-Overlay {
+    top: 36%;
+    font-size: 15vw;
+  }
+  .text-Overlay span {
+    font-size: 5vw;
+  }
+
+  .container img {
+    width: 80vmin;
+    border-radius: 10px;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
+  .footerContent li {
+    font-size: 4vw;
+    line-height: 4vh;
+  }
+
+  .footerUnten p {
+    font-size: 3vw;
+  }
+  .footerUnten h4 {
+    font-size: 3vw;
+  }
+}
+
+/*-_-_-_- Auflösung bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
+
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .kursContainer {
+    /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+    display: grid;
+    /* justify-content: space-evenly; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+    width: 90vmin;
+    margin: 2vmin auto;
+    align-items: center;
+
+    grid-template-areas:
+      "body fatburn"
+      "yoga  zumba"
+      "sixpack step"
+      "backwork tourde "
+      "booty  .";
+  }
+  .container {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+    background-color: var(--grau);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .container img {
+    width: 15em;
+    border-radius: 10px;
+  }
+
+  .container h1 {
+    position: absolute;
+    text-align: start;
+    padding-left: 2vmin;
+    bottom: 1vmin;
+    color: var(--hellGrau);
+    font-size: 6vmin;
+  }
+
+  .overlay {
+    width: 15em;
+    height: 15em;
+  }
+
+  .text-Overlay {
+    top: 30%;
+    font-size: 9vw;
+  }
+  .text-Overlay span {
+    font-size: 3vw;
+  }
+
+  /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
+  .container:hover {
+    box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+      0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+    transform: scale(1.05);
+    z-index: 9;
+    cursor: pointer;
+  }
+}
+
+/*-_-_-_- Auflösung bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 65vmin;
+  }
+  header img {
+    height: 65vmin;
+  }
+
+  .titleContainer {
+    top: 20%;
+  }
+  .websiteTitle {
+    font-size: 7vmin;
+  }
+  .websiteBeschreibung {
+    font-size: 4vmin;
+  }
+
+  .kursContainer {
+    /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
+    display: grid;
+    /* justify-content: space-evenly; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+    width: 90vmin;
+    margin: 2vmin auto;
+    align-items: center;
+
+    grid-template-areas:
+      "body fatburn yoga"
+      "zumba sixpack step"
+      "backwork tourde booty";
+  }
+  .container {
+    position: relative;
+    width: 15em;
+    height: 15em;
+    border-radius: 10px;
+    background-color: var(--grau);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .container img {
+    width: 15em;
+    border-radius: 10px;
+  }
+
+  .container h1 {
+    position: absolute;
+    text-align: start;
+    padding-left: 1vmin;
+    bottom: 1vmin;
+    color: var(--hellGrau);
+    font-size: 6vmin;
+  }
+
+  .overlay {
+    width: 15em;
+    height: 15em;
+  }
+
+  /*--  3 schichtige Hoverover-Effekt-Shatten -> src: brumm.af <--*/
+  .container:hover {
+    box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+      0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+    transform: scale(1.05);
+    z-index: 9;
+    cursor: pointer;
+  }
+}
