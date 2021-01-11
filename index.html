@@ -1,201 +1,240 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Fit von Zuhause</title>
     <meta name="description" content="Online Gym">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="stylegrid.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-	<style>
-		body{
-			color: #fff;
-			font-family: 'Nunito Semibold';
-			text-align: center;
-		}
-		#content{
-			display: grid;
-			grid-template-columns: repeat(14, 1fr);
-			grid-auto-rows: minmax(50px, auto);
-			grid-gap: 10px;
-			max-width: 100%;
-			margin: 0 auto;
-            grid-template-areas:
-                ". . . . header header header header header header . login . ."
-                ". . . . . . . . . . . . . ."
-                ". . . . . . . . . . . . . ."
-                ". headline headline .  . homepic homepic homepic homepic . headline2 headline2 .  ."
-                ". headline headline .  . homepic homepic homepic homepic . headline2 headline2 .  ."
-                ". . . .  . homepic homepic homepic homepic . . . . ."
-                ". . . .  . homepic homepic homepic homepic . . . . ."
-                ". . . .  . homepic homepic homepic homepic . . . . ."
-                ". . . .  . homepic homepic homepic homepic . . . . ."
-                ". . . .  . homepic homepic homepic homepic . . . . ."
-                ". . . . . . . . . . . . . ."
-                ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
-                ". . . . . . . . . . . . . ."
-                ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-                ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-                ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-                ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-                ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-                ". . . . . . . . . . . . . ."
-                ". . . . . ind_plaene ind_plaene ind_plaene ind_plaene . . . . ."
-                ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
-                "footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-                ". . . . . . nav . main main . . . ."
-                ". . . . . . section . aside  aside  . . . ."
-                ;
-		}
-		#content > *{
-			background: #3bbced;
-			padding: 0px;
-		}
-        header{
-            grid-area: header;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-        login{
-            grid-area: login;
-        }
-
-        headline{
-            grid-area: headline;
-        }
-
-        headline2{
-            grid-area: headline2;
-        }
-
-        homepic{
-            grid-area: homepic;
-        }
-       
-        
-        ceopic{
-            grid-area:ceoPic
-        }
-        ind_plaene{
-            grid-area:ind_plaene
-        }
-        ind_plaene2{
-            grid-area:ind_plaene2
-        }
-        
-        main{
-            grid-area: main;
-        }
-        aside{
-            grid-area: aside;
-        }
-        ueberuns{
-            grid-area: ueberuns;
-        }
-
-        aboutus_text{
-            grid-area: aboutus_text;
-
-        }
-        nav{
-            grid-area: nav;
-        }
-        section{
-            grid-area: section;
-        }
-        footer{
-            grid-area: footer;
-        }
-
-        h1 {
-    color: #CECECE;
-        font-family: 'OpenSans', sans-serif;
-        font-weight: 700;
-       font-size: 5vw;
-       margin: 0;
-       text-align: left;
-       
-}
-
-#content {
-    background-image: url(/pictures/background2.png);
-    background-position: center center;
-    background-size: cover;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    background-attachment: fixed;
-    /**srcset Alternative für css finden */
-
-}
-
-h2 {
-    color: #CECECE;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 400;
-    font-size: 3vw;
-    font-style: italic;
-    margin: 0;
-    text-align: left;
-}
-
-h3 {
-    /*color: #1B1B1B;*/
-    color: #e9e1e1;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 400;
-    font-size: 5vw;
-    font-style: normal;
-    padding:20px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-hr{
-    width: 10em;
-    height: 4px ;
-    background: #161616;
-}
-
-.responsive {
-  width: 100%;
-  height: auto;
-}
-	</style>
 </head>
+
 <body>
-    Test 
-</body>
+
+        <!---------Navigation----------->
+
+        <nav>
+            <div class="navContainer">
+                <div class="linksMenuContainer">
+                    <ul>
+                        <li><a href="/Kurse/kurse.html">Kurse</a></li>
+                        <li><a href="#">Ernährung</a></li>
+                    </ul>
+                </div>
+              
+                <div class="logoContaienr">
+                    <a href="/index.html"><img src="../Img/Logo.png" alt=""></a>
+                </div>
+                <div class="rechtsMenuContainer">
+                    <ul>
+                        <li><a href="#">Abos</a></li>
+                        <li><a href="/Trainer/trainer.html">Trainer</a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="anmeldungsContainer">
+                  <ul>
+                     <li><a href="#">Anmeldung</a></li>
+                  </ul>
+             </div>
+        <!--HambergerMenu-->
+             <div class="hamburgerMenuContainer">
+                <img src="../Img/Logo-BW.png" alt="">
+                <div class="hamburger">
+                    <div class="hLine"></div>
+                    <div class="hLine"></div>
+                    <div class="hLine"></div>
+                </div>
+                <ul class="hamburgerMenu">
+                    <li id="anmeldungbtn"><a href="#">Anmeldung</a></li>
+                    <li><a href="/Kurse/kurse.html">Kurse</a></li>
+                    <li><a href="#">Ernährung</a></li>
+                    <li><a href="#">Abos</a></li>
+                    <li><a href="/Trainer/trainer.html">Trainer</a></li>
+                </ul>
+            </div>
+        </nav>
+                <!---------/Navigation----------->
+
+    <div id="content">
+
+        <header>
+           
+        </header>
+        <!--Navigation-->
+       
+        <!--Login-->
+        <section id="home">
+        <headline>
+            <h1>Fit. <br>Zuhause.</h1>
+        </headline>
+        <!--Headline-->
+        <headline2>
+            <h2>einfach.<br>unkompliziert.</h2>
+        </headline2>
+        <!--Headline2-->
+        <homepic><img src="/pictures/frontpage/Front_Bild-min.png" alt="" class="responsive" /> </homepic>
+        </section>
+   
+        <section id="aboutus">
+        <ueberuns>
+            <h3>Über uns</h3>
+            <hr>
+        </ueberuns>
+        <ceopic>
+            <div id="aboutus_ceo">
+                <img src="/pictures/frontpage/Sasan-min.jpg" alt="" class="responsive">
+            </div>
+        </ceopic>
 
         <aboutus_text>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-            Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-            Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan lacus vel facilisis.
-
-        </p>
+            <p>
+                Jeder, der zu Fitness First kommt, hat ein anderes Ziel. Sei es, seinen Körper allgemein fitter zu machen und abzunehmen, Kraft aufzubauen oder auf ein sportliches Ziel hin zu trainieren. Wir unterstützen dich darin, deine persönlichen Fitnessziele optimal und nachhaltig zu erreichen. Ein ganzheitliches Fitnesskonzept, innovative Trainingstechnologien und die Inspiration durch die Fitness First Mitarbeiter – das machen wir zu deiner Motivation!
+            </p>
         </aboutus_text>
-        
+        </section>
+
+        <section id= "plaene">
         <ind_plaene>
-        <h3>Individuelle Pläne</h3>
-        <hr>
+            <h3>Individuelle Pläne</h3>
+            <hr>
         </ind_plaene>
-      
+
         <ind_plaene2>
-        <h4>für Sie erstellt</h4>
+            <h4>für Sie erstellt</h4>
         </ind_plaene2>
 
-        <main>Main</main>
-        <section>Section</section>
-        <aside>Aside</aside>
-        <nav>Nav</nav>
-        <footer>Footer</footer>
+        <bmi_calc><h3>BMI-Calc</h3></bmi_calc>
 
-	</div>
+        <ernaehrungbox>
+            <h3>Ernährung</h3>
+        </ernaehrungbox>
 
+        </section>
+
+        
+
+        <section id="kurse">
+        <kurse><h3>Hunderte Kurse</h3><hr></kurse>
+        
+        <kurse2><h4>zur Auswahl</h4></kurse2>
+        <kurspic1> 
+            <img src="/pictures/frontpage/engin-akyurt-sDhprtw0p6U-unsplash-min.jpg" alt="" class="responsive">
+        </kurspic1>
+        <kurstext1>
+            <p>
+                Entdecken Sie effektive Rückenübungen für Ihr Rückentraining. Einfache Übungen können Sie meist zuhause und ohne weitere Geräte absolvieren.
+            </p>
+
+            
+        </kurstext1>
+
+        <kurspic2> 
+            <img src="http://placehold.it/250x150" alt="" class="responsive">
+        </kurspic2>
+        <kurstext2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan
+                lacus vel facilisis.
+            </p>
+        </kurstext2>
+
+        <kurspic3> 
+            <img src="http://placehold.it/250x150" alt="" class="responsive">
+        </kurspic3>
+
+        <kurstext3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan
+                lacus vel facilisis.
+            </p>
+        </kurstext3>
+        </section>
+
+        <section id="abosection">
+        
+            <abos><h3>Flexible Abos</h3><hr></abos>
+            <standard_abo>Noch machen</standard_abo>
+            <prof_abo>Noch machen</prof_abo>
+            <ult_abo>auch noch</ult_abo>
+            </section>
+
+        <section id="kontaktus">
+            <kontakt>
+            <h3>Kontakt</h3>
+            <hr>
+            </kontakt>
+    
+            
+            <name>    <input type="text" tabindex="1" placeholder="Name">
+                <br>
+            </name>
+            <mail>
+                <input type="email" tabindex="2" placeholder="Email">
+                <br>
+            </mail>
+            <message>
+                <textarea tabindex="3" placeholder="Nachricht"></textarea>
+                <input class="button" type="submit" value="">
+            </message>
+            
+    
+            <div id="background_kontakt"> </div>
+        </section>
+        
+        <footer>
+            <div class="footerContainer">
+                <ul class="footerContent">
+                    <li>
+                        <h2>Mehr Info</h2>
+    
+                        <ul class="box">
+                            <li><a href="#">So geht es</a></li>
+                            <li><a href="#">Abo</a></li>
+                        </ul>
+                    </li>
+                    <div>
+                        <div class="logoContainer">
+                            <img src="../Img/Logo-BW.png" alt="">
+                        </div>
+                        <div class="box">
+                            <a href="https://www.instagram.com" target="_blank"><img src="../Img/instagram.svg" alt="instagramIcon"></a>
+                            <a href="https://www.facebook.com" target="_blank"><img src="../Img/facebook.svg" alt="facebookIcon"></a>
+                            <a href="https://www.youtube.com" target="_blank"><img src="../Img/youtube.svg" alt="youTubeIcon"></a>
+                        </div>
+                    </div>
+                    <li>
+                        <h2>Kunden Service</h2>
+                        <ul class="box">
+                            <li><a href="#">Hilfe und Support</a></li>
+                            <li><a href="#">Community</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerUnten">
+                <h4>Datenschutz</h4>
+                <p>Copyright &copy;2020. Alle Rechte vorbehalten. </p>
+                <h4>Impressum</h4>
+            </div>
+        </footer>
+        <!--<section id="eins"></section>--->
+
+    </div>  
+       
+    <script src="/hamMenu.js"></script>
 </body>
+
 </html>
