@@ -99,6 +99,7 @@ aboutus_text{
     margin: 0 auto;
 
     grid-template-areas:
+        ". . . . . . . . . . . . . ."
         ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
         ". . . . . . . . . . . . . ."
         ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
@@ -146,6 +147,7 @@ ernaehrungbox{
     max-width: 100%;
     margin: 0 auto;
     grid-template-areas:
+    ". . . . . . . . . . . . . ."
     ". . . ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene . . ."
         ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
         ". . . . . . . . . . . . . ."
@@ -153,7 +155,7 @@ ernaehrungbox{
         ". . . . . . . . . . . . . ."
         ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
         ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
-        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
         ". . . . . . . . . . . . . ."
         ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
         ". . . . . . . . . . . . . ."
@@ -225,6 +227,7 @@ kurstext3{
 
     grid-template-areas:
     ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
     ". . . . kurse kurse kurse kurse kurse kurse . . . ."
     ". . . . . . . kurse2 kurse2 kurse2 kurse2 . . ."
     ". . . . . . . . . . . . . ."
@@ -244,17 +247,17 @@ abos{
 
 standard_abo{
     grid-area: standard_abo;
-    border: 1px solid rgb(0, 0, 0);
+    
 }
 
 ult_abo{
     grid-area: ult_abo;
-    border: 1px solid red;
+   
 }
 
 prof_abo{
     grid-area: prof_abo;
-    border: 1px solid red;
+   
 }
 
 #abosection{
@@ -270,6 +273,8 @@ prof_abo{
     margin: 0 0;
 
     grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". . . . abos abos abos abos abos . . . . ."
     ". . . . . . . . . . . . . ."
@@ -302,9 +307,68 @@ message{
     grid-area:message;
 }
 
+kontakt_pic{
+    grid-area: kontaktpic;    
+}
+
+absenden{
+    grid-area: absendebutton;
+}
 footer{
     grid-area: footer;
 }
+
+name input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+
+} 
+
+mail input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+
+} 
+
+message textarea {
+    width: 100%;
+    height: 220px;
+    padding: 12px 20px;
+    box-sizing: border-box; 
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+absenden input[type=submit]{
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box; 
+    border: 2px solid #ccc;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color: #f8f8f8;
+   
+}
+
+
+
+
+
+
 
 #kontaktus{
     background-image: url("/pictures/images_high/Startseite_06.jpg");
@@ -320,18 +384,22 @@ footer{
     margin: 0 0;
 
     grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
     ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
     ". . . . . . . . . . . . . ."
-    ". . . . . . . . name name name name name ."
-    ". . . . . . . . mail mail mail mail mail ."
-    ". . . . . . . . message message message message message ."
-    ". . . . . . . . message message message message message ."
-    ". . . . . . . . message message message message message ."
-    ". . . . . . . . message message message message message ."
-    ". . . . . . . . message message message message message ."
     ". . . . . . . . . . . . . ."
-    "footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
-    
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic name name name name . ."
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  mail mail mail mail . ."
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
+    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  absendebutton absendebutton . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
     ;
 }
 
@@ -515,11 +583,17 @@ background{
         font-size: 9vw;
     }
 
+    h3 {
+        text-align: center;
+        font-size: 9vw;
+    }
+
     #home {
         background-image: url("/pictures/images_low/Startseite_low_01.jpg");
         background-position: center;
         background-size: 100% 100%;
     grid-template-areas:
+    ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". . headline headline headline headline headline headline headline headline headline headline . ."
     ". . headline headline headline headline headline headline headline headline headline headline . ."
@@ -539,10 +613,10 @@ background{
         background-size: 100% 100%;
         grid-template-areas:
         ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
-        ". ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
-        ". ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
-        ". ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
-        ". ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+        "ceoPic ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+        "ceoPic ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+        ". . . . . .  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+        ". . . . . .  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
         ". . . . . . . . . . . . . ."
         ". . . . . . . . . . . . . .";
 
@@ -560,7 +634,7 @@ background{
             ". . . . . . . . . . . . . ."
             ". . . . . . . . . . . . . ."
             ". . . . . . . . . . . . . ."
-            ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+            ". bmi_calc bmi_calc bmi_calc bmi_calc bmi_calc . . . . . . . ."
             
             ". . . . . . . . . . . . . ."
             ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
@@ -595,12 +669,13 @@ background{
         background-position: center;
         background-size: 100% 100%;
         grid-template-areas:
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."   
         ". . . . kurse kurse kurse kurse kurse kurse . . . ."
         ". . . . . . . kurse2 kurse2 kurse2 kurse2 . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 . . . "
-        ". . . kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 . . . "
-        ". . . kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 . . . "
+        ". . kurspic1  kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1  . . "
+        ". . kurspic1  kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1  . . "
+        ". . kurspic1  kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1  . . "
         ". kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 . "
         ". kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 . "
         ". . . kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 . . . "
@@ -622,20 +697,44 @@ background{
         background-image: url("/pictures/images_low/Startseite_low_05.jpg");
     
         grid-template-areas:
-       
+        ". . . . . . . . . . . . . ."
         ". . . . abos abos abos abos abos . . . . ."
+        ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+        ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+        ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
         ". . . . . . . . . . . . . ."
-        ". standard_abo standard_abo standard_abo standard_abo . . . . ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
-        ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+        ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+        ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+        ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
         ". . . . . . . . . . . . . ."
+        ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+        ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+        ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
         ". . . . . . . . . . . . . .";
     
     }
     
-
+    #kontaktus{
+        background-image: url("/pictures/images_low/Startseite_low_06.jpg");
+        
+    
+        grid-template-areas:
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . name name name name name name name ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic mail mail mail mail mail mail mail ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        ". . . . . . message message  message message message message message ."
+        ". . . . . . absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ." 
+        ;
+    }
 
 }
 
@@ -643,11 +742,80 @@ background{
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
+    #kontaktus{
+        background-image: url("/pictures/images_low/Startseite_low_06.jpg");
+        
+    
+        grid-template-areas:
+        ". . . . . . . . . . . . . ."
+        ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . name name name name name name name ."
+        ". . . . . . mail mail mail mail mail mail mail ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ;
+    }
 
 }
 
 /*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #home {
+
+        background-image: url("/pictures/images_high/Startseite_01.jpg");
+        background-position: center;
+        background-size: 100% 100%;
+      
+    
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-gap: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+        grid-template-areas:
+        ". . . . header header header header header header . login . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". headline headline .  . . . . . . headline2 headline2 .  ."
+        ". headline headline homepic  homepic homepic homepic homepic homepic homepic headline2 headline2 .  ."
+        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+        ". . . homepic homepic homepic homepic homepic homepic homepic . . . ."
+        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+        ". . . . . . . . . . . . . .";
+    }
+
+
+
+    #kontaktus{
+        background-image: url("/pictures/images_high/Startseite_06.jpg");
+        
+    
+        grid-template-areas:
+        ". . . . . . . . . . . . . ."   
+        ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . name name name name name name name ."
+        ". . . . . . mail mail mail mail mail mail mail ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton . . .  ."
+        ". . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . ."
+        ;
+    }
 
 }
 
