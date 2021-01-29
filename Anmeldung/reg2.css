@@ -32,33 +32,27 @@ body{
     padding: 0px;
 }
 
-/**Abtrennung*/
-hr{
-    width: 20em;
-    height: 4px ;
-    background: #161616;
-    margin-top: 0px;
-    }
 
-    h1 {
-        color: #CECECE;
+
+h1 {
+        color: #E7E4E4;
         font-family: 'OpenSans', sans-serif;
         font-weight: bolder;
         font-size: 2vw;
         margin: 0;
         text-align: left;
         
-        }
+    }
         
     /**Überschrift2 Home */
-    h2 {
-    color: #CECECE;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 400;
-    font-size: 1.5vw;
-    font-style: italic;
-    margin: 0;
-    text-align: left;
+h2 {
+      color: #E7E4E4;
+      font-family: 'OpenSans', sans-serif;
+      font-weight: 400;
+      font-size: 1.5vw;
+      font-style: italic;
+      margin: 0;
+      text-align: left;
     }
 
 
@@ -137,10 +131,19 @@ hr{
 
 
     #weiter a {
-        padding-top: 7px;
-        color: #d6d6d6;
-        text-decoration: none;
-      }
+      padding-top: 7px;
+      color: #d6d6d6;
+      text-decoration: none;
+      font-family: 'OpenSans', sans-serif;
+      font-weight: bolder;
+      font-size: 1vw;
+      text-align: center;
+    }
+  
+    #weiter ul {
+      padding: 0px;
+      list-style: none;
+    }
 
     #weiter:hover {
         transition: 0.3s;
@@ -206,3 +209,31 @@ hr{
     #input[type="submit"]:hover {
         background-color: #5f6161;
       }
+
+
+/*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
+Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    
+
+}
+
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  
+
+}
+  
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+
+   
+}

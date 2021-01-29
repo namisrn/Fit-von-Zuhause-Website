@@ -71,3 +71,9 @@ footer {
 }
 
 /********************* /FOOTER *********************/
+
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+
+}

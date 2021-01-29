@@ -124,7 +124,17 @@ p{
     padding-top: 7px;
     color: #d6d6d6;
     text-decoration: none;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bolder;
+    font-size: 1vw;
+    text-align: center;
   }
+
+  #weiter ul {
+    padding: 0px;
+    list-style: none;
+  }
+
 
 #weiter:hover {
     transition: 0.3s;

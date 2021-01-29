@@ -271,7 +271,7 @@ header {
     header,
     main,
     footer {
-      position: relative;
+      
       top: 10vh;
     }
   
