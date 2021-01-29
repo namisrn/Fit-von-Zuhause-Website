@@ -2,366 +2,260 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-  src: url("../Font/OpenSans-Light.ttf"),
-    url("../Font/OpenSans.woff") format("woff"),
+  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
     url("../Font/OpenSans.woff2") format("woff2");
 }
 
-
 :root {
-    /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
-    --schwarz: #1b1b1b;
-    --grau: #747474;
-    --hellGrau: #d6d6d6;
-    --blau: #034078;
-    --hellBlau: #3b88c6;
-  }
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+  --hellBlau: #3b88c6;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "OpenSans";
+}
 
 /********************* Navigation *********************/
 .hamburgerMenuContainer {
-    display: none;
-  }
-  
-  nav {
-    margin: 1.5em 30em;
-    display: flex;
-    justify-content: center;
-    height: 75px;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  
-    /* border: 3px dotted red; */
-  }
-  
-  .navContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d6d6d6;
-    border-radius: 10px;
-    opacity: 0.8;
-  
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
-  }
-  
-  .navContainer a {
-    color: #1b1b1b;
-  }
-  
-  .logoContaienr img {
-    width: 130px;
-    height: 120px;
-  }
-  .anmeldungsContainer {
-    height: 50px;
-    color: #d6d6d6;
-    border-radius: 10px;
-    background-color: #034078;
-    margin: 12px 0 0 25px;
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
-  }
-  
-  .anmeldungsContainer a {
-    padding-top: 7px;
-    color: #d6d6d6;
-  }
-  .anmeldungsContainer a:hover {
-    transition: 0.3s;
-    text-decoration: underline;
-  }
-  
-  /* Dropdown für Anmeldung */
-.login-form{
-  opacity: 0;
-  position: absolute;
-  width: 300px;
-  height: auto;
-  right: -18em;
-  top: 80px;
+  display: none;
+}
+
+nav {
+  margin: 1.5em 30em;
+  display: flex;
+  justify-content: center;
+  height: 75px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  /* border: 3px dotted red; */
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #d6d6d6;
   border-radius: 10px;
+  opacity: 0.8;
+
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
-  
-  
 }
 
-label{
- position: relative;
- font-size: 26px; 
- margin-left: 88px;
- margin-right: 50%;
- font-weight: bold;
- color: #EFEFEF;
+.navContainer a {
+  color: #1b1b1b;
 }
 
-.login-form>form{
-  width: 250px;
-  margin: 25px auto;
-  font-family: 'OpenSans', sans-serif;
-  font-size: 20px; 
-  
- 
+.logoContaienr img {
+  width: 130px;
+  height: 120px;
+}
+.anmeldungsContainer {
+  height: 50px;
+  color: #d6d6d6;
+  border-radius: 10px;
+  background-color: #034078;
+  margin: 12px 0 0 25px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
 }
 
-.login-form a {
-  font-family: 'OpenSans', sans-serif;
+.anmeldungsContainer a {
+  padding-top: 7px;
+  color: #d6d6d6;
+}
+.anmeldungsContainer a:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
 
-  font-size: 12px;
-  float: right;
-  color: #78849D;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+nav li {
+  margin: 0 2em;
   text-decoration: none;
-  top: 20px; 
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.3s all;
+  border-radius: 5px;
 }
 
-hr{
-  width: 10em;
-  height: 1px ;
-  background: #010101;
-  margin-top: 50px;
-  }
-
-  h5{
-    margin-bottom: 0px;
-    font-family: 'OpenSans', sans-serif;
-
-  font-size: 12px;
- 
-  color: #78849D;
-  }
-input[type="text"],input[type="password"]
-{
-  width: 100%;
-  height: 28px;
-  border: 0px;
-  outline: none;
-  border-radius: 6px;
-  box-shadow: 0 0 8px #747474;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  font-family: 'OpenSans', sans-serif;
-  color: #78849D;
-  font-size: 16px;
+.linksMenuContainer a:hover,
+.rechtsMenuContainer a:hover {
+  transition: 0.3s;
+  color: var(--hellGrau);
+  background-color: var(--blau);
 }
 
-input[type="submit"]
-{
-  width: 100%;
-  height: 35px;
-  background-color: #404242;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'OpenSans', sans-serif;
-  color: white;
-  outline: none;
-  border: 0px;
-  border-radius: 6px;
-  cursor: pointer;
-  
-}
-
-#facebook>input[type="submit"],#google>input[type="submit"]{
-  background-color: #026A96;
-  margin-top: 10px;
-  margin-bottom: 5px;
-
-}
-#facebook>input[type="submit"]:hover,#google>input[type="submit"]:hover {
-  background-color: #037caf;
-
-}
-
-input[type="submit"]:hover {
-  background-color: #5f6161;
-}
-
-.nav-active{ /*ganzen Container sichtba machen*/
-  opacity: 1;
-}
- /* Dropdown für Anmeldung ENDE */
-
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-  }
-  nav li {
-    margin: 0 2em;
-    text-decoration: none;
-  }
-  nav a {
-    display: block;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: 0.3s all;
-    border-radius: 5px;
-  }
-  
-  .linksMenuContainer a:hover,
-  .rechtsMenuContainer a:hover {
-    transition: 0.3s;
-    color: var(--hellGrau);
-    background-color: var(--blau);
-  }
-  
-  /********************* /Navigation *********************/
-
-
+/********************* /Navigation *********************/
 
 /********************* HEADER *********************/
 header {
-    position: relative;
-   
-    overflow: hidden;
-  }
-  
-  /* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
-  header > img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transform: skewY(-6deg);
-    transform-origin: top left;
-  }
-  
-  .titleContainer {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bolder;
-    top: 25%;
-    margin: 0 10%;
-    z-index: 5;
-    color: var(--hellGrau);
-  }
-  
-  .websiteTitle {
-    font-size: 5vw;
-    font-weight: bolder;
-  }
-  
-  .websiteBeschreibung {
-    font-size: 2.5vw;
-    font-weight: 600;
-    font-style: italic;
-    padding-top: 3em;
-  }
-  /********************* /HEADER *********************/
+  position: relative;
 
-  
-  /********************* RESPONSIVE DESIGN *********************/
+  overflow: hidden;
+}
+
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  top: 25%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
+}
+
+.websiteTitle {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 2.5vw;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 3em;
+}
+/********************* /HEADER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
 
 /*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
 @media screen and (max-width: 1023px) {
-    .navContainer,
-    .anmeldungsContainer {
-      display: none;
-    }
-    .hamburgerMenuContainer {
-      display: block;
-    }
-    header,
-    main,
-    footer {
-      position: relative;
-      top: 10vh;
-    }
-  
-    .hLine {
-      width: 30px;
-      height: 3px;
-      background: white;
-      margin: 5px;
-    }
-    nav {
-      margin: 0;
-      display: block;
-      position: fixed;
-      height: 10vh;
-      background-color: var(--schwarz);
-  
-      /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
-    }
-  
-    nav img {
-      position: absolute;
-      height: 10vh;
-      margin-left: 1em;
-      z-index: 999;
-    }
-  
-    .hamburger {
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: 50%;
-      transform: translate(-5%, -50%);
-      z-index: 2;
-    }
-  
-    .hamburgerMenu {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-left: auto;
-      list-style: none;
-      position: fixed;
-      background-color: var(--schwarz);
-      height: 100vh;
-      width: 100%;
-      clip-path: circle(50px at 90% -10%);
-      -webkit-clip-path: circle(50px at 90% -10%);
-      transition: all 0.4s ease-out;
-      pointer-events: none;
-    }
-    .hamburgerMenu.open {
-      clip-path: circle(1200px at 90% 60%);
-      -webkit-clip-path: circle(1200px at 90% 60%);
-      pointer-events: all;
-    }
-  
-    .hamburgerMenu li a {
-      color: white;
-      text-decoration: none;
-      font-size: 25px;
-    }
-  
-    .hamburgerMenu li a:hover {
-      text-decoration: underline;
-    }
-  
-    .hamburgerMenu li:nth-child(1) {
-      transition: all 0.5s ease 0.15s;
-    }
-    .hamburgerMenu li:nth-child(2) {
-      transition: all 0.5s ease 0.25s;
-    }
-    .hamburgerMenu li:nth-child(3) {
-      transition: all 0.5s ease 0.35s;
-    }
-    .hamburgerMenu li:nth-child(4) {
-      transition: all 0.5s ease 0.45s;
-    }
-    .hamburgerMenu li:nth-child(5) {
-      transition: all 0.5s ease 0.55s;
-    }
-    li.fade {
-      opacity: 1;
-    }
-  
-    #anmeldungbtn {
-      background: green;
-      padding: 1em;
-      border-radius: 10px;
-    }
+  .navContainer,
+  .anmeldungsContainer {
+    display: none;
   }
-  /**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+  .hamburgerMenuContainer {
+    display: block;
+  }
+  header,
+  main,
+  footer {
+    position: relative;
+    top: 10vh;
+  }
+
+  .hLine {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    margin: 0;
+    display: block;
+    position: fixed;
+    height: 10vh;
+    background-color: var(--schwarz);
+
+    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
+  }
+
+  nav img {
+    position: absolute;
+    height: 10vh;
+    margin-left: 1em;
+    z-index: 999;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    position: fixed;
+    background-color: var(--schwarz);
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(50px at 90% -10%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 0.4s ease-out;
+    pointer-events: none;
+  }
+  .hamburgerMenu.open {
+    clip-path: circle(1200px at 90% 60%);
+    -webkit-clip-path: circle(1200px at 90% 60%);
+    pointer-events: all;
+  }
+
+  .hamburgerMenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .hamburgerMenu li a:hover {
+    text-decoration: underline;
+  }
+
+  .hamburgerMenu li:nth-child(1) {
+    transition: all 0.5s ease 0.15s;
+  }
+  .hamburgerMenu li:nth-child(2) {
+    transition: all 0.5s ease 0.25s;
+  }
+  .hamburgerMenu li:nth-child(3) {
+    transition: all 0.5s ease 0.35s;
+  }
+  .hamburgerMenu li:nth-child(4) {
+    transition: all 0.5s ease 0.45s;
+  }
+  .hamburgerMenu li:nth-child(5) {
+    transition: all 0.5s ease 0.55s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+
+  #anmeldungbtn {
+    background: green;
+    padding: 1em;
+    border-radius: 10px;
+  }
+}
+/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
