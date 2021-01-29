@@ -152,7 +152,6 @@ header > img {
 /********************* /HEADER *********************/
 
 /********************* RESPONSIVE DESIGN *********************/
-
 /*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
 @media screen and (max-width: 1023px) {
   .navContainer,
@@ -186,7 +185,8 @@ header > img {
   }
 
   nav img {
-    position: absolute;
+    position: relative;
+    float: left;
     height: 10vh;
     margin-left: 1em;
     z-index: 999;
@@ -215,11 +215,15 @@ header > img {
     clip-path: circle(50px at 90% -10%);
     -webkit-clip-path: circle(50px at 90% -10%);
     transition: all 0.4s ease-out;
+
+    /* Die Linke, die in HamburgerMenu sind, werden durch dieser Code nich klickbar bis auf die HamburgerMenu öffen ist */
     pointer-events: none;
   }
   .hamburgerMenu.open {
     clip-path: circle(1200px at 90% 60%);
     -webkit-clip-path: circle(1200px at 90% 60%);
+
+    /* Alle linke, die HamburgerMenu sind, sind jetzt klickbar, da der Menü öffen ist*/
     pointer-events: all;
   }
 
@@ -229,10 +233,12 @@ header > img {
     font-size: 25px;
   }
 
-  .hamburgerMenu li a:hover {
-    text-decoration: underline;
+  /* Damit die linke mit kleine Verzögerung bzw. Animation ausführen können, blenden wir erstmal die opacity der Linke aus. */
+  .hamburgerMenu li {
+    opacity: 0;
   }
 
+  /* Dann wird hier verschiede trasition-zeit eingeführt, damit jeder Link mit kleine Verzögerung auftaucht.*/
   .hamburgerMenu li:nth-child(1) {
     transition: all 0.5s ease 0.15s;
   }
@@ -248,10 +254,15 @@ header > img {
   .hamburgerMenu li:nth-child(5) {
     transition: all 0.5s ease 0.55s;
   }
+
+  /* Am Ende wir mit hilfe von diese Zeile und JS-QuellCode alle link aufgetaucht. */
   li.fade {
     opacity: 1;
   }
 
+  .hamburgerMenu li a:hover {
+    text-decoration: underline;
+  }
   #anmeldungbtn {
     background: green;
     padding: 1em;
