@@ -62,26 +62,27 @@ hr{
     }
 
 
-    headline1{
+    #headline1{
         grid-area: headline1;
     }
     
-    headline2{
+    #headline2{
         grid-area: headline2;
     }
     
-    headline3{
+    #headline3{
         grid-area: headline3;
     }
 
-    mailname{
+    #mailname{
         grid-area: mailname;
     }
-    mail{
+
+    #mail{
         grid-area: mail;
     }
 
-    mail input[type=email]{
+    #mail input[type=email]{
         width: 100%;
         padding: 12px 20px;
         margin:  0px;
@@ -94,15 +95,15 @@ hr{
     
     } 
 
-   passname{
+   #passname{
        
         grid-area:passname;
     }
-   pass{
+   #pass{
         grid-area:pass;
     }
 
-    pass input[type=password]{
+    #pass input[type=password]{
         width: 100%;
         padding: 12px 20px;
         margin:  0px;
@@ -116,13 +117,13 @@ hr{
     
     } 
 
-   notification{
+   #notification{
         grid-area:notification;
     }
 
 
 
-    weiter{
+    #weiter{
         grid-area: weiter;
             height: 50px;
             color: #d6d6d6;
@@ -135,17 +136,18 @@ hr{
     }
 
 
-    weiter a {
+    #weiter a {
         padding-top: 7px;
         color: #d6d6d6;
         text-decoration: none;
       }
-      weiter:hover {
+
+    #weiter:hover {
         transition: 0.3s;
         background-color: #0458a7;
       }
 
-      #facebookButton{
+    #facebookButton{
         grid-area:fb;
       }
 
@@ -156,6 +158,7 @@ hr{
       hr{
         grid-area:hr;
       }
+
       #anmeldeSection2 {
         
         background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
@@ -194,11 +197,12 @@ hr{
         margin-bottom: 5px;
       
       }
-      #facebookButton>input[type="submit"]:hover,#googleButton>input[type="submit"]:hover {
+
+    #facebookButton>input[type="submit"]:hover,#googleButton>input[type="submit"]:hover {
         background-color: #037caf;
       
       }
       
-      input[type="submit"]:hover {
+    #input[type="submit"]:hover {
         background-color: #5f6161;
       }
