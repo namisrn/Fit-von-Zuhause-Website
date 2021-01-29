@@ -38,18 +38,17 @@ hr{
     background: #161616;
     }
     
-    h1 {
-        color: #CECECE;
-        font-family: 'OpenSans', sans-serif;
-        font-weight: bolder;
-        font-size: 2vw;
-        margin: 0;
-        text-align: left;
-        
-        }
+h1 {
+    color: #CECECE;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bolder;
+    font-size: 2vw;
+    margin: 0;
+    text-align: left;      
+    }
         
     /**Überschrift2 Home */
-    h2 {
+h2 {
     color: #CECECE;
     font-family: 'OpenSans', sans-serif;
     font-weight: 400;
@@ -61,7 +60,6 @@ hr{
 
     /**Überschrift */
 h3 {
-
     color: #1B1B1B;
     font-family: 'OpenSans', sans-serif;
     font-weight: 400;
@@ -85,31 +83,31 @@ p{
 
     /*Grid Definieren und Einstellen, erster Teil *HOME***/
 
-    headline1{
+#headline1{
     grid-area: headline1;
 }
 
-headline2{
+#headline2{
     grid-area: headline2;
 }
 
-headline3{
+#headline3{
     grid-area: headline3;
 }
 
-standard_abo{
+#standard_abo{
     grid-area: standard_abo;
 }
 
-prof_abo{
+#prof_abo{
     grid-area: prof_abo;
 }
 
-ult_abo{
+#ult_abo{
     grid-area: ult_abo;
 }
 
-weiter{
+#weiter{
     grid-area: weiter;
     
         height: 50px;
@@ -122,17 +120,18 @@ weiter{
 }
 
 
-weiter a {
+#weiter a {
     padding-top: 7px;
     color: #d6d6d6;
     text-decoration: none;
   }
-  weiter:hover {
+
+#weiter:hover {
     transition: 0.3s;
     background-color: #0458a7;
   }
 
-standard_abo.onclick{
+#standard_abo.onclick{
     opacity: 0;
 }
 
@@ -166,23 +165,23 @@ standard_abo.onclick{
 }
 
 
-headline4{
+#headline4{
     grid-area: headline4;
 }
 
-vorteil1{
+#vorteil1{
     grid-area: vorteil1;
     background:#ffffff7a ;
     border-radius: 10px;
 }
 
-vorteil2{
+#vorteil2{
     grid-area: vorteil2;
     background:#ffffff7a ;
     border-radius: 10px;
 }
 
-vorteil3{
+#vorteil3{
     grid-area: vorteil3;
     background:#ffffff7a ;
     border-radius: 10px;
