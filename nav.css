@@ -33,6 +33,9 @@
     top: 0;
     left: 0;
     right: 0;
+    font-family: "OpenSans";  
+    
+    
   
     /* border: 3px dotted red; */
   }
@@ -70,12 +73,20 @@
     padding-top: 7px;
     color: #d6d6d6;
   }
+
+  .anmeldungsContainer ul {
+
+    padding-left: 0px;
+    margin-bottom: 16px;
+    margin-top: 3px;
+  }
+
   .anmeldungsContainer a:hover {
     transition: 0.3s;
     text-decoration: underline;
   }
   
-  /* Dropdown für Anmeldung */
+      /******************** Dropdown für Anmeldung ************************/
 .login-form{
   opacity: 0;
   position: absolute;
@@ -118,14 +129,14 @@ label{
   top: 20px; 
 }
 
-hr{
+.login-form hr{
   width: 10em;
   height: 1px ;
   background: #010101;
   margin-top: 50px;
   }
 
-  h5{
+.login-form  h5{
     margin-bottom: 0px;
     font-family: 'OpenSans', sans-serif;
 
@@ -133,7 +144,7 @@ hr{
  
   color: #78849D;
   }
-input[type="text"],input[type="password"]
+.login-form input[type="text"],input[type="password"]
 {
   width: 100%;
   height: 28px;
@@ -148,7 +159,7 @@ input[type="text"],input[type="password"]
   font-size: 16px;
 }
 
-input[type="submit"]
+.login-form input[type="submit"]
 {
   width: 100%;
   height: 35px;

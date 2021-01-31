@@ -85,6 +85,10 @@ header{
 
 }
 
+#aboutus_text p{
+    text-align: left;
+}
+
 #aboutus{
     background-image: url("/pictures/images_high/Startseite_02.jpg");
     
@@ -179,40 +183,59 @@ header{
 }
 
 #kurstext1{
-    background: linear-gradient(0deg, rgba(136,136,136,0) 56%, rgba(190,190,190,1) 100%);
+    
     grid-area:kurstext1;
+    text-align: left;
     border-radius: 10px;
     margin-left: -100px;
     margin-top: 25px;
 }
+
+#kurstext1 p{
+    background: linear-gradient(0deg, rgba(136,136,136,1) 56%, rgba(190,190,190,1) 100%);
+    border-radius: 10px;
+}
+
+
 #kurspic2{
     border-radius: 10px;
     grid-area:kurspic2;
 }
 #kurstext2{
     grid-area:kurstext2;
-    background: linear-gradient(0deg, rgba(136,136,136,0) 56%, rgba(190,190,190,1) 100%);
+   
+    text-align: left;
     border-radius: 10px;
     margin-left: -75px;
     margin-top: -120px;
     margin-bottom: 250px;
     margin-right: 25px;
 }
+
+#kurstext2 p{
+    background: linear-gradient(0deg, rgba(136,136,136,1) 56%, rgba(190,190,190,1) 100%);
+    border-radius: 10px;
+}
+
 #kurspic3{
     border-radius: 10px;
     grid-area:kurspic3;
 }
 
 #kurstext3{
-    background: linear-gradient(0deg, rgba(136,136,136,0) 56%, rgba(190,190,190,1) 100%);
+   
     grid-area:kurstext3;
+    text-align: left;
     
-    border-radius: 10px;
     margin-right: -100px;
     margin-top: 25px;
     margin-bottom: 75px;
 }
 
+#kurstext3 p{
+    background: linear-gradient(0deg, rgba(136,136,136,1) 56%, rgba(190,190,190,1) 100%);
+    border-radius: 10px;
+}
 
 #kurse {
     background-image: url("/pictures/images_high/Startseite_04.jpg");
@@ -501,7 +524,7 @@ nav ul li a{
     font-family: 'OpenSans', sans-serif;
     font-weight: 400;
     color: #161616;
-    font-size: 16px;
+    
 }
 
 /**Bindestrich Überschriften*/
@@ -646,19 +669,18 @@ background{
     }
 
     #kurstext1{ 
-        border: 1px solid rgb(12, 247, 71);
+   
         margin: 0;
         border-radius: 10px; 
     }
 
     #kurstext2{ 
-        border: 1px solid rgb(247, 192, 12);
+       
         margin: 0;
         border-radius: 10px; 
     }
 
     #kurstext3{ 
-        border: 1px solid rgb(15, 148, 115);
         margin: 0;
         border-radius: 10px; 
     }
