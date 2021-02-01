@@ -2,7 +2,7 @@
     /* Definieren lokal Font*/
     /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
     font-family: "OpenSans";
-    src: url("../Font/OpenSans-Light.ttf"),
+    src: url("../Font/OpenSans.ttf"),
       url("../Font/OpenSans.woff") format("woff"),
       url("../Font/OpenSans.woff2") format("woff2");
   }
