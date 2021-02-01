@@ -1,3 +1,11 @@
+<?php
+$browserCompression =$_SERVER['HTTP_ACCEPT_ENCODING'];
+if(stristr($browserCompression,"gzip")){
+    ob_start("ob_gzhandler");
+}
+header("Content‐type:text/html;charset=utf‐8");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,7 +57,7 @@
             <div class="hLine"></div>
         </div>
         <ul class="hamburgerMenu">
-            <li id="anmeldungbtn"><a href="#">Anmeldung</a></li>
+            <li id="anmeldungbtn"><a href="/Anmeldung/anmeldung1.html">Anmeldung</a></li>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/Kurse/kurse.html">Kurse</a></li>
             <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
@@ -64,7 +72,7 @@
 
     <header>
         <div class="titleContainer">
-            <p class="websiteTitle">Fit <br> von <br> Zuhause.</p>
+            <p class="websiteTitle">Fit. <br> Zuhause.</p>
             <p class="websiteBeschreibung">einfach. <br> unkompliziert.</p>
         </div>
         <img src="./img/headerPic_Kurse.webp" alt="headerPic">
