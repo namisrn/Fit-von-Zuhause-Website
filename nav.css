@@ -7,16 +7,23 @@
     url("../Font/OpenSans.woff2") format("woff2");
 }
 
-
 :root {
-    /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
-    --schwarz: #1b1b1b;
-    --grau: #747474;
-    --hellGrau: #d6d6d6;
-    --blau: #034078;
-    --hellBlau: #3b88c6;
-  }
+  /*Farbe Palette werden hier als CSS-Variablen definieren, damit man sie nachher schneller und einfacher mit definierten name rufen kann.*/
+  --schwarz: #1b1b1b;
+  --grau: #747474;
+  --hellGrau: #d6d6d6;
+  --blau: #034078;
+  --hellBlau: #3b88c6;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "OpenSans";
+}
 
 /********************* Navigation *********************/
 .hamburgerMenuContainer {
@@ -96,37 +103,52 @@
   top: 80px;
   background-color: #d6d6d6;
   border-radius: 10px;
+  opacity: 0.8;
+
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
-  
-  
 }
 
-label{
- position: relative;
- font-size: 26px; 
- margin-left: 88px;
- margin-right: 50%;
- font-weight: bold;
- color: #EFEFEF;
+.navContainer a {
+  color: #1b1b1b;
 }
 
-.login-form>form{
-  width: 250px;
-  margin: 25px auto;
-  font-family: 'OpenSans', sans-serif;
-  font-size: 20px; 
-  
- 
+.logoContaienr img {
+  width: 130px;
+  height: 120px;
+}
+.anmeldungsContainer {
+  height: 50px;
+  color: #d6d6d6;
+  border-radius: 10px;
+  background-color: #034078;
+  margin: 12px 0 0 25px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
 }
 
-.login-form a {
-  font-family: 'OpenSans', sans-serif;
+.anmeldungsContainer a {
+  padding-top: 7px;
+  color: #d6d6d6;
+}
+.anmeldungsContainer a:hover {
+  transition: 0.3s;
+  text-decoration: underline;
+}
 
-  font-size: 12px;
-  float: right;
-  color: #78849D;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+nav li {
+  margin: 0 2em;
   text-decoration: none;
-  top: 20px; 
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: 0.3s all;
+  border-radius: 5px;
 }
 
 .login-form hr{
@@ -175,100 +197,129 @@ label{
   
 }
 
-#facebook>input[type="submit"],#google>input[type="submit"]{
-  background-color: #026A96;
-  margin-top: 10px;
-  margin-bottom: 5px;
-
-}
-#facebook>input[type="submit"]:hover,#google>input[type="submit"]:hover {
-  background-color: #037caf;
-
-}
-
-input[type="submit"]:hover {
-  background-color: #5f6161;
+/* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
+header > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: skewY(-6deg);
+  transform-origin: top left;
 }
 
-.nav-active{ /*ganzen Container sichtba machen*/
-  opacity: 1;
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  top: 25%;
+  margin: 0 10%;
+  z-index: 5;
+  color: var(--hellGrau);
 }
- /* Dropdown für Anmeldung ENDE */
 
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+.websiteTitle {
+  font-size: 5vw;
+  font-weight: bolder;
+}
+
+.websiteBeschreibung {
+  font-size: 2.5vw;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 3em;
+}
+/********************* /HEADER *********************/
+
+/********************* RESPONSIVE DESIGN *********************/
+/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+@media screen and (max-width: 1023px) {
+  .navContainer,
+  .anmeldungsContainer {
+    display: none;
   }
-  nav li {
-    margin: 0 2em;
-    text-decoration: none;
-  }
-  nav a {
+  .hamburgerMenuContainer {
     display: block;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: 0.3s all;
-    border-radius: 5px;
   }
-  
-  .linksMenuContainer a:hover,
-  .rechtsMenuContainer a:hover {
-    transition: 0.3s;
-    color: var(--hellGrau);
-    background-color: var(--blau);
-  }
-  
-  /********************* /Navigation *********************/
-
-
-
-/********************* HEADER *********************/
-header {
+  header,
+  main,
+  footer {
     position: relative;
-   
-    overflow: hidden;
+    top: 10vh;
   }
-  
-  /* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
-  header > img {
+
+  .hLine {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    margin: 0;
+    display: block;
+    position: fixed;
+    height: 10vh;
+    background-color: var(--schwarz);
+
+    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
+  }
+
+  nav img {
+    position: relative;
+    float: left;
+    height: 10vh;
+    margin-left: 1em;
+    z-index: 999;
+  }
+
+  .hamburger {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transform: skewY(-6deg);
-    transform-origin: top left;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
   }
-  
-  .titleContainer {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bolder;
-    top: 25%;
-    margin: 0 10%;
-    z-index: 5;
-    color: var(--hellGrau);
-  }
-  
-  .websiteTitle {
-    font-size: 5vw;
-    font-weight: bolder;
-  }
-  
-  .websiteBeschreibung {
-    font-size: 2.5vw;
-    font-weight: 600;
-    font-style: italic;
-    padding-top: 3em;
-  }
-  /********************* /HEADER *********************/
 
-  
-  /********************* RESPONSIVE DESIGN *********************/
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    position: fixed;
+    background-color: var(--schwarz);
+    height: 100vh;
+    width: 100%;
+    clip-path: circle(50px at 90% -10%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 0.4s ease-out;
+
+    /* Die Linke, die in HamburgerMenu sind, werden durch dieser Code nich klickbar bis auf die HamburgerMenu öffen ist */
+    pointer-events: none;
+  }
+  .hamburgerMenu.open {
+    clip-path: circle(1200px at 90% 60%);
+    -webkit-clip-path: circle(1200px at 90% 60%);
+
+    /* Alle linke, die HamburgerMenu sind, sind jetzt klickbar, da der Menü öffen ist*/
+    pointer-events: all;
+  }
+
+  .hamburgerMenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  /* Damit die linke mit kleine Verzögerung bzw. Animation ausführen können, blenden wir erstmal die opacity der Linke aus. */
+  .hamburgerMenu li {
+    opacity: 0;
+  }
 
 /*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
 @media screen and (max-width: 1023px) {
@@ -303,7 +354,7 @@ header {
     }
   
     nav img {
-      position: absolute;
+      position: relative;
       height: 10vh;
       margin-left: 1em;
       z-index: 999;
@@ -375,4 +426,28 @@ header {
       border-radius: 10px;
     }
   }
-  /**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+  .hamburgerMenu li:nth-child(3) {
+    transition: all 0.5s ease 0.35s;
+  }
+  .hamburgerMenu li:nth-child(4) {
+    transition: all 0.5s ease 0.45s;
+  }
+  .hamburgerMenu li:nth-child(5) {
+    transition: all 0.5s ease 0.55s;
+  }
+
+  /* Am Ende wir mit hilfe von diese Zeile und JS-QuellCode alle link aufgetaucht. */
+  li.fade {
+    opacity: 1;
+  }
+
+  .hamburgerMenu li a:hover {
+    text-decoration: underline;
+  }
+  #anmeldungbtn {
+    background: green;
+    padding: 1em;
+    border-radius: 10px;
+  }
+}
+/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/

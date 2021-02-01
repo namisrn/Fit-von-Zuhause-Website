@@ -12,24 +12,34 @@ body{
     text-align: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  margin: 0px;
+  text-align: center;
+  font-family: "OpenSans";
+}
+
 /*Flex Eienschaften ganze Seite */
-#content{
-    display: flex;
-    flex-direction: column;
+#content {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Einstellen für alle Kinder der Seite */
-#content > *{
-   /* background: #3bbced; */
-    padding: 0px;
+#content > * {
+  /* background: #3bbced; */
+  padding: 0px;
 }
-
-
 
 /*Grid Definieren und Einstellen, erster Teil *HOME***/
 
-header{
-    grid-area: header;
+header {
+  grid-area: header;
 }
 
 #login{
@@ -49,19 +59,17 @@ header{
 }
 
 #home {
+  background-image: url("/pictures/images_high/Startseite_01.jpg");
+  background-position: center;
+  background-size: 100% 100%;
 
-    background-image: url("/pictures/images_high/Startseite_01.jpg");
-    background-position: center;
-    background-size: 100% 100%;
-  
-
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-    grid-template-areas:
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  grid-template-areas:
     ". . . . header header header header header header . login . ."
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
@@ -74,9 +82,6 @@ header{
     ". . . .  . homepic homepic homepic homepic . . . . ."
     ". . . . . . . . . . . . . .";
 }
-
-
-
 
 /*Grid Definieren und Einstellen, zweiter Teil *ABOUTUS***/
 
@@ -103,25 +108,27 @@ header{
     background-position: center;
     background-size: 100% 100%;
 
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
+  background-position: center;
+  background-size: 100% 100%;
 
-    grid-template-areas:
-        ". . . . . . . . . . . . . ."
-        ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . .";
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  max-width: 100%;
+  margin: 0 auto;
 
+  grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+    ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+    ". . . ceoPic ceoPic ceoPic . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+    ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+    ". . . . . . . aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . .";
 }
 
 /*Grid Definieren und Einstellen, dritter Teil *INDIVIDUELLE PLAENE***/
@@ -163,18 +170,17 @@ header{
     grid-template-areas:
     ". . . . . . . . . . . . . ."
     ". . . ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene . . ."
-        ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
-        ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . .";
-
+    ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+    ". bmi_calc bmi_calc bmi_calc . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . .";
 }
 
 /*Grid Definieren und Einstellen, vierter Teil *Kurse***/
@@ -246,19 +252,18 @@ header{
 }
 
 #kurse {
-    background-image: url("/pictures/images_high/Startseite_04.jpg");
-    background-position: center;
-    background-size: 100% 100%;
-   
+  background-image: url("/pictures/images_high/Startseite_04.jpg");
+  background-position: center;
+  background-size: 100% 100%;
 
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  max-width: 100%;
+  margin: 0 auto;
 
-    grid-template-areas:
+  grid-template-areas:
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". . . . kurse kurse kurse kurse kurse kurse . . . ."
@@ -268,9 +273,7 @@ header{
     ". kurspic1 kurspic1 kurspic1 kurspic1 . . . . kurspic2 kurspic2 kurspic2 kurspic2 ."
     ". . kurstext3 kurstext3 kurstext3 kurspic3 kurspic3 kurspic3 kurspic3 . kurstext2 kurstext2 kurstext2 ."
     ". . . . . . . . . . . . . .";
-
 }
-
 
 /*Grid Definieren und Einstellen, fünfter Teil *Abos***/
 
@@ -293,19 +296,19 @@ header{
    
 }
 
-#abosection{
-    background-image: url("/pictures/images_high/Startseite_05.jpg");
-    background-position: center;
-    background-size: 100% 100%;
+#abosection {
+  background-image: url("/pictures/images_high/Startseite_05.jpg");
+  background-position: center;
+  background-size: 100% 100%;
 
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 0;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  max-width: 100%;
+  margin: 0 0;
 
-    grid-template-areas:
+  grid-template-areas:
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
@@ -319,9 +322,7 @@ header{
     ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . .";
-
 }
-
 
 /*Grid Definieren und Einstellen, fünfter Teil *Kontakt***/
 #kontakt{
@@ -397,26 +398,51 @@ footer{
    
 }
 
+mail input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
 
+message textarea {
+  width: 100%;
+  height: 220px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
 
+absenden input[type="submit"] {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #f8f8f8;
+}
 
+#kontaktus {
+  background-image: url("/pictures/images_high/Startseite_06.jpg");
+  background-position: center;
+  background-size: 100% 100%;
 
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  max-width: 100%;
+  margin: 0 0;
 
-
-#kontaktus{
-    background-image: url("/pictures/images_high/Startseite_06.jpg");
-    background-position: center;
-    background-size: 100% 100%;
-  
-
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
-    max-width: 100%;
-    margin: 0 0;
-
-    grid-template-areas:
+  grid-template-areas:
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
@@ -432,98 +458,88 @@ footer{
     ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
     ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  absendebutton absendebutton . . . ."
     ". . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . ."
-    ;
+    ". . . . . . . . . . . . . .";
 }
 
+/* footer {
+  grid-area: footer;
+} */
 
-
-
-
-footer{
-    grid-area: footer;
-}
-
-
-#content  {
-/*background-image: url(/pictures/background.jpg);
+#content {
+  /*background-image: url(/pictures/background.jpg);
 background-position: top left;
 background-size: cover;*/
-margin-top: 0px;
-margin-bottom: 0px;
-display: flex;
-flex-direction: column;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
 
-
-/**srcset Alternative für css finden */
-
+  /**srcset Alternative für css finden */
 }
 
 /**************************Einstellen der Schriften*******************/
 
 /**Überschrift Home */
 h1 {
-    color: #CECECE;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 700;
-    font-size: 5vw;
-    margin: 0;
-    text-align: left;
-    
-    }
-    
+  color: #cecece;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  font-size: 5vw;
+  margin: 0;
+  text-align: left;
+}
+
 /**Überschrift2 Home */
 h2 {
-color: #CECECE;
-font-family: 'OpenSans', sans-serif;
-font-weight: 400;
-font-size: 3vw;
-font-style: italic;
-margin: 0;
-text-align: left;
+  color: #cecece;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 3vw;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
 }
 
 /**Überschriften überuns, Kurse etc. */
 h3 {
-
-color: #1B1B1B;
-font-family: 'OpenSans', sans-serif;
-font-weight: 400;
-font-size: 5vw;
-font-style: normal;
-padding:20px;
-margin: 0px;
-margin-bottom: 0px;
-padding:0px;
-text-align: center;
+  color: #1b1b1b;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 5vw;
+  font-style: normal;
+  padding: 20px;
+  margin: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
 /**Überschriften Kursiv etc. */
 h4 {
-    color: #1B1B1B;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 400;
-    font-size: 3.5vw;
-    font-style: italic;
-    padding-top: 0px;
-    margin: 0px;
+  color: #1b1b1b;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 3.5vw;
+  font-style: italic;
+  padding-top: 0px;
+  margin: 0px;
 }
 
 /**Überschriften Ceo etc. */
 h5 {
-    color: #CECECE;
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 700;
-    font-size: 1.5vw;  
-    font-style: italic;
-    color: #161616; 
+  color: #cecece;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  font-size: 1.5vw;
+  font-style: italic;
+  color: #161616;
 }
 
 /**Textblöcke */
-p{
-    font-family: 'OpenSans', sans-serif;
-    font-weight: 400;
-    color: #161616;
+p {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  color: #161616;
 }
 
 /**Navigationslistenelemente */
@@ -536,70 +552,62 @@ nav ul li a{
 }
 
 /**Bindestrich Überschriften*/
-hr{
-width: 10em;
-height: 4px ;
-background: #161616;
+hr {
+  position: absolute;
+  width: 20vw;
+  border-bottom: 2px solid black;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /**Logopositonierung*/
 
 #logo {
-    position: absolute;
-    padding-left:44% ;
-    padding-right: 44%;
-    margin: 0;
-   
+  position: absolute;
+  padding-left: 44%;
+  padding-right: 44%;
+  margin: 0;
 }
 
 /**Logopositonierung*/
 
-#logo img{
-width: 100px;
-height:100px;
-
+#logo img {
+  width: 100px;
+  height: 100px;
 }
 
-
-
 #nav_left {
-float: left;
+  float: left;
 }
 
 #nav_right {
-float:right;
-padding-right: 16px;
+  float: right;
+  padding-right: 16px;
 }
 
-
-
-
 a {
-text-decoration: none;  /*Ankertags nicht mehr unterstrichen*/
+  text-decoration: none; /*Ankertags nicht mehr unterstrichen*/
 }
 
 li {
-list-style-type: none; /*Punkte von Listen weg und zentriert*/
+  list-style-type: none; /*Punkte von Listen weg und zentriert*/
 }
 
 header nav ul li {
-float: left;
-margin-right: 16px;
-margin-left: 16px;
+  float: left;
+  margin-right: 16px;
+  margin-left: 16px;
 }
-
 
 .responsive {
-width: 100%;
-height: auto;
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
 }
 
-background{
-    position: absolute;
-    z-index: -100;
-   
-    height: 800px;
-   
+.background {
+  position: absolute;
+  z-index: -100;
 
    
 } 
@@ -768,100 +776,300 @@ background{
         ;
     }
 
+/********************* FOOTER *********************/
+footer {
+  color: var(--hellGrau);
+  background-color: var(--schwarz);
+}
+.footerContainer {
+  text-align: center;
+  padding: 3em;
 }
 
+.logoContainer img {
+  width: 7em;
+}
 
+.footerContainer ul {
+  list-style: none;
+}
+
+.footerContainer li {
+  line-height: 2em;
+}
+
+.footerContainer a {
+  text-decoration: none;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerContent h2 {
+  padding-bottom: 1em;
+}
+
+.box a {
+  color: var(--hellGrau);
+}
+
+.box img {
+  width: 2em;
+  margin: 1em;
+}
+.footerUnten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3em;
+  padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten p {
+  text-align: center;
+  padding: 0 2em;
+  font-size: 1vw;
+}
+.footerUnten h4 {
+  padding: 0 2em;
+  font-size: 1vw;
+}
+
+/********************* /FOOTER *********************/
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+  headline h1 {
+    font-size: 9vw;
+    text-align: center;
+  }
+
+  headline2 h2 {
+    text-align: center;
+    font-size: 9vw;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 9vw;
+  }
+
+  #home {
+    background-image: url("/pictures/images_low/Startseite_low_01.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . headline headline headline headline headline headline headline headline headline headline . ."
+      ". . headline headline headline headline headline headline headline headline headline headline . ."
+      ". homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic ."
+      ". homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic  ."
+      ". homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic ."
+      ". homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic ."
+      ". homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic homepic ."
+      ". . headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 . ."
+      ". . headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 . ."
+      ". . . . . . . . . . . . . .";
+  }
+
+  #aboutus {
+    background-image: url("/pictures/images_low/Startseite_low_02.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    grid-template-areas:
+      ". . . . . ueberuns ueberuns ueberuns ueberuns . . . . ."
+      "ceoPic ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+      "ceoPic ceoPic ceoPic ceoPic ceoPic ceoPic  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+      ". . . . . .  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+      ". . . . . .  aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text aboutus_text  aboutus_text ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . .";
+  }
+
+  #plaene {
+    background-image: url("/pictures/images_low/Startseite_low_03.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    grid-template-areas:
+      ". . . ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene ind_plaene . . ."
+      ". . . . . . . ind_plaene2 ind_plaene2 ind_plaene2 ind_plaene2 . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". bmi_calc bmi_calc bmi_calc bmi_calc bmi_calc . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". ernaehrungbox ernaehrungbox ernaehrungbox . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . .";
+  }
+
+  kurstext1 {
+    border: 1px solid rgb(12, 247, 71);
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  kurstext2 {
+    border: 1px solid rgb(247, 192, 12);
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  kurstext3 {
+    border: 1px solid rgb(15, 148, 115);
+    margin: 0;
+    border-radius: 10px;
+  }
+  #kurse p {
+    margin: 0;
+  }
+
+  #kurse {
+    background-image: url("/pictures/images_low/Startseite_low_04.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . kurse kurse kurse kurse kurse kurse . . . ."
+      ". . . . . . . kurse2 kurse2 kurse2 kurse2 . . ."
+      ". . kurspic1  kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1  . . "
+      ". . kurspic1  kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1  . . "
+      ". . kurspic1  kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1 kurspic1  . . "
+      ". kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 . "
+      ". kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 kurstext1 . "
+      ". . . kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 . . . "
+      ". . . kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 . . . "
+      ". . . kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 kurspic2 . . . "
+      ". kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 . "
+      ". kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 . "
+      ". kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 kurstext2 . "
+      ". . . kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 . . . "
+      ". . . kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 . . . "
+      ". . . kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 kurspic3 . . . "
+      ". kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 . "
+      ". kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 . "
+      ". kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 . ";
+  }
+
+  #abosection {
+    background-image: url("/pictures/images_low/Startseite_low_05.jpg");
+
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . abos abos abos abos abos . . . . ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". . . . . . . . . . . . . ."
+      ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+      ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+      ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+      ". . . . . . . . . . . . . ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". . . . . . . . . . . . . .";
+  }
+
+  #kontaktus {
+    background-image: url("/pictures/images_low/Startseite_low_06.jpg");
+
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . name name name name name name name ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic mail mail mail mail mail mail mail ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      ". . . . . . message message  message message message message message ."
+      ". . . . . . absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . .";
+  }
+}
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    #kontaktus{
-        background-image: url("/pictures/images_low/Startseite_low_06.jpg");
-        
-    
-        grid-template-areas:
-        ". . . . . . . . . . . . . ."
-        ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . name name name name name name name ."
-        ". . . . . . mail mail mail mail mail mail mail ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ;
-    }
+  #kontaktus {
+    background-image: url("/pictures/images_low/Startseite_low_06.jpg");
 
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . name name name name name name name ."
+      ". . . . . . mail mail mail mail mail mail mail ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . .";
+  }
 }
 
 /*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    #home {
+  #home {
+    background-image: url("/pictures/images_high/Startseite_01.jpg");
+    background-position: center;
+    background-size: 100% 100%;
 
-        background-image: url("/pictures/images_high/Startseite_01.jpg");
-        background-position: center;
-        background-size: 100% 100%;
-      
-    
-        display: grid;
-        grid-template-columns: repeat(14, 1fr);
-        grid-auto-rows: minmax(50px, auto);
-        grid-gap: 10px;
-        max-width: 100%;
-        margin: 0 auto;
-        grid-template-areas:
-        ". . . . header header header header header header . login . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". headline headline .  . . . . . . headline2 headline2 .  ."
-        ". headline headline homepic  homepic homepic homepic homepic homepic homepic headline2 headline2 .  ."
-        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
-        ". . . homepic homepic homepic homepic homepic homepic homepic . . . ."
-        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
-        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
-        ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
-        ". . . . . . . . . . . . . .";
-    }
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+      ". . . . header header header header header header . login . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". headline headline .  . . . . . . headline2 headline2 .  ."
+      ". headline headline homepic  homepic homepic homepic homepic homepic homepic headline2 headline2 .  ."
+      ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+      ". . . homepic homepic homepic homepic homepic homepic homepic . . . ."
+      ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+      ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+      ". . . homepic  homepic homepic homepic homepic homepic homepic . . . ."
+      ". . . . . . . . . . . . . .";
+  }
 
+  #kontaktus {
+    background-image: url("/pictures/images_high/Startseite_06.jpg");
 
-
-    #kontaktus{
-        background-image: url("/pictures/images_high/Startseite_06.jpg");
-        
-    
-        grid-template-areas:
-        ". . . . . . . . . . . . . ."   
-        ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . name name name name name name name ."
-        ". . . . . . mail mail mail mail mail mail mail ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-        "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton . . .  ."
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ;
-    }
-
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . name name name name name name name ."
+      ". . . . . . mail mail mail mail mail mail mail ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton . . .  ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . .";
+  }
 }
-
 
 /*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
 Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-
 }
-
-
-
-
-
-
-
-
+}
