@@ -2,12 +2,8 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-<<<<<<< HEAD
-  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
-=======
   src: url("../Font/OpenSans.ttf"),
     url("../Font/OpenSans.woff") format("woff"),
->>>>>>> master
     url("../Font/OpenSans.woff2") format("woff2");
 }
 
@@ -31,30 +27,6 @@ body {
 
 /********************* Navigation *********************/
 .hamburgerMenuContainer {
-<<<<<<< HEAD
-  display: none;
-}
-
-nav {
-  margin: 1.5em 30em;
-  display: flex;
-  justify-content: center;
-  height: 75px;
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  /* border: 3px dotted red; */
-}
-
-.navContainer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-=======
     display: none;
   }
   
@@ -129,7 +101,6 @@ nav {
   height: auto;
   right: -18em;
   top: 80px;
->>>>>>> master
   background-color: #d6d6d6;
   border-radius: 10px;
   opacity: 0.8;
@@ -180,22 +151,6 @@ nav a {
   border-radius: 5px;
 }
 
-<<<<<<< HEAD
-.linksMenuContainer a:hover,
-.rechtsMenuContainer a:hover {
-  transition: 0.3s;
-  color: var(--hellGrau);
-  background-color: var(--blau);
-}
-
-/********************* /Navigation *********************/
-
-/********************* HEADER *********************/
-header {
-  position: relative;
-
-  overflow: hidden;
-=======
 .login-form hr{
   width: 10em;
   height: 1px ;
@@ -240,7 +195,6 @@ header {
   border-radius: 6px;
   cursor: pointer;
   
->>>>>>> master
 }
 
 /* Hier verwenden wir eine CSS-Transformation (skew), um das Ganze schräg zu stellen*/
@@ -367,14 +321,6 @@ header > img {
     opacity: 0;
   }
 
-<<<<<<< HEAD
-  /* Dann wird hier verschiede trasition-zeit eingeführt, damit jeder Link mit kleine Verzögerung auftaucht.*/
-  .hamburgerMenu li:nth-child(1) {
-    transition: all 0.5s ease 0.15s;
-  }
-  .hamburgerMenu li:nth-child(2) {
-    transition: all 0.5s ease 0.25s;
-=======
 /*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
 @media screen and (max-width: 1023px) {
     .navContainer,
@@ -408,7 +354,7 @@ header > img {
     }
   
     nav img {
-      position: absolute;
+      position: relative;
       height: 10vh;
       margin-left: 1em;
       z-index: 999;
@@ -479,7 +425,6 @@ header > img {
       padding: 1em;
       border-radius: 10px;
     }
->>>>>>> master
   }
   .hamburgerMenu li:nth-child(3) {
     transition: all 0.5s ease 0.35s;
