@@ -8,12 +8,17 @@
     <title>Fit von Zuhause</title>
     <meta name="description" content="Online Gym">
     <link rel="stylesheet" type="text/css" href="/nav.css">
-    <link rel="stylesheet" type="text/css" href="reg1.css">
+    <link rel="stylesheet" type="text/css" href="/Abos/abos.css">
     <link rel="stylesheet" type="text/css" href="/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+
     <!---------Navigation----------->
 
     <nav>
@@ -21,7 +26,7 @@
             <div class="linksMenuContainer">
                 <ul>
                     <li><a href="/Kurse/kurse.html">Kurse</a></li>
-                    <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
+                    <li><a href="../Ernaehrung/ernaehrung.html">Ernährung</a></li>
                 </ul>
             </div>
 
@@ -37,12 +42,47 @@
         </div>
         <div class="anmeldungsContainer">
             <ul>
-                <li><a href="Anmeldung/anmeldung1.html">Anmeldung</a></li>
+                <li><a href="#">Anmeldung</a></li>
             </ul>
         </div>
-    <!--HambergerMenu-->
+        <div class="login-form">
+            <form>
+                <div>
+                    <label>Login</label>
+
+                    <input type="text" placeholder="Benutzername" required />
+                </div>
+                <div>
+
+                    <div>
+                        <a href="#"> Passwort vergessen</a>
+                    </div>
+                    <input type="password" placeholder="Passwort" required />
+                    <br>
+                </div>
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
+                <hr>
+                <div id="facebook">
+                    <input type="submit" value="Mit Facebook anmelden" />
+                </div>
+                <div id="google">
+                    <input type="submit" value="Mit Google anmelden" />
+                </div>
+                <div>
+                    <h5>noch nicht registriert</h5>
+                    <input type="submit" value="Registrieren" />
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <!--HambergerMenu-->
         <div class="hamburgerMenuContainer">
-            <a href="../index.html"><img src="../Img/Logo-BW.png" alt=""></a>
+            <img src="../Img/Logo-BW.png" alt="">
             <div class="hamburger">
                 <div class="hLine"></div>
                 <div class="hLine"></div>
@@ -50,86 +90,40 @@
             </div>
             <ul class="hamburgerMenu">
                 <li id="anmeldungbtn"><a href="#">Anmeldung</a></li>
-                <li><a href="/index.html">Home</a></li>
                 <li><a href="/Kurse/kurse.html">Kurse</a></li>
-                <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
-                <li><a href="Abos/abos.html">Abos</a></li>
+                <li><a href="#">Ernährung</a></li>
+                <li><a href="#">Abos</a></li>
                 <li><a href="/Trainer/trainer.html">Trainer</a></li>
             </ul>
         </div>
-    <!--HambergerMenu-->
     </nav>
     <!---------/Navigation----------->
+
     <div id="content">
 
         <header>
 
         </header>
         <!--Navigation-->
-        <section id="anmeldeSection">
-            <div id="headline1">
-                <h2>Schritt 1 von 3</h2>
-            </div>
+       
 
-            <div id="headline2">
-                <h1>Wähle dein Paket</h1>
-            </div>
+         <!--Abos-->
+         <section id="abosection">
 
-            <div id="headline3">
-                <h2>Teste 7 Tage kostenlos. Jederzeit kündbar</h2>
+            <div id="abos">
+                <h3>Flexible Abos</h3>
+                <hr>
             </div>
 
             <div id="standard_abo">
                 <img src="/pictures/frontpage/Abo-Standard.png    " alt="" class="responsive" />
             </div>
-            <div id="prof_abo"
-            ><img src="/pictures/frontpage/Abo-Professional.png   " alt="" class="responsive" />
+            <div id="prof_abo">
+                <img src="/pictures/frontpage/Abo-Professional.png   " alt="" class="responsive" />
             </div>
             <div id="ult_abo">
                 <img src="/pictures/frontpage/Abo-Ultimate.png   " alt="" class="responsive" />
             </div>
-
-            <div id="weiter">
-                <ul>
-                    <li><a href="anmeldung2.html">Weiter</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="vorteile">
-            <div id="headline4">
-                <h3>Das bekommst du</h3>
-                <hr>
-            </div>
-            
-
-            <div id="vorteil1">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                    Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan
-                    lacus vel facilisis.
-                </p>
-            </div>
-
-            <div id="vorteil2">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                    Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan
-                    lacus vel facilisis.
-                </p>
-            </div>
-
-            <div id="vorteil3">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                    Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan
-                    lacus vel facilisis.
-                </p>
-            </div>
-
         </section>
 
 

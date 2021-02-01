@@ -1,10 +1,20 @@
 @font-face {
+<<<<<<< HEAD
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
   src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
     url("../Font/OpenSans.woff2") format("woff2");
 }
+=======
+    /* Definieren lokal Font*/
+    /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
+    font-family: "OpenSans";
+    src: url("../Font/OpenSans.ttf"),
+      url("../Font/OpenSans.woff") format("woff"),
+      url("../Font/OpenSans.woff2") format("woff2");
+  }
+>>>>>>> master
 
 body {
   color: #fff;
@@ -30,11 +40,53 @@ body {
 }
 
 /**Bindestrich Überschriften*/
+<<<<<<< HEAD
 hr {
   width: 10em;
   height: 4px;
   background: #161616;
 }
+=======
+hr{
+    width: 10em;
+    height: 4px ;
+    background: #161616;
+    }
+    
+h1 {
+    color: #CECECE;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bolder;
+    font-size: 2vw;
+    margin: 0;
+    text-align: left;      
+    }
+        
+    /**Überschrift2 Home */
+h2 {
+    color: #CECECE;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5vw;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+    }
+
+    /**Überschrift */
+h3 {
+    color: #1B1B1B;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    font-size: 5vw;
+    font-style: normal;
+    padding:20px;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding:0px;
+    text-align: center;
+    }
+>>>>>>> master
 
 h1 {
   color: #cecece;
@@ -70,6 +122,7 @@ h3 {
   text-align: center;
 }
 
+<<<<<<< HEAD
 /**Textblöcke */
 p {
   font-family: "OpenSans", sans-serif;
@@ -102,11 +155,48 @@ prof_abo {
 
 ult_abo {
   grid-area: ult_abo;
+=======
+#headline1{
+    grid-area: headline1;
+}
+
+#headline2{
+    grid-area: headline2;
+}
+
+#headline3{
+    grid-area: headline3;
+}
+
+#standard_abo{
+    grid-area: standard_abo;
+}
+
+#prof_abo{
+    grid-area: prof_abo;
+}
+
+#ult_abo{
+    grid-area: ult_abo;
+}
+
+#weiter{
+    grid-area: weiter;
+    
+        height: 50px;
+        color: #d6d6d6;
+        border-radius: 10px;
+        background-color: #034078;
+        margin: 12px 0 0 25px;
+        box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+      
+>>>>>>> master
 }
 
 weiter {
   grid-area: weiter;
 
+<<<<<<< HEAD
   height: 50px;
   color: #d6d6d6;
   border-radius: 10px;
@@ -123,6 +213,31 @@ weiter a {
 weiter:hover {
   transition: 0.3s;
   background-color: #0458a7;
+=======
+#weiter a {
+    padding-top: 7px;
+    color: #d6d6d6;
+    text-decoration: none;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bolder;
+    font-size: 1vw;
+    text-align: center;
+  }
+
+  #weiter ul {
+    padding: 0px;
+    list-style: none;
+  }
+
+
+#weiter:hover {
+    transition: 0.3s;
+    background-color: #0458a7;
+  }
+
+#standard_abo.onclick{
+    opacity: 0;
+>>>>>>> master
 }
 
 standard_abo.onclick {
@@ -130,6 +245,7 @@ standard_abo.onclick {
 }
 
 #anmeldeSection {
+<<<<<<< HEAD
   background-image: url("/Anmeldung/pictures/Reg01-min.jpg");
   background-position: center;
   background-size: 100% 100%;
@@ -141,6 +257,21 @@ standard_abo.onclick {
   max-width: 100%;
   margin: 0 auto;
   grid-template-areas:
+=======
+
+    background-image: url("/Anmeldung/pictures/Reg01-min.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+   
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+>>>>>>> master
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". headline1 headline1 headline1 . . . . . . . . . ."
@@ -155,6 +286,7 @@ standard_abo.onclick {
     ". . . . . . . . . . . . . .";
 }
 
+<<<<<<< HEAD
 headline4 {
   grid-area: headline4;
 }
@@ -175,6 +307,29 @@ vorteil3 {
   grid-area: vorteil3;
   background: #ffffff7a;
   border-radius: 10px;
+=======
+
+#headline4{
+    grid-area: headline4;
+}
+
+#vorteil1{
+    grid-area: vorteil1;
+    background:#ffffff7a ;
+    border-radius: 10px;
+}
+
+#vorteil2{
+    grid-area: vorteil2;
+    background:#ffffff7a ;
+    border-radius: 10px;
+}
+
+#vorteil3{
+    grid-area: vorteil3;
+    background:#ffffff7a ;
+    border-radius: 10px;
+>>>>>>> master
 }
 
 #vorteile {

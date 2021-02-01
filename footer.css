@@ -89,6 +89,7 @@ footer {
 
 /********************* /FOOTER *********************/
 
+<<<<<<< HEAD
 /********************* RESPONSIVE DESIGN *********************/
 
 /*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
@@ -350,3 +351,10 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
     font-size: 1.5vw;
   }
 }
+=======
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+
+}
+>>>>>>> master

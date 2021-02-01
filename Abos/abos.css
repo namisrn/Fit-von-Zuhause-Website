@@ -1,0 +1,306 @@
+body{
+    color: #fff;
+    margin: 0px;
+    text-align: center;
+}
+
+/*Flex Eienschaften ganze Seite */
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Einstellen für alle Kinder der Seite */
+#content > *{
+   /* background: #3bbced; */
+    padding: 0px;
+}
+
+
+
+
+/*Grid Definieren  *Abos***/
+
+#abos{
+    grid-area:abos;
+}
+
+#standard_abo{
+    grid-area: standard_abo;
+    
+}
+
+#ult_abo{
+    grid-area: ult_abo;
+   
+}
+
+#prof_abo{
+    grid-area: prof_abo;
+   
+}
+
+#abosection{
+    background-image: url("/pictures/images_high/Startseite_05.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 0;
+
+    grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . abos abos abos abos abos . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". standard_abo standard_abo standard_abo standard_abo . . . . ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". standard_abo standard_abo standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . .";
+
+}
+
+
+
+#content  {
+margin-top: 0px;
+margin-bottom: 0px;
+display: flex;
+flex-direction: column;
+
+
+/**srcset Alternative für css finden */
+
+}
+
+/**************************Einstellen der Schriften*******************/
+
+/**Überschrift Home */
+h1 {
+    color: #CECECE;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    font-size: 5vw;
+    margin: 0;
+    text-align: left;
+    
+    }
+    
+/**Überschrift2 Home */
+h2 {
+color: #CECECE;
+font-family: 'OpenSans', sans-serif;
+font-weight: 400;
+font-size: 3vw;
+font-style: italic;
+margin: 0;
+text-align: left;
+}
+
+/**Überschriften überuns, Kurse etc. */
+h3 {
+
+color: #1B1B1B;
+font-family: 'OpenSans', sans-serif;
+font-weight: 400;
+font-size: 5vw;
+font-style: normal;
+padding:20px;
+margin: 0px;
+margin-bottom: 0px;
+padding:0px;
+text-align: center;
+}
+
+/**Überschriften Kursiv etc. */
+h4 {
+    color: #1B1B1B;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    font-size: 3.5vw;
+    font-style: italic;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+/**Überschriften Ceo etc. */
+h5 {
+    color: #CECECE;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;  
+    font-style: italic;
+    color: #161616; 
+}
+
+/**Textblöcke */
+p{
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    color: #161616;
+}
+
+/**Navigationslistenelemente */
+
+nav ul li a{
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    color: #161616;
+    
+}
+
+/**Bindestrich Überschriften*/
+hr{
+width: 10em;
+height: 4px ;
+background: #161616;
+}
+
+/**Logopositonierung*/
+
+#logo {
+    position: absolute;
+    padding-left:44% ;
+    padding-right: 44%;
+    margin: 0;
+   
+}
+
+/**Logopositonierung*/
+
+#logo img{
+width: 100px;
+height:100px;
+
+}
+
+
+
+#nav_left {
+float: left;
+}
+
+#nav_right {
+float:right;
+padding-right: 16px;
+}
+
+
+
+
+a {
+text-decoration: none;  /*Ankertags nicht mehr unterstrichen*/
+}
+
+li {
+list-style-type: none; /*Punkte von Listen weg und zentriert*/
+}
+
+header nav ul li {
+float: left;
+margin-right: 16px;
+margin-left: 16px;
+}
+
+
+.responsive {
+width: 100%;
+height: auto;
+}
+
+background{
+    position: absolute;
+    z-index: -100;
+   
+    height: 800px;
+   
+
+   
+} 
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+@media screen and (min-width: 50px) and (max-width: 480px) {
+    
+    #headline h1 {
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    #headline2 h2 {
+        text-align: center;
+        font-size: 9vw;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 9vw;
+    }
+
+  
+   
+
+    #abosection{
+        background-image: url("/pictures/images_low/Startseite_low_05.jpg");
+    
+        grid-template-areas:
+        ". . . . . . . . . . . . . ."
+        ". . . . abos abos abos abos abos . . . . ."
+        ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+        ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+        ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+        ". . . . . . . . . . . . . ."
+        ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+        ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+        ". prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo prof_abo ."
+        ". . . . . . . . . . . . . ."
+        ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+        ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+        ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+        ". . . . . . . . . . . . . .";
+    
+    }
+    
+
+
+}
+
+
+
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+   
+
+}
+
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   
+
+
+
+    
+
+}
+
+
+/*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
+Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
