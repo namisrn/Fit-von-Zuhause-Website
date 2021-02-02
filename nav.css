@@ -25,6 +25,10 @@ body {
   font-family: "OpenSans";
 }
 
+/*****************************************************/
+/************* Author: Sasan Rafat Nami **************/
+/*****************************************************/
+
 /********************* Navigation *********************/
 .hamburgerMenuContainer {
     display: none;
@@ -94,6 +98,7 @@ body {
   }
   
       /******************** Dropdown für Anmeldung ************************/
+      /*******Author: Dennis Liebelt******/
 .login-form{
   opacity: 0;
   position: absolute;
@@ -232,7 +237,7 @@ header > img {
   font-style: italic;
   padding-top: 3em;
 }
-/********************* /HEADER *********************/
+/********************* Ende HEADER *********************/
 
 /********************* RESPONSIVE DESIGN *********************/
 /*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
@@ -489,4 +494,5 @@ header > img {
     border-radius: 10px;
   }
 
-/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+/**********Ende NavMenu-(HAMBURGER-MENU) -Responsive*********/
+/********************* Ende RESPONSIVE DESIGN *********************/
