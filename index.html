@@ -65,6 +65,10 @@
     </nav>
     <!---------/Navigation----------->
 
+    <!---------------------------------------------------->
+    <!------------ Author: Dennis Liebelt    ------------->
+    <!---------------------------------------------------->
+
     <div id="content">
 
         <header>
@@ -213,21 +217,21 @@
                 <img src="/pictures/frontpage/kontaktpic-min.png    " alt="" class="responsive" />
             </div>
 
-            <div id="name"> <input type="text" tabindex="1" placeholder="Name*">
+            <div id="name"> <input id="name_key" type="text" tabindex="1" placeholder="Name*">
                 <br>
             </div>
 
             <div id="mail">
-                <input type="email" tabindex="2" placeholder="Email*">
+                <input id="mail_key" type="email" tabindex="2" placeholder="Email*">
                 <br>
             </div>
 
             <div id="message">
-                <textarea rows="14" cols="60" tabindex="3" placeholder="Nachricht*"></textarea>
+                <textarea  id="message_key" rows="14" cols="60" tabindex="3" placeholder="Nachricht*"></textarea>
             </div>
 
             <div id="absenden">
-                <input class="button" type="submit" value="senden">
+                <input id="button_key" class="button" type="submit" value="senden">
             </div>
 
             <div id="background_kontakt"> </div>
@@ -272,11 +276,10 @@
                 <h4>Impressum</h4>
             </div>
         </footer>
-        <!--<section id="eins"></section>--->
-
     </div>
 
     <script src="/hamMenu.js"></script>
+    <script src="/message.js"></script>
 </body>
 
 </html>
