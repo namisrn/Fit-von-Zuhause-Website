@@ -2,238 +2,209 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-  src: url("../Font/OpenSans.ttf"),
-    url("../Font/OpenSans.woff") format("woff"),
+  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
     url("../Font/OpenSans.woff2") format("woff2");
 }
 
-body{
-    color: #fff;
-    margin: 0px;
-    margin-left: 0px;
-    text-align: center;
+body {
+  color: #fff;
+  margin: 0px;
+  margin-left: 0px;
+  text-align: center;
 }
 
 /*Flex Eienschaften ganze Seite */
-#content{
-    display: flex;
-    flex-direction: column;
-    
+#content {
+  display: flex;
+  flex-direction: column;
 }
 
 .responsive {
-    width: 100%;
-    height: auto;
-    }
-
-/*Einstellen für alle Kinder der Seite */
-#content > *{
-   /* background: #3bbced; */
-    padding: 0px;
+  width: 100%;
+  height: auto;
 }
 
-
+/*Einstellen für alle Kinder der Seite */
+#content > * {
+  /* background: #3bbced; */
+  padding: 0px;
+}
 
 h1 {
-        color: #E7E4E4;
-        font-family: 'OpenSans', sans-serif;
-        font-weight: bolder;
-        font-size: 2vw;
-        margin: 0;
-        text-align: left;
-        
-    }
-        
-    /**Überschrift2 Home */
+  color: #e7e4e4;
+  font-family: "OpenSans", sans-serif;
+  font-weight: bolder;
+  font-size: 2vw;
+  margin: 0;
+  text-align: left;
+}
+
+/**Überschrift2 Home */
 h2 {
-      color: #E7E4E4;
-      font-family: 'OpenSans', sans-serif;
-      font-weight: 400;
-      font-size: 1.5vw;
-      font-style: italic;
-      margin: 0;
-      text-align: left;
-    }
+  color: #e7e4e4;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
 
+#headline1 {
+  grid-area: headline1;
+}
 
-    #headline1{
-        grid-area: headline1;
-    }
-    
-    #headline2{
-        grid-area: headline2;
-    }
-    
-    #headline3{
-        grid-area: headline3;
-    }
+#headline2 {
+  grid-area: headline2;
+}
 
-    #mailname{
-        grid-area: mailname;
-    }
+#headline3 {
+  grid-area: headline3;
+}
 
-    #mail{
-        grid-area: mail;
-    }
+#mailname {
+  grid-area: mailname;
+}
 
-    #mail input[type=email]{
-        width: 100%;
-        padding: 12px 20px;
-        margin:  0px;
-        margin-top: -20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        resize: none;
-    
-    } 
+#mail {
+  grid-area: mail;
+}
 
-   #passname{
-       
-        grid-area:passname;
-    }
-   #pass{
-        grid-area:pass;
-    }
+#mail input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0px;
+  margin-top: -20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
 
-    #pass input[type=password]{
-        width: 100%;
-        padding: 12px 20px;
-        margin:  0px;
-        margin-top: -20px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        height: 43.2px;
-        resize: none;
-    
-    } 
+#passname {
+  grid-area: passname;
+}
+#pass {
+  grid-area: pass;
+}
 
-   #notification{
-        grid-area:notification;
-    }
+#pass input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0px;
+  margin-top: -20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  height: 43.2px;
+  resize: none;
+}
 
+#notification {
+  grid-area: notification;
+}
 
+#weiter {
+  grid-area: weiter;
+  height: 50px;
+  color: #d6d6d6;
+  border-radius: 10px;
+  background-color: #034078;
+  margin: 0;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
 
-    #weiter{
-        grid-area: weiter;
-            height: 50px;
-            color: #d6d6d6;
-            border-radius: 10px;
-            background-color: #034078;
-            margin: 0;
-            box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
-            
-          
-    }
+#weiter a {
+  padding-top: 7px;
+  color: #d6d6d6;
+  text-decoration: none;
+  font-family: "OpenSans", sans-serif;
+  font-weight: bolder;
+  font-size: 1vw;
+  text-align: center;
+}
 
+#weiter ul {
+  padding: 0px;
+  list-style: none;
+}
 
-    #weiter a {
-      padding-top: 7px;
-      color: #d6d6d6;
-      text-decoration: none;
-      font-family: 'OpenSans', sans-serif;
-      font-weight: bolder;
-      font-size: 1vw;
-      text-align: center;
-    }
-  
-    #weiter ul {
-      padding: 0px;
-      list-style: none;
-    }
+#weiter:hover {
+  transition: 0.3s;
+  background-color: #0458a7;
+}
 
-    #weiter:hover {
-        transition: 0.3s;
-        background-color: #0458a7;
-      }
+#facebookButton {
+  grid-area: fb;
+}
 
-    #facebookButton{
-        grid-area:fb;
-      }
+#googleButton {
+  grid-area: google;
+}
 
-      #googleButton{
-        grid-area:google;
-      }
+hr {
+  grid-area: hr;
+}
 
-      hr{
-        grid-area:hr;
-      }
+#anmeldeSection2 {
+  background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-size: cover;
 
-      #anmeldeSection2 {
-        
-        background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
-        background-position: center;
-        background-size: 100% 100%;
-        background-size: cover;
-        
-    
-        display: grid;
-        grid-template-columns: repeat(14, 1fr);
-        grid-auto-rows: minmax(50px, auto);
-        grid-gap: 10px;
-        max-width: 100%;
-        
-        grid-template-areas:
-        ". . . . . . . . . . . . . ."
-        ". . . . . . . . . . . . . ."
-        ". headline1 headline1 headline1 . . . . . . . . . ."
-        ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
-        ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . . . ."
-        ". . . . mailname mailname . passname passname . . . . ."
-        ". . . . mail mail mail pass pass pass . . . ."
-        ". . . . notification notification notification notification notification notification . . . ."
-       
-        ". . . . . . weiter weiter . . . . . ."
-        ". . . . . hr hr hr hr . . . . ."
-        ". . . . . . fb fb . . . . . ."
-        ". . . . . . google google . . . . . ."
-        ". . . . . . . . . . . . . .";
-    }
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 10px;
+  max-width: 100%;
 
+  grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". headline1 headline1 headline1 . . . . . . . . . ."
+    ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
+    ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . . . ."
+    ". . . . mailname mailname . passname passname . . . . ."
+    ". . . . mail mail mail pass pass pass . . . ."
+    ". . . . notification notification notification notification notification notification . . . ."
+    ". . . . . . weiter weiter . . . . . ."
+    ". . . . . hr hr hr hr . . . . ."
+    ". . . . . . fb fb . . . . . ."
+    ". . . . . . google google . . . . . ."
+    ". . . . . . . . . . . . . .";
+}
 
-    #facebookButton>input[type="submit"],#googleButton>input[type="submit"]{
-        background-color: #026A96;
-        margin-top: 10px;
-        margin-bottom: 5px;
-      
-      }
+#facebookButton > input[type="submit"],
+#googleButton > input[type="submit"] {
+  background-color: #026a96;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
 
-    #facebookButton>input[type="submit"]:hover,#googleButton>input[type="submit"]:hover {
-        background-color: #037caf;
-      
-      }
-      
-    #input[type="submit"]:hover {
-        background-color: #5f6161;
-      }
+#facebookButton > input[type="submit"]:hover,
+#googleButton > input[type="submit"]:hover {
+  background-color: #037caf;
+}
 
+#input[type="submit"]:hover {
+  background-color: #5f6161;
+}
 
 /*-_-_-_- Desktop-klein-Bildschirm -bis 1200px - für mehr kontrolle auf 
 Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal mode-_-_-_-*/
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-
 }
-
 
 /*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
-    
-
 }
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
-
-  
-
 }
-  
+
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {
-
-   
 }
