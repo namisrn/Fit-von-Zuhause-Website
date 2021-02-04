@@ -8,7 +8,15 @@ button_key.onclick = function () {
     const mail = mail_key.value;
     const message = message_key.value;
 
-    console.log(name);
-    console.log(mail);
-    console.log(message);
+    
+        if (name && mail && message)
+        {
+            localStorage.setItem("name_key", name);
+            localStorage.setItem("mail_key", mail);
+            localStorage.setItem("message_key", message);
+            localStorage.setItem("kontaktaufnahme", name + " ;" + mail  + " ;" + message);
+            //location.reload();
+            window.confirm("Wir melden uns!");
+        }    
+
 };  

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    
 
 </head>
 
@@ -45,6 +47,44 @@
                 <li><a href="#">Anmeldung</a></li>
             </ul>
         </div>
+
+        <div class="login-form">
+            <form>
+                <div>
+                <label>Login</label>
+                
+                <input id= "nutzer_id" type="text" placeholder="Benutzername" required/>
+            </div>
+            <div>
+                
+                <div>
+                    <a href="#"> Passwort vergessen</a>
+                </div>
+                <input id= "pass_id" type="password" placeholder="Passwort" required/>
+                <br>
+            </div>
+            <div>
+                <input id ="login_btn" type="submit" value="Login"/>
+            </div>
+            <hr>
+            <div id = "facebook" >
+                <input type="submit" value="Mit Facebook anmelden"/>
+            </div>
+            <div id = "google">
+                <input type="submit" value="Mit Google anmelden"/>
+            </div>
+            <div>
+                <h5>noch nicht registriert</h5>
+                <a href="/Anmeldung/anmeldung1.html">
+                    <input type="button" value="Registrieren"/>
+                </a>
+            </div>
+            
+
+            </form>
+
+     </div>
+
         <!--HambergerMenu-->
         <div class="hamburgerMenuContainer">
             <a href="../index.html"><img src="../Img/Logo-BW.png" alt=""></a>
@@ -280,6 +320,7 @@
 
     <script src="/hamMenu.js"></script>
     <script src="/message.js"></script>
+    <script src="/nav.js"></script>
 </body>
 
 </html>
