@@ -1,3 +1,4 @@
+// Author: Dennis Liebelt //
 //Registrierung
 
 const reg_mail_id = document.getElementById("reg_mail_id"); //Mailadresse
@@ -20,8 +21,7 @@ reg_send_id.onclick = function () {
             user.push(mail_id,pass_id);
             alert("User in localstorage gespeichert");
             console.log(console.table(user));
-           //alert(user[0,0]); 
-           //location.reload();
+           
         }    
 
 };  
