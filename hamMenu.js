@@ -1,3 +1,8 @@
+/*****************************************************/
+/************* Author: Sasan Rafat Nami **************/
+/*****************************************************/
+
+
 /* sucht nach hamburger und hamburgerMenu klass sowie die listen (li) 
     in HamburgerMenu und verweisen die an entsprechende konstanten */
 

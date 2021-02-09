@@ -2,8 +2,7 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-  src: url("../Font/OpenSans.ttf"),
-    url("../Font/OpenSans.woff") format("woff"),
+  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
     url("../Font/OpenSans.woff2") format("woff2");
 }
 :root {
@@ -17,6 +16,10 @@
   --weiß: #f4f6f5;
 }
 
+/*****************************************************/
+/************* Author: Sasan Rafat Nami **************/
+/*****************************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -27,11 +30,8 @@ body {
   font-family: "OpenSans";
 }
 
-/*****************************************************/
-/************* Author: Sasan Rafat Nami **************/
-/*****************************************************/
-
 /********************* Navigation *********************/
+/**Hamburgermenü wird hier erstmal deaktiviert - Dies erfolgt nur in responsive Design**/
 .hamburgerMenuContainer {
   display: none;
 }
@@ -46,8 +46,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-
-  /* border: 3px dotted red; */
 }
 
 .navContainer {
@@ -111,7 +109,6 @@ nav a {
   color: var(--hellGrau);
   background-color: var(--blau);
 }
-
 /********************* Ende Navigation *********************/
 
 /********************* HEADER *********************/
@@ -157,11 +154,9 @@ header > img {
   font-style: italic;
   padding-top: 2em;
 }
-
 /********************* Ende HEADER *********************/
 
 /********************* MAIN *********************/
-
 .trainerTitle {
   text-align: center;
   font-size: 5vw;
@@ -198,7 +193,7 @@ header > img {
     "backwork backwork tourde"
     "backwork backwork booty";
 }
-/*-- 3 größe Kacheln --*/
+/*-- 3 größe Kacheln wird hier eingestellt--*/
 .BodyKurs,
 .bodyKursContainer,
 .SixpackKurs,
@@ -217,7 +212,7 @@ header > img {
   border-radius: 10px;
 }
 
-/*-- 6 kleine Kacheln --*/
+/*-- 6 kleine Kacheln wird hier eingestellt--*/
 .FatburnKurs,
 .ZumbaKurs,
 .YogaKurs,
@@ -399,7 +394,7 @@ footer {
 
 /********************* RESPONSIVE DESIGN *********************/
 
-/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+/***** HAMBURGERMENU-Responsive *****/
 @media screen and (max-width: 1023px) {
   .navContainer,
   .anmeldungsContainer {
@@ -518,7 +513,8 @@ footer {
     border-radius: 10px;
   }
 }
-/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+
+/***** Ende HAMBURGERMENU-Responsive *****/
 
 /*-_-_-_- Auflösung bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {

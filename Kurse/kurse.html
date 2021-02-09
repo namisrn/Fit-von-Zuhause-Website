@@ -1,67 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
+
 <!--Definieren viewport für Responsive Design in CSS-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!--Definieren CSS-Datei-->
     <link rel="stylesheet" href="kurse-style.css">
+
     <title>Kurse</title>
+
 <!-- OnPage SEO Meta-Tag description -->
     <meta name="description" content="Auf Fit von Zuhause kannst du in
                  richtigsten weg Fit zu bleiben und Gesund zu ernähren">
+
 </head>
         <!---------------------------------------------------->
         <!------------ Author: Sasan Rafat Nami  ------------->
         <!---------------------------------------------------->
 <body>
-   <!---------Navigation----------->
-   <nav>
-    <div class="navContainer">
-        <div class="linksMenuContainer">
+<!---------Navigation----------->
+    <nav>
+        <div class="navContainer">
+            <div class="linksMenuContainer">
+                <ul>
+                    <li><a href="/Kurse/kurse.html">Kurse</a></li>
+                    <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
+                </ul>
+            </div>
+
+            <div class="logoContaienr">
+                <a href="/index.html"><img src="../Img/Logo.png" alt=""></a>
+            </div>
+            <div class="rechtsMenuContainer">
+                <ul>
+                    <li><a href="/Abos/abos.html">Abos</a></li>
+                    <li><a href="/Trainer/trainer.html">Trainer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="anmeldungsContainer">
             <ul>
-                <li><a href="/Kurse/kurse.html">Kurse</a></li>
-                <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
+                <li><a href="/Anmeldung/anmeldung1.html">Anmeldung</a></li>
             </ul>
         </div>
-
-        <div class="logoContaienr">
-            <a href="/index.html"><img src="../Img/Logo.png" alt=""></a>
-        </div>
-        <div class="rechtsMenuContainer">
-            <ul>
+    <!--HambergerMenu-->
+        <div class="hamburgerMenuContainer">
+            <a href="../index.html"><img src="../Img/Logo-BW.png" alt=""></a>
+            <div class="hamburger">
+                <div class="hLine"></div>
+                <div class="hLine"></div>
+                <div class="hLine"></div>
+            </div>
+            <ul class="hamburgerMenu">
+                <li id="anmeldungbtn"><a href="/Anmeldung/anmeldung1.html">Anmeldung</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Kurse/kurse.html">Kurse</a></li>
+                <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
                 <li><a href="/Abos/abos.html">Abos</a></li>
                 <li><a href="/Trainer/trainer.html">Trainer</a></li>
             </ul>
         </div>
-    </div>
-    <div class="anmeldungsContainer">
-        <ul>
-            <li><a href="/Anmeldung/anmeldung1.html">Anmeldung</a></li>
-        </ul>
-    </div>
-<!--HambergerMenu-->
-    <div class="hamburgerMenuContainer">
-        <a href="../index.html"><img src="../Img/Logo-BW.png" alt=""></a>
-        <div class="hamburger">
-            <div class="hLine"></div>
-            <div class="hLine"></div>
-            <div class="hLine"></div>
-        </div>
-        <ul class="hamburgerMenu">
-            <li id="anmeldungbtn"><a href="/Anmeldung/anmeldung1.html">Anmeldung</a></li>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/Kurse/kurse.html">Kurse</a></li>
-            <li><a href="/Ernaehrung/ernaehrung.html">Ernährung</a></li>
-            <li><a href="/Abos/abos.html">Abos</a></li>
-            <li><a href="/Trainer/trainer.html">Trainer</a></li>
-        </ul>
-    </div>
-<!--Ende HambergerMenu-->
-</nav>
-<!--------- Ende Navigation----------->
+    <!--Ende HambergerMenu-->
+    </nav>
+<!--------- Ende Navigation ----------->
 
-
+<!-- Header -->
     <header>
         <div class="titleContainer">
             <p class="websiteTitle">Fit. <br> Zuhause.</p>
@@ -69,16 +74,21 @@
         </div>
         <img src="./img/headerPic_Kurse.webp" alt="headerPic">
     </header>
+<!-- Ende Header -->
 
-
-
+<!-- Main -->
     <main>
         <div class="trainerTitle">
             <p>Kurse</p>
             <div class="line"></div>
         </div>
-        <div class="kursContainer">
+
+<!-- Kurs Section -->
+    <!-- Hier wurde 12 unterschiedliche bereiche mit zwei größe für Kurse definiert -->
+    <!-- 3 davon sind klickbar : Body, Fatburn, SIX-Pack -->
+        <section class="kursContainer">
             
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="BodyKurs container">
                 <a href="/Kurse/K-Body.html"> <!--Link an entsprechender Kurs-->
                     <h1>Body</h1>
@@ -93,9 +103,10 @@
                     </div>
                 </a>
             </div>
-            
+
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->            
             <div class="FatburnKurs container">
-                <a href="/Kurse/K-Fatburn.html">
+                <a href="/Kurse/K-Fatburn.html"> <!--Link an entsprechender Kurs-->
                     <h1>Fatburn</h1>
                     <picture>
                         <img src="../Kurse/img/fatburn.webp" alt="Fatburn">
@@ -109,6 +120,7 @@
                 </a>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="ZumbaKurs container">
                 <h1>Zumba</h1>
                 <picture>
@@ -122,10 +134,11 @@
                 </div>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="YogaKurs container">
                 <h1>Yoga</h1>
                 <picture>
-                    <img src="../Kurse/img/yoga.webp" alt="yoga">
+                    <img src="../Kurse/img/yoga.webp" alt="yoga"> 
                 </picture>
                 <div class="overlay">
                     <div class="overlay">
@@ -137,6 +150,7 @@
                 </div>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="StepKurs container">
                 <h1>Step</h1>
                 <picture>
@@ -150,8 +164,9 @@
                 </div>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="SixpackKurs container">
-                <a href="/Kurse/K-SixPack.html">
+                <a href="/Kurse/K-SixPack.html">  <!--Link an entsprechender Kurs-->
                     <h1>Six-pack</h1>
                     <picture>
                         <img src="../Kurse/img/6pack.webp" alt="Six-pack">
@@ -165,6 +180,7 @@
                 </a>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="BackworkKurs container">
                 <h1>Backwork</h1>
                 <picture>
@@ -178,6 +194,7 @@
                 </div>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="TourdeKurs container">
                 <h1>Tour de</h1>
                 <picture>
@@ -191,6 +208,7 @@
                 </div>
             </div>
 
+            <!--  jeder Kurs har zwei klassen - Einer ist individuell für dendelben klass und die andere ist für alle (container), damit man in css besser steuern kann -->
             <div class="BootyKurs container">
                 <h1>Booty</h1>
                 <picture>
@@ -203,12 +221,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
+        </section>
+<!-- Ende Kurs Section -->
 
     </main>
-    
+<!-- Ende Main -->
+
+<!--  Footer  -->    
     <footer>
         <div class="footerContainer">
             <ul class="footerContent">
@@ -225,6 +244,7 @@
                         <img src="../Img/Logo-BW.png" alt="">
                     </div>
                     <div class="box">
+                <!--  zur Sozial-Netzwerk verlinken  -->
                         <a href="https://www.instagram.com" target="_blank"><img src="../Img/instagram.svg" alt="instagramIcon"></a>
                         <a href="https://www.facebook.com" target="_blank"><img src="../Img/facebook.svg" alt="facebookIcon"></a>
                         <a href="https://www.youtube.com" target="_blank"><img src="../Img/youtube.svg" alt="youTubeIcon"></a>
@@ -245,6 +265,9 @@
             <h4>Impressum</h4>
         </div>
     </footer>
+<!--  Ende Footer  -->
+
+    <!--  Difinieren JS-datei für Hambergermenü  -->
     <script src="../hamMenu.js"></script>
 
 </body>
