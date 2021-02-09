@@ -101,7 +101,7 @@ p {
 
 /**Bindestrich Überschriften*/
 #content hr {
-  width: 20em;
+  /*width: 20em;*/
   height: 4px;
   background: #161616;
   margin: auto;
