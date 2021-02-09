@@ -1,3 +1,7 @@
+/*********************************************************/
+/***         Author: Dennis Liebelt                     **/
+/*********************************************************/
+
 @font-face {
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
@@ -135,7 +139,19 @@ h2 {
   list-style: none;
 }
 
-#weiter:hover {
+#reg_send_id {
+  grid-area: weiter;
+  height: 50px;
+  width: 100%;
+  color: #034078;
+  border-radius: 10px;
+  border-color: #034078;
+  background-color: #034078;
+  margin: 0;
+
+}
+
+#reg_send_id:hover {
   transition: 0.3s;
   background-color: #0458a7;
 }

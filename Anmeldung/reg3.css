@@ -1,3 +1,7 @@
+/*********************************************************/
+/***         Author: Dennis Liebelt                     **/
+/*********************************************************/
+
 @font-face {
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
@@ -34,7 +38,7 @@ h1 {
   color: #e7e4e4;
   font-family: "OpenSans", sans-serif;
   font-weight: bolder;
-  font-size: 65px;
+  font-size: 3em;
   margin: 0;
   text-align: center;
 }
@@ -44,7 +48,7 @@ h2 {
   color: #e7e4e4;
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 2em;
   font-style: bold;
   margin: 0;
   text-align: center;
@@ -54,7 +58,7 @@ h3 {
   color: #e7e4e4;
   font-family: "OpenSans", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 2em;
   font-style: bolder;
   margin: 0;
   text-align: left;

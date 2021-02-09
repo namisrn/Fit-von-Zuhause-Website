@@ -1,3 +1,7 @@
+/*--------------------------------------------------------------------------->
+<!------------ Author: Sasan Rafat Nami (Navigation, Hamburger) ------------->
+<!---------------------Dennis Liebelt (Dropdown)----------------------------*/
+
 @font-face {
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
@@ -82,7 +86,6 @@ nav {
 
 
 /******************** Dropdown für Anmeldung ************************/
-/* Author: Dennis Liebelt  */
 .login-form {
   opacity: 0;
   position: absolute;
@@ -179,6 +182,23 @@ input[type="password"] {
 input[type="submit"]:hover {
   background-color: #5f6161;
 }
+
+
+#register a{
+  width: 100%;
+  height: 35px;
+  background-color: #404242;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "OpenSans", sans-serif;
+  color: white;
+  outline: none;
+  border: 0px;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
 
 .nav-active {
   /*ganzen Container sichtbar machen*/
