@@ -12,7 +12,13 @@
   --hellGrau: #d6d6d6;
   --blau: #034078;
   --hellBlau: #3b88c6;
+  --rot: #9a2828;
+  --weiß: #f4f6f5;
 }
+
+/*****************************************************/
+/************* Author: Sasan Rafat Nami **************/
+/*****************************************************/
 
 * {
   margin: 0;
@@ -24,11 +30,8 @@ body {
   font-family: "OpenSans";
 }
 
-/*****************************************************/
-/************* Author: Sasan Rafat Nami **************/
-/*****************************************************/
-
 /********************* Navigation *********************/
+/**Hamburgermenü wird hier erstmal deaktiviert - Dies erfolgt nur in responsive Design**/
 .hamburgerMenuContainer {
   display: none;
 }
@@ -43,8 +46,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-
-  /* border: 3px dotted red; */
 }
 
 .navContainer {
@@ -108,7 +109,6 @@ nav a {
   color: var(--hellGrau);
   background-color: var(--blau);
 }
-
 /********************* Ende Navigation *********************/
 
 /********************* HEADER *********************/
@@ -157,7 +157,6 @@ header > img {
 /********************* Ende HEADER *********************/
 
 /********************* MAIN *********************/
-
 .trainerTitle {
   text-align: center;
   font-size: 5vw;
@@ -308,12 +307,11 @@ footer {
   padding: 0 2em;
   font-size: 1vw;
 }
-
 /********************* Ende FOOTER *********************/
 
 /********************* RESPONSIVE DESIGN *********************/
 
-/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+/***** HAMBURGERMENU-Responsive *****/
 @media screen and (max-width: 1023px) {
   .navContainer,
   .anmeldungsContainer {
@@ -432,7 +430,7 @@ footer {
     border-radius: 10px;
   }
 }
-/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+/***** ENDE HAMBURGERMENU-Responsive *****/
 
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {

@@ -30,10 +30,11 @@ body {
 }
 
 /**Bindestrich Überschriften*/
-hr {
-  width: 10em;
+#content hr {
+  width: 20em;
   height: 4px;
   background: #161616;
+  margin: auto;
 }
 
 h1 {
@@ -45,7 +46,7 @@ h1 {
   text-align: left;
 }
 
-/**Überschrift2 Home */
+/**Überschrift2 */
 h2 {
   color: #cecece;
   font-family: "OpenSans", sans-serif;
@@ -92,15 +93,15 @@ p {
   grid-area: headline3;
 }
 
-#standard_abo {
+.standard_abo {
   grid-area: standard_abo;
 }
 
-#prof_abo {
+.prof_abo {
   grid-area: prof_abo;
 }
 
-#ult_abo {
+.ult_abo {
   grid-area: ult_abo;
 }
 
@@ -126,6 +127,7 @@ p {
 }
 
 #weiter ul {
+  margin-top: 12px;
   padding: 0px;
   list-style: none;
 }
@@ -135,9 +137,23 @@ p {
   background-color: #0458a7;
 }
 
-#standard_abo.onclick {
-  opacity: 0;
+/**Veränderung bei Toggle */
+.standard_abo_active img, .prof_abo_active img, .ult_abo_active img{
+  box-shadow: 0 0px 4.6px rgba(30, 9, 150, 0.884),
+    0 0px 15.4px rgba(49, 31, 207, 0.411), 0 0px 69px rgba(39, 3, 241, 0.69);
+  transform: scale(1.2);
+  z-index: 2;
 }
+
+
+
+.standard_abo img:hover, .prof_abo img:hover, .ult_abo img:hover{
+  box-shadow: 0 0px 4.6px rgba(0, 0, 0, 0.278),
+    0 0px 15.4px rgba(0, 0, 0, 0.411), 0 0px 69px rgba(0, 0, 0, 0.69);
+  z-index: 4;
+  cursor: pointer;
+}
+
 
 #anmeldeSection {
   background-image: url("/Anmeldung/pictures/Reg01-min.jpg");
@@ -211,7 +227,126 @@ p {
     ". vorteil1 vorteil1 vorteil1 vorteil1 vorteil2 vorteil2 vorteil2 vorteil2 vorteil3 vorteil3 vorteil3 vorteil3 ."
     ". vorteil1 vorteil1 vorteil1 vorteil1 vorteil2 vorteil2 vorteil2 vorteil2 vorteil3 vorteil3 vorteil3 vorteil3 ."
     ". vorteil1 vorteil1 vorteil1 vorteil1 vorteil2 vorteil2 vorteil2 vorteil2 vorteil3 vorteil3 vorteil3 vorteil3 ."
-    ". vorteil1 vorteil1 vorteil1 vorteil1 vorteil2 vorteil2 vorteil2 vorteil2 vorteil3 vorteil3 vorteil3 vorteil3 ."
-    ". vorteil1 vorteil1 vorteil1 vorteil1 vorteil2 vorteil2 vorteil2 vorteil2 vorteil3 vorteil3 vorteil3 vorteil3 ."
     ". . . . . . . . . . . . . .";
+}
+
+
+/*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
+/* Anpassung Seitenaufbau wo Flex keine schönen Ergebinsse liefert */
+@media screen and (min-width: 50px) and (max-width: 480px) {
+
+  h1 {
+    font-size: 7vw;
+    text-align: center;
+  }
+  /**Überschrift2 */
+  h2 {
+  font-size: 5.5vw;
+  text-align: center;
+  }
+
+  #weiter {
+    margin:0;
+  }
+  #weiter a {
+  font-size: 20px;
+  }
+
+  .standard_abo_active img, .prof_abo_active img, .ult_abo_active img{
+    transform: scale(1.1);
+  }
+  
+  #anmeldeSection {
+    /*background-image: url("/Anmeldung/pictures/Reg01-min.jpg");*/
+    background-position: center;
+    background-size: 100% 100%;
+  
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 ."
+      ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 ."
+      ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+      ". standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo standard_abo ."
+     
+      ".  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo ."
+      ".  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo ."
+      ".  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo ."
+      ".  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo ."
+      ".  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo  prof_abo prof_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". . . . . . . . . . . . . ."
+      ". . weiter weiter weiter weiter weiter weiter weiter weiter weiter weiter . ."
+      ". . . . . . . . . . . . . .";
+  }
+
+  #vorteile {
+    display: none;
+}
+}
+
+/*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+}
+
+
+/*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  
+  h1 {
+    font-size: 4vw;
+    
+  }
+  /**Überschrift2 */
+  h2 {
+  font-size: 3.5vw;
+  }
+  
+  #weiter a {
+    font-size: 20px;
+    }
+  
+  #anmeldeSection {
+    background-image: url("/Anmeldung/pictures/Reg01-min.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+  
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". headline1 headline1 headline1 headline1 headline1 . . . . . . . ."
+      ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
+      ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . weiter weiter weiter weiter . ."
+      ;
+  }
 }

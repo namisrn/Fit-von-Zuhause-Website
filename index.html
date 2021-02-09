@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
+    <!--Definieren viewport für Responsive Design in CSS-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Fit von Zuhause</title>
-    <meta name="description" content="Online Gym">
-    <link rel="stylesheet" type="text/css" href="nav.css">
-    <link rel="stylesheet" type="text/css" href="stylegrid.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
+   <!-- OnPage SEO Meta-Tag description -->
+   <meta name="description" content="Auf Fit von Zuhause kannst du in
+   richtigsten weg Fit zu bleiben und Gesund zu ernähren">
+   
+    <!-- CSS-Datei für die Navigationsleiste -->
+    <link rel="stylesheet" type="text/css" href="nav.css">
+
+    <!-- CSS-Datei für die Indexseite -->
+    <link rel="stylesheet" type="text/css" href="stylegrid.css">
+    
+    <!-- CSS-Datei für den Footer -->
+    <link rel="stylesheet" type="text/css" href="footer.css">
+   
 </head>
 
 <body>
 
-    <!---------Navigation----------->
+    <!-- -------Navigation-Top--------- -->
 
     <nav>
         <div class="navContainer">
@@ -45,6 +51,45 @@
                 <li><a href="#">Anmeldung</a></li>
             </ul>
         </div>
+
+          <!-- ------- Drop-Down Menü --------- -->
+        <div class="login-form">
+            <form>
+                <div>
+                <label>Login</label>
+                
+                <input id= "nutzer_id" type="text" placeholder="Benutzername" required/>
+            </div>
+            <div>
+                
+                <div>
+                    <a href="#"> Passwort vergessen</a>
+                </div>
+                <input id= "pass_id" type="password" placeholder="Passwort" required/>
+                <br>
+            </div>
+            <div>
+                <input id ="login_btn" type="submit" value="Login"/>
+            </div>
+            <hr>
+            <div id = "facebook" >
+                <input type="submit" value="Mit Facebook anmelden"/>
+            </div>
+            <div id = "google">
+                <input type="submit" value="Mit Google anmelden"/>
+            </div>
+            <div>
+                <h5>noch nicht registriert</h5>
+                <a href="/Anmeldung/anmeldung1.html">
+                    <input type="button" value="Registrieren"/>
+                </a>
+            </div>
+            
+
+            </form>
+
+     </div>
+
         <!--HambergerMenu-->
         <div class="hamburgerMenuContainer">
             <a href="../index.html"><img src="../Img/Logo-BW.png" alt=""></a>
@@ -65,44 +110,48 @@
     </nav>
     <!---------/Navigation----------->
 
+    <!---------------------------------------------------->
+    <!------------ Author: Dennis Liebelt    ------------->
+    <!---------------------------------------------------->
+
+     <!---------Inhalt ganze Seite----------->
     <div id="content">
 
         <header>
-
         </header>
-        <!--Navigation-->
+       
 
-        <!--Login-->
+        <!--section home = Inhalt erster Bildschirm Startseite-->
         <section id="home">
-            <div id="headline">
+            <div id="headline"> <!--Div Container um Element im Grid anzuordnen-->
                 <h1>Fit. <br>Zuhause.</h1>
             </div>
-            <!--Headline-->
+            
 
-            <div id="headline2">
+            <div id="headline2"> <!--Div Container um Element im Grid anzuordnen-->
                 <h2>einfach.<br>unkompliziert.</h2>
             </div>
             <!--Headline2-->
 
-            <div id="homepic">
+            <div id="homepic"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/pictures/frontpage/Front_Bild-min.png" alt="" class="responsive" />
             </div>
         </section>
 
 
-        <!--Über uns-->
+        <!--section aboutus = Inhalt zweiter Bildschirm Startseite-->
         <section id="aboutus">
-            <div id="ueberuns">
+            <div id="ueberuns"><!--Div Container um Element im Grid anzuordnen-->
                 <h3>Über uns</h3>
                 <hr>
             </div>
             <div id="ceopic">
-                <div id="aboutus_ceo">
+                <div id="aboutus_ceo"><!--Div Container um Element im Grid anzuordnen-->
                     <img src="/pictures/frontpage/Sasan-min.jpg" alt="" class="responsive">
                 </div>
             </div>
 
-            <div id="aboutus_text">
+            <div id="aboutus_text"> <!--Div Container um Element im Grid anzuordnen-->
                 <p>
                     Jeder, der zu Fitness First kommt, hat ein anderes Ziel. Sei es, seinen Körper allgemein fitter zu
                     machen und abzunehmen, Kraft aufzubauen oder auf ein sportliches Ziel hin zu trainieren. Wir
@@ -113,42 +162,42 @@
             </div>
         </section>
 
-         <!--Plaene-->
+         <!--section plaene = Inhalt dritter Bildschirm Startseite-->
         <section id="plaene">
-            <div id="ind_plaene">
+            <div id="ind_plaene"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>Individuelle Pläne</h3>
                 <hr>
             </div>
 
-            <div id="ind_plaene2">
+            <div id="ind_plaene2"> <!--Div Container um Element im Grid anzuordnen-->
                 <h4>für Sie erstellt</h4>
             </div>
 
-            <div id="bmi_calc">
+            <div id="bmi_calc"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>BMI-Calc</h3>
             </div>
 
-            <div id="ernaehrungbox">
+            <div id="ernaehrungbox"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>Ernährung</h3>
             </div>
 
         </section>
 
 
-         <!--Kurse-->
+        <!--section kurse = Inhalt vierter Bildschirm Startseite-->
         <section id="kurse">
-            <div id="kurse-hl">
+            <div id="kurse-hl"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>Hunderte Kurse</h3>
                 <hr>
             </div>
 
-            <div id="kurse2">
+            <div id="kurse2"> <!--Div Container um Element im Grid anzuordnen-->
                 <h4>zur Auswahl</h4>
             </div>
-            <div id="kurspic1">
+            <div id="kurspic1"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/Kurse/img/backwork.webp" alt="" class="responsive">
             </div>
-            <div id="kurstext1">
+            <div id="kurstext1"> <!--Div Container um Element im Grid anzuordnen-->
                 <p>
                     Entdecken Sie effektive Rückenübungen für Ihr Rückentraining. Einfache Übungen können Sie meist
                     zuhause und ohne weitere Geräte absolvieren.
@@ -157,10 +206,10 @@
 
             </div>
 
-            <div id="kurspic2">
+            <div id="kurspic2"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/Kurse/img/body.webp" alt="" class="responsive">
             </div>
-            <div id="kurstext2">
+            <div id="kurstext2"> <!--Div Container um Element im Grid anzuordnen-->
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -169,11 +218,11 @@
                 </p>
             </div>
 
-            <div id="kurspic3">
+            <div id="kurspic3"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/Kurse/img/fatburn.webp" alt="" class="responsive">
             </div>
 
-            <div id="kurstext3">
+            <div id="kurstext3"> <!--Div Container um Element im Grid anzuordnen-->
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -183,57 +232,59 @@
             </div>
         </section>
 
-         <!--Abos-->
+         <!--section abosection = Inhalt fünfter Bildschirm Startseite-->
         <section id="abosection">
 
-            <div id="abos">
+            <div id="abos"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>Flexible Abos</h3>
                 <hr>
             </div>
 
-            <div id="standard_abo">
+            <div id="standard_abo"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/pictures/frontpage/Abo-Standard.png    " alt="" class="responsive" />
             </div>
-            <div id="prof_abo">
+            <div id="prof_abo"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/pictures/frontpage/Abo-Professional.png   " alt="" class="responsive" />
             </div>
-            <div id="ult_abo">
+            <div id="ult_abo"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/pictures/frontpage/Abo-Ultimate.png   " alt="" class="responsive" />
             </div>
         </section>
 
-         <!--Kontakt-->
+         <!--section kontaktus = Inhalt sechster Bildschirm Startseite-->
         <section id="kontaktus">
-            <div id="kontakt">
+            <div id="kontakt"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>Kontakt</h3>
                 <hr>
             </div>
 
-            <div id="kontakt_pic">
+            <div id="kontakt_pic"> <!--Div Container um Element im Grid anzuordnen-->
                 <img src="/pictures/frontpage/kontaktpic-min.png    " alt="" class="responsive" />
             </div>
 
-            <div id="name"> <input type="text" tabindex="1" placeholder="Name*">
+            <div id="name"> <!--Div Container um Element im Grid anzuordnen-->
+                <input id="name_key" type="text" tabindex="1" placeholder="Name*"> <!--name_key um Eingabe in javascript zu erreicchen-->
                 <br>
             </div>
 
-            <div id="mail">
-                <input type="email" tabindex="2" placeholder="Email*">
+            <div id="mail"> <!--Div Container um Element im Grid anzuordnen-->
+                <input id="mail_key" type="email" tabindex="2" placeholder="Email*"> <!--mail_key um Eingabe in javascript zu erreicchen-->
                 <br>
             </div>
 
-            <div id="message">
-                <textarea rows="14" cols="60" tabindex="3" placeholder="Nachricht*"></textarea>
+            <div id="message"> <!--Div Container um Element im Grid anzuordnen-->
+                <textarea  id="message_key" rows="14" cols="60" tabindex="3" placeholder="Nachricht*"></textarea> <!--message_key um Eingabe in javascript zu erreicchen-->
             </div>
 
-            <div id="absenden">
-                <input class="button" type="submit" value="senden">
+            <div id="absenden"> <!--Div Container um Element im Grid anzuordnen-->
+                <input id="button_key" class="button" type="submit" value="senden"> <!--button_key um Nachhricht zu senden-->
             </div>
 
-            <div id="background_kontakt"> </div>
+            <div id="background_kontakt"> </div> <!--Div Container um Element im Grid anzuordnen-->
         </section>
 
-        <footer>
+        <!--Footer-->
+        <footer> 
             <div class="footerContainer">
                 <ul class="footerContent">
                     <li>
@@ -272,11 +323,16 @@
                 <h4>Impressum</h4>
             </div>
         </footer>
-        <!--<section id="eins"></section>--->
-
     </div>
 
+     <!--javascript Datei für das Hambuger Menü-->
     <script src="/hamMenu.js"></script>
+
+    <!--javascript Datei um  Nachricht bei Kontaktus zu verarbeiten -->
+    <script src="/message.js"></script>
+
+     <!--javascript Datei für die Navigation -->
+    <script src="/nav.js"></script>
 </body>
 
 </html>

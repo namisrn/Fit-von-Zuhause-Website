@@ -2,8 +2,7 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-  src: url("../Font/OpenSans.ttf"),
-    url("../Font/OpenSans.woff") format("woff"),
+  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
     url("../Font/OpenSans.woff2") format("woff2");
 }
 :root {
@@ -17,6 +16,10 @@
   --weiß: #f4f6f5;
 }
 
+/*****************************************************/
+/************* Author: Sasan Rafat Nami **************/
+/*****************************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -27,11 +30,8 @@ body {
   font-family: "OpenSans";
 }
 
-/*****************************************************/
-/************* Author: Sasan Rafat Nami **************/
-/*****************************************************/
-
 /********************* Navigation *********************/
+/**Hamburgermenü wird hier erstmal deaktiviert - Dies erfolgt nur in responsive Design**/
 .hamburgerMenuContainer {
   display: none;
 }
@@ -46,8 +46,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-
-  /* border: 3px dotted red; */
 }
 
 .navContainer {
@@ -333,7 +331,8 @@ footer {
 /********************* Ende FOOTER *********************/
 
 /********************* RESPONSIVE DESIGN *********************/
-/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+
+/***** HAMBURGERMENU-Responsive *****/
 @media screen and (max-width: 1023px) {
   .navContainer,
   .anmeldungsContainer {
@@ -361,8 +360,6 @@ footer {
     position: fixed;
     height: 10vh;
     background-color: var(--schwarz);
-
-    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
   }
 
   nav img {
@@ -452,7 +449,8 @@ footer {
     border-radius: 10px;
   }
 }
-/**********NavMenu-(HAMBURGER-MENU) -Responsive*********/
+
+/***** Ende HAMBURGERMENU-Responsive *****/
 
 /*-_-_-_- bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {

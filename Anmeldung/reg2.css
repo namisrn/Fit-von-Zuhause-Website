@@ -50,6 +50,10 @@ h2 {
   text-align: left;
 }
 
+#headline1 h3{
+  text-align: left;
+}
+
 #headline1 {
   grid-area: headline1;
 }
@@ -136,17 +140,8 @@ h2 {
   background-color: #0458a7;
 }
 
-#facebookButton {
-  grid-area: fb;
-}
 
-#googleButton {
-  grid-area: google;
-}
 
-hr {
-  grid-area: hr;
-}
 
 #anmeldeSection2 {
   background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
@@ -169,24 +164,12 @@ hr {
     ". . . . mailname mailname . passname passname . . . . ."
     ". . . . mail mail mail pass pass pass . . . ."
     ". . . . notification notification notification notification notification notification . . . ."
+    ". . . . . . . . . . . . . ."
     ". . . . . . weiter weiter . . . . . ."
-    ". . . . . hr hr hr hr . . . . ."
-    ". . . . . . fb fb . . . . . ."
-    ". . . . . . google google . . . . . ."
     ". . . . . . . . . . . . . .";
 }
 
-#facebookButton > input[type="submit"],
-#googleButton > input[type="submit"] {
-  background-color: #026a96;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
 
-#facebookButton > input[type="submit"]:hover,
-#googleButton > input[type="submit"]:hover {
-  background-color: #037caf;
-}
 
 #input[type="submit"]:hover {
   background-color: #5f6161;
@@ -207,4 +190,53 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
 
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {
+
+  h1 {
+    font-size: 6.5vw;
+    text-align: center;
+  }
+  /**Überschrift2 */
+  h2 {
+  font-size: 5.1vw;
+  text-align: center;
+  }
+
+  #notification h3 {
+    font-size: 2.3vw;
+    text-align: center;
+
+  }
+  #anmeldeSection2 {
+    background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-size: cover;
+  
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    grid-gap: 10px;
+    max-width: 100%;
+  
+    grid-template-areas:
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 headline1 ."
+      ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 headline2 ."
+      ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 ."
+      ". . . . . . . . . . . . . ."
+      ". . . . mailname mailname mailname mailname mailname mailname . . . ."
+      ". . mail mail mail mail mail mail mail mail mail mail . ."
+    
+      ". . . . passname passname passname passname passname passname . . . ."
+      ". . pass pass pass pass pass pass pass pass pass pass . ."
+      ". . . . . . . . . . . . . ."
+      ". . notification notification notification notification notification notification notification notification notification notification . ."
+      ". . . . weiter weiter weiter weiter weiter weiter . . . ."
+      
+      ". . . . . . . . . . . . . .";
+  }
+
+  
 }

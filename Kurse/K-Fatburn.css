@@ -13,7 +13,12 @@
   --blau: #034078;
   --hellBlau: #3b88c6;
   --rot: #9a2828;
+  --weiß: #f4f6f5;
 }
+
+/*****************************************************/
+/************* Author: Sasan Rafat Nami **************/
+/*****************************************************/
 
 * {
   margin: 0;
@@ -25,11 +30,8 @@ body {
   font-family: "OpenSans";
 }
 
-/*****************************************************/
-/************* Author: Sasan Rafat Nami **************/
-/*****************************************************/
-
 /********************* Navigation *********************/
+/**Hamburgermenü wird hier erstmal deaktiviert - Dies erfolgt nur in responsive Design**/
 .hamburgerMenuContainer {
   display: none;
 }
@@ -44,8 +46,6 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-
-  /* border: 3px dotted red; */
 }
 
 .navContainer {
@@ -56,7 +56,6 @@ nav {
   background-color: #d6d6d6;
   border-radius: 10px;
   opacity: 0.8;
-
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
 }
 
@@ -109,7 +108,6 @@ nav a {
   color: var(--hellGrau);
   background-color: var(--blau);
 }
-
 /********************* Ende Navigation *********************/
 
 /********************* HEADER *********************/
@@ -331,7 +329,8 @@ footer {
 /********************* Ende FOOTER *********************/
 
 /********************* RESPONSIVE DESIGN *********************/
-/*-*-*NavMenu-(HAMBURGER-MENU)-Responsive*-*-*/
+
+/***** HAMBURGERMENU-Responsive *****/
 @media screen and (max-width: 1023px) {
   .navContainer,
   .anmeldungsContainer {
@@ -359,8 +358,6 @@ footer {
     position: fixed;
     height: 10vh;
     background-color: var(--schwarz);
-
-    /* box-shadow: 0 3px 5px -2px rgb(49, 49, 49); */
   }
 
   nav img {
