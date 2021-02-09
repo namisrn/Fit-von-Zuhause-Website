@@ -22,9 +22,8 @@
 
 <body>
 
-    <!---------Navigation----------->
-     <!--Author: Sasan Rafat Nami-->
-     
+   
+   
     <nav>
         <div class="navContainer">
             <div class="linksMenuContainer">
@@ -54,24 +53,24 @@
 
         <!---------------------------------------------------->
         <!------------ Author: Dennis Liebelt    ------------->
-        <!---------------------------------------------------->
+        <!---------------Dropdown           ------------------>
         <div class="login-form">
             <form>
                 <div>
                     <label>Login</label>
 
-                    <input type="text" placeholder="Benutzername" required />
+                    <input id="log_mail_id" type="text" placeholder="Benutzername" required />
                 </div>
                 <div>
 
                     <div>
                         <a href="#"> Passwort vergessen</a>
                     </div>
-                    <input type="password" placeholder="Passwort" required />
+                    <input id="log_pass_id" type="password" placeholder="Passwort" required />
                     <br>
                 </div>
                 <div>
-                    <input id="reg_login" type="submit" value="Login" />
+                    <input id="log_send_id" type="submit" value="Login" />
                 </div>
                 <hr>
                 <div id="facebook">
@@ -80,11 +79,9 @@
                 <div id="google">
                     <input type="submit" value="Mit Google anmelden" />
                 </div>
-                <div id="register">
+                <div id="neu">
                     <h5>noch nicht registriert</h5>
-                    <a href="/Anmeldung/anmeldung1.html">
-                        <input type="button" value="Registrieren"/>
-                    </a>
+                    <a href="anmeldung1.html">Registrieren</a>
                 </div>
 
 
@@ -111,7 +108,7 @@
         </div>
         <!-- Ende HambergerMenu-->
     </nav>
-    <!---------Ende Navigation----------->
+    <!---------/Navigation----------->
 
 
 
@@ -187,7 +184,7 @@
 
             <div id="vorteil3"><!--Div Container um Element im Grid anzuordnen-->
                 <p>
-                    <h4>Vorteile Ultimate Abo</h4>
+                    <h4>Vorteile Ult Abo</h4>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
                     Risus commodo viverra maecenas accumsan lacus vel facilisis.Risus commodo viverra maecenas accumsan
@@ -240,10 +237,11 @@
         <!--<section id="eins"></section>--->
 
     </div>
-
+    <script src="/Anmeldung/login.js"></script>
     <script src="/hamMenu.js"></script>
     <script src="../nav.js"></script>
     <script src="../Anmeldung/auswahl.js"></script>
+    
     
 
 </body>

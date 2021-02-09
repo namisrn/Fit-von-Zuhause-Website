@@ -1,3 +1,7 @@
+/*---------------------------------------------------->
+<!------------ Author: Sasan Rafat Nami  ------------->
+<!----------------------------------------------------*/
+
 @font-face {
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
@@ -74,6 +78,10 @@ footer {
   align-items: center;
   padding: 0 3em;
   padding-bottom: 1em;
+  color: var(--grau);
+}
+
+.footerUnten h4, .footerUnten p {
   color: var(--grau);
 }
 
