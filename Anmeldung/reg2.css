@@ -198,10 +198,53 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
 
 /*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  #weiter a {
+    font-size: 20px;
+    }
+
 }
+
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  #mailname h2, #passname h2{
+    font-size: 1.8vw;  
+  }
+  /**Überschrift2 */
+  h2 {
+  font-size: 3.5vw;
+  }
+  #weiter a {
+    font-size: 2vw;
+    }
+
+  #notification {
+    font-size: 1vw;
+  }
+  #anmeldeSection2 {
+    background-image: url("/Anmeldung/pictures/RegistrierungSeite2_768.png");
+    grid-auto-rows: minmax(30px, auto);
+
+    grid-template-areas:
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". headline1 headline1 headline1 . . . . . . . . . ."
+    ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
+    ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . mailname mailname . passname passname . . . . ."
+    ". . . . mail mail mail pass pass pass . . . ."
+    ". . . . notification notification notification notification notification notification . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . ."
+    ". . . . . . weiter weiter . . . . . ."
+    ". . . . . . . . . . . . . .";
+  }
 }
 
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
@@ -220,8 +263,12 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
   #notification h3 {
     font-size: 2.3vw;
     text-align: center;
-
   }
+
+  #weiter a {
+    font-size: 20px;
+    }
+
   #anmeldeSection2 {
     background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
     background-position: center;

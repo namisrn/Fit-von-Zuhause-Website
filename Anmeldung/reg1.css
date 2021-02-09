@@ -272,6 +272,7 @@ p {
   }
   
   #anmeldeSection {
+    background-image: url("/Anmeldung/pictures/Registrierung400-1_01.jpg");
     background-position: center;
     background-size: 100% 100%;
   
@@ -316,7 +317,43 @@ p {
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  #weiter a {
+    
+    font-size: 2vw;
+  
+  }
 
+  h1 {
+    font-size: 5vw;
+  }
+
+  /**Überschrift2 */
+  h2 {
+  font-size: 3.5vw;
+  }
+
+  #anmeldeSection {
+    background-image: url("/Anmeldung/pictures/Registrierung768-1_01-min.jpg");
+
+    grid-template-areas:
+  
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". headline1 headline1 headline1 headline1 headline1 . . . . . . . ."
+      ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
+      ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". standard_abo  standard_abo  standard_abo standard_abo prof_abo prof_abo prof_abo prof_abo ult_abo ult_abo ult_abo ult_abo ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . weiter weiter weiter weiter . ."
+      ;
+  }
+
+  #vorteile {
+    background-image: url("/Anmeldung/pictures/Registrierung768-1_02-min.jpg");
+  }
 }
 
 
