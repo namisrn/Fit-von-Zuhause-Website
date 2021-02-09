@@ -1,3 +1,7 @@
+/*********************************************************/
+/***         Author: Dennis Liebelt                     **/
+/*********************************************************/
+
 @font-face {
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
@@ -25,7 +29,6 @@ body {
 
 /*Einstellen für alle Kinder der Seite */
 #content > * {
-  /* background: #3bbced; */
   padding: 0px;
 }
 
@@ -37,6 +40,8 @@ body {
   margin: auto;
 }
 
+
+/**************************Einstellen der Schriften*******************/
 h1 {
   color: #cecece;
   font-family: "OpenSans", sans-serif;
@@ -79,7 +84,11 @@ p {
   text-align: left;
 }
 
-/*Grid Definieren und Einstellen, erster Teil *HOME***/
+
+
+
+/*Grid Elemente definieren und Einstellen, erster Teil */
+/*um  komplette Übereinstimmung zu erreichen werden die einelnen Elemente wie in der Xd in ein 14 collumns Grid Layout anggeordnet*/
 
 #headline1 {
   grid-area: headline1;
@@ -105,6 +114,7 @@ p {
   grid-area: ult_abo;
 }
 
+/**************************weiter Button*******************/
 #weiter {
   grid-area: weiter;
 
@@ -137,7 +147,7 @@ p {
   background-color: #0458a7;
 }
 
-/**Veränderung bei Toggle */
+/**Veränderung bei Js Toggle */
 .standard_abo_active img, .prof_abo_active img, .ult_abo_active img{
   box-shadow: 0 0px 4.6px rgba(30, 9, 150, 0.884),
     0 0px 15.4px rgba(49, 31, 207, 0.411), 0 0px 69px rgba(39, 3, 241, 0.69);
@@ -153,6 +163,7 @@ p {
   z-index: 4;
   cursor: pointer;
 }
+
 
 
 #anmeldeSection {
@@ -181,6 +192,9 @@ p {
     ". . . . . . . . . . . . . .";
 }
 
+
+
+/*Grid Elemente definieren und Einstellen, zweiter Teil */
 #headline4 {
   grid-area: headline4;
 }
@@ -232,13 +246,14 @@ p {
 
 
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
-/* Anpassung Seitenaufbau wo Flex keine schönen Ergebinsse liefert */
+/* Anpassung Seitenaufbau wo Flex keine schönen Ergebinsse lieferte */
 @media screen and (min-width: 50px) and (max-width: 480px) {
 
   h1 {
     font-size: 7vw;
     text-align: center;
   }
+
   /**Überschrift2 */
   h2 {
   font-size: 5.5vw;
@@ -257,7 +272,6 @@ p {
   }
   
   #anmeldeSection {
-    /*background-image: url("/Anmeldung/pictures/Reg01-min.jpg");*/
     background-position: center;
     background-size: 100% 100%;
   
