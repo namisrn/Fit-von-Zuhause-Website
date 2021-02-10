@@ -84,8 +84,7 @@ nav {
   text-decoration: underline;
 }
 
-
-/******************** Dropdown für Anmeldung ************************/
+/******************** Dropdown für Anmeldung (Dennis Liebelt) ************************/
 
 .login-form {
   opacity: 0;
@@ -94,7 +93,7 @@ nav {
   height: auto;
   right: -18em;
   top: 80px;
-  background-color: #d6d6d6;  
+  background-color: #d6d6d6;
   border-radius: 10px;
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
 }
@@ -141,8 +140,6 @@ label {
   color: #78849d;
 }
 
-
-
 .login-form input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -158,7 +155,8 @@ input[type="password"] {
   font-size: 16px;
 }
 
-.login-form input[type="submit"], #neu a {
+.login-form input[type="submit"],
+#neu a {
   width: 100%;
   height: 35px;
   background-color: #404242;
@@ -187,8 +185,7 @@ input[type="submit"]:hover {
   background-color: #5f6161;
 }
 
-
-#register a{
+#register a {
   width: 100%;
   height: 35px;
   background-color: #404242;
@@ -200,15 +197,13 @@ input[type="submit"]:hover {
   border: 0px;
   border-radius: 6px;
   cursor: pointer;
-
 }
-
 
 .nav-active {
   /*ganzen Container sichtbar machen*/
   opacity: 1;
 }
-/* Dropdown für Anmeldung ENDE */
+/****************** Dropdown für Anmeldung ENDE ****************/
 
 nav ul {
   display: flex;

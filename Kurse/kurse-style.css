@@ -86,6 +86,127 @@ nav {
   text-decoration: underline;
 }
 
+/******************** Dropdown für Anmeldung (Dennis Liebelt) ************************/
+
+.login-form {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: auto;
+  right: -18em;
+  top: 80px;
+  background-color: #d6d6d6;
+  border-radius: 10px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.278);
+}
+
+label {
+  position: relative;
+  font-size: 26px;
+  margin-left: 88px;
+  margin-right: 50%;
+  font-weight: bold;
+  color: #efefef;
+}
+
+.login-form > form {
+  width: 250px;
+  margin: 25px auto;
+  font-family: "OpenSans", sans-serif;
+  font-size: 20px;
+}
+
+.login-form a {
+  font-family: "OpenSans", sans-serif;
+
+  font-size: 12px;
+  float: right;
+  color: #78849d;
+  text-decoration: none;
+  top: 20px;
+}
+
+.login-form hr {
+  width: 10em;
+  height: 1px;
+  background: #010101;
+  margin-top: 50px;
+}
+
+.login-form h5 {
+  margin-bottom: 0px;
+  font-family: "OpenSans", sans-serif;
+
+  font-size: 12px;
+
+  color: #78849d;
+}
+
+.login-form input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 28px;
+  border: 0px;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #747474;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-family: "OpenSans", sans-serif;
+  color: #78849d;
+  font-size: 16px;
+}
+
+.login-form input[type="submit"],
+#neu a {
+  width: 100%;
+  height: 35px;
+  background-color: #404242;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "OpenSans", sans-serif;
+  color: white;
+  outline: none;
+  border: 0px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#facebook > input[type="submit"],
+#google > input[type="submit"] {
+  background-color: #026a96;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#facebook > input[type="submit"]:hover,
+#google > input[type="submit"]:hover {
+  background-color: #037caf;
+}
+
+input[type="submit"]:hover {
+  background-color: #5f6161;
+}
+
+#register a {
+  width: 100%;
+  height: 35px;
+  background-color: #404242;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "OpenSans", sans-serif;
+  color: white;
+  outline: none;
+  border: 0px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-active {
+  /*ganzen Container sichtbar machen*/
+  display: block;
+}
+/****************** Dropdown für Anmeldung ENDE ****************/
+
 nav ul {
   display: flex;
   justify-content: space-between;
