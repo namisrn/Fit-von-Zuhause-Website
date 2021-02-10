@@ -258,7 +258,7 @@
             </div>
         </section>
 
-         <!--section kontaktus = Inhalt sechster Bildschirm Startseite-->
+          <!--section kontaktus = Inhalt sechster Bildschirm Startseite-->
         <section id="kontaktus">
             <div id="kontakt"> <!--Div Container um Element im Grid anzuordnen-->
                 <h3>Kontakt</h3>
@@ -266,28 +266,29 @@
             </div>
 
             <div id="kontakt_pic"> <!--Div Container um Element im Grid anzuordnen-->
-                <img src="/pictures/frontpage/kontaktpic-min.png    " alt="" class="responsive" />
+                <img src="/pictures/frontpage/kontaktpic-min.png" alt="" class="kontaktImg" />
             </div>
 
-            <div id="name"> <!--Div Container um Element im Grid anzuordnen-->
-                <input id="name_key" type="text" tabindex="1" placeholder="Name*"> <!--name_key um Eingabe in javascript zu erreicchen-->
+            
+        <form id="formular" class="formular">
+
+                <input type="text" id="name_key" class="input-kontakt" name="name" tabindex="1" placeholder="Name:*" required>
+
+                <input type="email" id="mail_key" class="input-kontakt" name="email" tabindex="2" placeholder="Email:*" required>
+
+                <textarea name="massage" id="message_key" class="input-kontakt" tabindex="3" maxlength="200" placeholder="Nachricht:*" required></textarea>
+
+                <div id="error" class="error"></div>
                 <br>
-            </div>
 
-            <div id="mail"> <!--Div Container um Element im Grid anzuordnen-->
-                <input id="mail_key" type="email" tabindex="2" placeholder="Email*"> <!--mail_key um Eingabe in javascript zu erreicchen-->
-                <br>
-            </div>
+                <button id="button_key" class="button" type="submit" tabindex="4">Senden</button>
 
-            <div id="message"> <!--Div Container um Element im Grid anzuordnen-->
-                <textarea  id="message_key" rows="14" cols="60" tabindex="3" placeholder="Nachricht*"></textarea> <!--message_key um Eingabe in javascript zu erreicchen-->
-            </div>
+        </form>
 
-            <div id="absenden"> <!--Div Container um Element im Grid anzuordnen-->
-                <input id="button_key" class="button" type="submit" value="senden"> <!--button_key um Nachhricht zu senden-->
-            </div>
 
             <div id="background_kontakt"> </div> <!--Div Container um Element im Grid anzuordnen-->
+
+
         </section>
 
         <!--Footer-->

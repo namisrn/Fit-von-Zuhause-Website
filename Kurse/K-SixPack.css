@@ -117,9 +117,7 @@ label {
 
 .login-form a {
   font-family: "OpenSans", sans-serif;
-
   font-size: 12px;
-  float: right;
   color: #78849d;
   text-decoration: none;
   top: 20px;
@@ -169,6 +167,10 @@ input[type="password"] {
   border: 0px;
   border-radius: 6px;
   cursor: pointer;
+}
+#neu p {
+  padding-left: 75px;
+  padding-top: 5px;
 }
 
 #facebook > input[type="submit"],
