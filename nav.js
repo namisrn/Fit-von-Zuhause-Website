@@ -1,4 +1,4 @@
-const loginSlide = () => {
+const loginSlide = () => { 
     const anmeldungsContainer = document.querySelector('.anmeldungsContainer');
     const nav = document.querySelector('.login-form');
     const navLinks = document.querySelectorAll('.login-form li');

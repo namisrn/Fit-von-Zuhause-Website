@@ -87,7 +87,7 @@ nav {
 /******************** Dropdown für Anmeldung (Dennis Liebelt) ************************/
 
 .login-form {
-  opacity: 0;
+  display: none;
   position: absolute;
   width: 300px;
   height: auto;
@@ -118,7 +118,6 @@ label {
   font-family: "OpenSans", sans-serif;
 
   font-size: 12px;
-  float: right;
   color: #78849d;
   text-decoration: none;
   top: 20px;
@@ -201,7 +200,7 @@ input[type="submit"]:hover {
 
 .nav-active {
   /*ganzen Container sichtbar machen*/
-  opacity: 1;
+  display: block;
 }
 /****************** Dropdown für Anmeldung ENDE ****************/
 

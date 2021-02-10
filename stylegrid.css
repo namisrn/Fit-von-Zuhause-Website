@@ -1,4 +1,3 @@
-
 /*********************************************************/
 /***         Author: Dennis Liebelt                     **/
 /*********************************************************/
@@ -7,11 +6,9 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-  src: url("../Font/OpenSans.ttf"),
-    url("../Font/OpenSans.woff") format("woff"),
+  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
     url("../Font/OpenSans.woff2") format("woff2");
 }
-
 
 /*Eigenschaften Body */
 body {
@@ -32,7 +29,6 @@ body {
 #content > * {
   padding: 0px;
 }
-
 
 /**************************Einstellen der Schriften*******************/
 
@@ -107,7 +103,6 @@ p {
   margin: auto;
 }
 
-
 a {
   text-decoration: none; /*Ankertags nicht mehr unterstrichen*/
 }
@@ -116,23 +111,14 @@ li {
   list-style-type: none; /*Punkte von Listen weg */
 }
 
-
 .responsive {
   width: 100%;
   height: auto;
 }
 
-
-
-
-
-
-
-
 /*********************************************************/
 /*Grid Elemente definieren und Einstellen, erster Teil *HOME***/
 /*um  komplette Übereinstimmung zu erreichen werden die einelnen Elemente wie in der Xd in ein 14 collumns Grid Layout anggeordnet*/
-
 
 /* Grid Area Elemente */
 header {
@@ -155,11 +141,8 @@ header {
   grid-area: homepic;
 }
 
-
-
 /*Grid einstellen, erster Teil (hochauflösend) *HOME***/
 #home {
-
   /*Hintergrundbild volle Auflösung definieren und auf die gane Seite strecken*/
   background-image: url("/pictures/images_high/Startseite_01.jpg");
   background-position: center;
@@ -187,9 +170,6 @@ header {
     ". . . .  . homepic homepic homepic homepic . . . . ."
     ". . . . . . . . . . . . . .";
 }
-
-
-
 
 /*********************************************************/
 /*Grid Definieren und Einstellen, zweiter Teil *ABOUTUS***/
@@ -227,7 +207,6 @@ header {
   max-width: 100%;
   margin: 0 auto;
 
-
   /*Grid Areas für die zweite Seite einstellen */
   grid-template-areas:
     ". . . . . . . . . . . . . ."
@@ -242,8 +221,6 @@ header {
     ". . . . . . . . . . . . . .";
 }
 
-
-
 /*********************************************************/
 /*Grid Definieren und Einstellen, dritter Teil *Plaene***/
 /*********************************************************/
@@ -257,7 +234,8 @@ header {
   grid-area: ind_plaene2;
 }
 
-#bmi_calc { /* Box gestalten */
+#bmi_calc {
+  /* Box gestalten */
   grid-area: bmi_calc;
   background: #ffffff7a;
   border-radius: 10px;
@@ -269,7 +247,6 @@ header {
   background: #ffffff7a;
   border-radius: 10px;
 }
-
 
 /*Grid einstellen, dritter Teil (hochauflösend) *plaene***/
 #plaene {
@@ -284,8 +261,6 @@ header {
   max-width: 100%;
   margin: 0 auto;
 
-
-  
   /*Grid Areas für die dritte Seite einstellen */
   grid-template-areas:
     ". . . . . . . . . . . . . ."
@@ -303,14 +278,11 @@ header {
     ". . . . . . . . . . . . . .";
 }
 
-
-
 /*********************************************************/
 /*Grid Definieren und Einstellen, vierter Teil *Kurse und
    styles für die einelnen Elemente. Bei kleinerer Auflösung
    jeweils bei den Auflösungen geändert                ***/
 /*********************************************************/
-
 
 #kurse-hl {
   grid-area: kurse;
@@ -323,7 +295,6 @@ header {
   border-radius: 10px;
   grid-area: kurspic1;
 }
-
 
 #kurstext1 {
   grid-area: kurstext1;
@@ -389,7 +360,7 @@ header {
   border-radius: 10px;
 }
 
- /*Grid Areas für die vierte Seite einstellen */
+/*Grid Areas für die vierte Seite einstellen */
 #kurse {
   background-image: url("/pictures/images_high/Startseite_04.jpg");
   background-position: center;
@@ -434,7 +405,6 @@ header {
   grid-area: prof_abo;
 }
 
-
 /*Grid Areas für die fünfte Seite einstellen */
 #abosection {
   background-image: url("/pictures/images_high/Startseite_05.jpg");
@@ -464,25 +434,73 @@ header {
     ". . . . . . . . . . . . . .";
 }
 
-
-
 /****************************************************************************/
 /*Grid Definieren und Einstellungen für Kontaktform, sechter Teil *Kontakt***/
 /****************************************************************************/
+
+/***** Kontakt Formular *****/
+.formular {
+  max-width: 450px;
+  margin: 50px auto;
+}
+.input-kontakt {
+  font-family: OpenSans;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #999999;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+.input-kontakt:focus {
+  border: 2px solid #034078;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: gray;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+[type="submit"]:hover {
+  background: #034078;
+}
+
+.error {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+}
+/***** Ende neue Kontakt Formular *****/
+
 #kontakt {
   grid-area: kontakt;
 }
 
-#name {
-  grid-area: name;
-}
-
-#mail {
-  grid-area: mail;
-}
-
-#message {
-  grid-area: message;
+#formular {
+  grid-area: formular;
 }
 
 #kontakt_pic {
@@ -495,51 +513,6 @@ header {
 footer {
   grid-area: footer;
 }
-
-#name input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-}
-
-#mail input[type="email"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-}
-
-#message textarea {
-  width: 100%;
-  height: 220px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-}
-
-#absenden input[type="submit"] {
-  width: 100%;
-  height: 45px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  box-shadow: inset 0px 1px 0px 0px #ffffff;
-  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-  background-color: #f8f8f8;
-}
-
 
 #kontaktus {
   background-image: url("/pictures/images_high/Startseite_06.jpg");
@@ -561,26 +534,20 @@ footer {
     ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic name name name name . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  mail mail mail mail . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  message message message message . ."
-    ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  absendebutton absendebutton . . . ."
+    ". . . kontaktpic kontaktpic kontaktpic . .  formular formular formular formular . ."
+    ". . . kontaktpic kontaktpic kontaktpic . .  formular formular formular formular . ."
+    ". . . kontaktpic kontaktpic kontaktpic . .  formular formular formular formular . ."
+    ". . . kontaktpic kontaktpic kontaktpic . .  formular formular formular formular . ."
+    ". . . kontaktpic kontaktpic kontaktpic . .  formular formular formular formular . ."
+    ". . . kontaktpic kontaktpic kontaktpic . .  formular formular formular formular . ."
+    ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . ."
     ". . . . . . . . . . . . . .";
 }
 
-
-
-
-
-
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 /* Anpassung Seitenaufbau wo Flex keine schönen Ergebinsse liefert */
 @media screen and (min-width: 50px) and (max-width: 480px) {
-
   /****************************************************/
   /* Home Sektion Anpassung Schriften und Grid Layout */
   /****************************************************/
@@ -658,7 +625,6 @@ footer {
       ". . . . . . . . . . . . . .";
   }
 
-
   /****************************************************/
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
@@ -710,7 +676,6 @@ footer {
       ". kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 kurstext3 . ";
   }
 
-
   /****************************************************/
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
@@ -735,7 +700,6 @@ footer {
       ". . . . . . . . . . . . . .";
   }
 
-
   /****************************************************/
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
@@ -745,24 +709,26 @@ footer {
     grid-template-areas:
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
       ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
       ". . . . . . . . . . . . . ."
-      ". . . . . . . . . . . . . ."
-      ". . . . . . name name name name name name name ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic mail mail mail mail mail mail mail ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      ". . . . . . message message  message message message message message ."
-      ". . . . . . absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
-      ". . . . . . . . . . . . . ."
+      ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic . . ."
+      ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic . . ."
+      ". . . kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic . . ."
+      ". . . formular formular formular formular formular  formular formular formular . . ."
+      ". . . formular formular formular formular formular  formular formular formular . . ."
+      ". . . formular formular formular formular formular  formular formular formular . . ."
+      ". . . formular formular formular formular formular  formular formular formular . . ."
       ". . . . . . . . . . . . . .";
+  }
+  .kontaktImg {
+    width: 50vw;
+    height: auto;
   }
 }
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  
   /****************************************************/
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
@@ -771,30 +737,33 @@ footer {
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
       ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
       ". . . . . . . . . . . . . ."
-      ". . . . . . . . . . . . . ."
-      ". . . . . . name name name name name name name ."
-      ". . . . . . mail mail mail mail mail mail mail ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton absendebutton ."
-      ". . . . . . . . . . . . . ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic ."
+      "formular formular formular formular formular formular formular formular  formular formular formular formular formular ."
+      "formular formular formular formular formular formular formular formular  formular formular formular formular formular ."
+      "formular formular formular formular formular formular formular formular  formular formular formular formular formular ."
+      "formular formular formular formular formular formular formular formular  formular formular formular formular formular ."
       ". . . . . . . . . . . . . .";
+  }
+  .kontaktImg {
+    width: 50vw;
+    height: auto;
   }
 }
 
 /*-_-_-_- Kleine Bildschirm, Laptops - bis 1024 -_-_-_-*/
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  
   /****************************************************/
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
-  
+
   #home {
-    background-image: url("/pictures/images_high/Startseite_01.jpg"); 
+    background-image: url("/pictures/images_high/Startseite_01.jpg");
     background-position: center;
     background-size: 100% 100%;
 
@@ -826,18 +795,21 @@ footer {
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
       ". . . . kontakt kontakt kontakt kontakt kontakt kontakt . . . ."
       ". . . . . . . . . . . . . ."
-      ". . . . . . . . . . . . . ."
-      ". . . . . . name name name name name name name ."
-      ". . . . . . mail mail mail mail mail mail mail ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic message message  message message message message message ."
-      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic absendebutton absendebutton absendebutton absendebutton . . .  ."
-      ". . . . . . . . . . . . . ."
-      ". . . . . . . . . . . . . .";
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic ."
+      "kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic  kontaktpic kontaktpic kontaktpic kontaktpic kontaktpic ."
+      "formular formular formular formular formular formular formular formular  formular formular formular formular formular ."
+      "formular formular formular formular formular formular formular formular  formular formular formular formular formular .";
+  }
+  .kontaktImg {
+    width: 50vw;
+    height: auto;
   }
 }
 

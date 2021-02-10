@@ -120,7 +120,6 @@ label {
   font-family: "OpenSans", sans-serif;
 
   font-size: 12px;
-  float: right;
   color: #78849d;
   text-decoration: none;
   top: 20px;
@@ -170,6 +169,11 @@ input[type="password"] {
   border: 0px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+#neu p {
+  padding-left: 75px;
+  padding-top: 5px;
 }
 
 #facebook > input[type="submit"],
@@ -726,7 +730,6 @@ footer {
   .kursContainer {
     /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
     display: grid;
-    /* justify-content: space-evenly; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1em;
@@ -810,7 +813,6 @@ footer {
   .kursContainer {
     /*Da wir zwei-Dimensionale Layout haben, verwenden wir Grid-Layout*/
     display: grid;
-    /* justify-content: space-evenly; */
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
     justify-items: center;
