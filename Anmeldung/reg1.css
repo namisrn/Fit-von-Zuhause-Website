@@ -163,7 +163,7 @@ p {
 }
 
 #anmeldeSection {
-  background-image: url("/Anmeldung/pictures/Reg01-min.jpg");
+  background-image: url("pictures/Reg01-min.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -212,7 +212,7 @@ p {
 }
 
 #vorteile {
-  background-image: url("/Anmeldung/pictures/Reg02-min.jpg");
+  background-image: url("pictures/Reg02-min.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -266,7 +266,7 @@ p {
   }
 
   #anmeldeSection {
-    background-image: url("/Anmeldung/pictures/Registrierung400-1_01.jpg");
+    background-image: url("pictures/Registrierung400-1_01.jpg");
     background-position: center;
     background-size: 100% 100%;
 
@@ -324,7 +324,7 @@ p {
   }
 
   #anmeldeSection {
-    background-image: url("/Anmeldung/pictures/Registrierung768-1_01-min.jpg");
+    background-image: url("pictures/Registrierung768-1_01-min.jpg");
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
@@ -341,7 +341,7 @@ p {
   }
 
   #vorteile {
-    background-image: url("/Anmeldung/pictures/Registrierung768-1_02-min.jpg");
+    background-image: url("pictures/Registrierung768-1_02-min.jpg");
   }
 }
 
@@ -360,7 +360,7 @@ p {
   }
 
   #anmeldeSection {
-    background-image: url("/Anmeldung/pictures/Reg01-min.jpg");
+    background-image: url("pictures/Reg01-min.jpg");
     background-position: center;
     background-size: 100% 100%;
 

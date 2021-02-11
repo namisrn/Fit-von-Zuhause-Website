@@ -6,8 +6,8 @@
   /* Definieren lokal Font*/
   /*Für mehr unterstützung in verschiedene Browsers wurde hier .ttf, .woff sowie .woff2 deffiniert*/
   font-family: "OpenSans";
-  src: url("../Font/OpenSans.ttf"), url("../Font/OpenSans.woff") format("woff"),
-    url("../Font/OpenSans.woff2") format("woff2");
+  src: url("./Font/OpenSans.ttf"), url("./Font/OpenSans.woff") format("woff"),
+    url("./Font/OpenSans.woff2") format("woff2");
 }
 
 /*Eigenschaften Body */
@@ -144,7 +144,7 @@ header {
 /*Grid einstellen, erster Teil (hochauflösend) *HOME***/
 #home {
   /*Hintergrundbild volle Auflösung definieren und auf die gane Seite strecken*/
-  background-image: url("/pictures/images_high/Startseite_01.jpg");
+  background-image: url("./pictures/images_high/Startseite_01.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -195,7 +195,7 @@ header {
 
 /*Grid einstellen, zweiter Teil (hochauflösend) *aboutus***/
 #aboutus {
-  background-image: url("/pictures/images_high/Startseite_02.jpg");
+  background-image: url("./pictures/images_high/Startseite_02.jpg");
 
   background-position: center;
   background-size: 100% 100%;
@@ -250,7 +250,7 @@ header {
 
 /*Grid einstellen, dritter Teil (hochauflösend) *plaene***/
 #plaene {
-  background-image: url("/pictures/images_high/Startseite_03.jpg");
+  background-image: url("./pictures/images_high/Startseite_03.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -362,7 +362,7 @@ header {
 
 /*Grid Areas für die vierte Seite einstellen */
 #kurse {
-  background-image: url("/pictures/images_high/Startseite_04.jpg");
+  background-image: url("./pictures/images_high/Startseite_04.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -407,7 +407,7 @@ header {
 
 /*Grid Areas für die fünfte Seite einstellen */
 #abosection {
-  background-image: url("/pictures/images_high/Startseite_05.jpg");
+  background-image: url("./pictures/images_high/Startseite_05.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -515,7 +515,7 @@ footer {
 }
 
 #kontaktus {
-  background-image: url("/pictures/images_high/Startseite_06.jpg");
+  background-image: url("./pictures/images_high/Startseite_06.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -567,7 +567,7 @@ footer {
   }
 
   #home {
-    background-image: url("/pictures/images_low/Startseite_low_01.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_01.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
     background-position: center;
     background-size: 100% 100%;
     grid-template-areas:
@@ -589,7 +589,7 @@ footer {
   /*     Sektion Anpassung Schriften und Grid Layout */
   /****************************************************/
   #aboutus {
-    background-image: url("/pictures/images_low/Startseite_low_02.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_02.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
     background-position: center;
     background-size: 100% 100%;
 
@@ -608,7 +608,7 @@ footer {
   /****************************************************/
 
   #plaene {
-    background-image: url("/pictures/images_low/Startseite_low_03.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_03.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
     background-position: center;
     background-size: 100% 100%;
     grid-template-areas:
@@ -649,7 +649,7 @@ footer {
   }
 
   #kurse {
-    background-image: url("/pictures/images_low/Startseite_low_04.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_04.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
     background-position: center;
     background-size: 100% 100%;
     grid-template-areas:
@@ -681,7 +681,7 @@ footer {
   /***************************************************/
 
   #abosection {
-    background-image: url("/pictures/images_low/Startseite_low_05.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_05.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
@@ -704,7 +704,7 @@ footer {
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
   #kontaktus {
-    background-image: url("/pictures/images_low/Startseite_low_06.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_06.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
@@ -733,7 +733,7 @@ footer {
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
   #kontaktus {
-    background-image: url("/pictures/images_low/Startseite_low_06.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
+    background-image: url("./pictures/images_low/Startseite_low_06.jpg"); /* niedrig aufgelöstes Hintergrundbild für Performance */
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
@@ -763,7 +763,7 @@ footer {
   /***************************************************/
 
   #home {
-    background-image: url("/pictures/images_high/Startseite_01.jpg");
+    background-image: url("./pictures/images_high/Startseite_01.jpg");
     background-position: center;
     background-size: 100% 100%;
 
@@ -791,7 +791,7 @@ footer {
   /*     Sektion Anpassung Schriften und Grid Layout */
   /***************************************************/
   #kontaktus {
-    background-image: url("/pictures/images_high/Startseite_06.jpg");
+    background-image: url("./pictures/images_high/Startseite_06.jpg");
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."

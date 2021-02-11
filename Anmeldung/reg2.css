@@ -54,7 +54,7 @@ h2 {
   text-align: left;
 }
 
-#headline1 h3{
+#headline1 h3 {
   text-align: left;
 }
 
@@ -148,7 +148,6 @@ h2 {
   border-color: #034078;
   background-color: #034078;
   margin: 0;
-
 }
 
 #reg_send_id:hover {
@@ -156,11 +155,8 @@ h2 {
   background-color: #0458a7;
 }
 
-
-
-
 #anmeldeSection2 {
-  background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
+  background-image: url("pictures/RegSeite2-min.png");
   background-position: center;
   background-size: 100% 100%;
   background-size: cover;
@@ -185,8 +181,6 @@ h2 {
     ". . . . . . . . . . . . . .";
 }
 
-
-
 #input[type="submit"]:hover {
   background-color: #5f6161;
 }
@@ -200,10 +194,8 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #weiter a {
     font-size: 20px;
-    }
-
+  }
 }
-
 
 /*-_-_-_- iPad,Tablets-Geräten - bis 768px -_-_-_-*/
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -211,53 +203,53 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
     font-size: 5vw;
   }
 
-  #mailname h2, #passname h2{
-    font-size: 1.8vw;  
+  #mailname h2,
+  #passname h2 {
+    font-size: 1.8vw;
   }
   /**Überschrift2 */
   h2 {
-  font-size: 3.5vw;
+    font-size: 3.5vw;
   }
   #weiter a {
     font-size: 2vw;
-    }
+  }
 
   #notification {
     font-size: 1vw;
   }
   #anmeldeSection2 {
-    background-image: url("/Anmeldung/pictures/RegistrierungSeite2_768.png");
+    background-image: url("pictures/RegistrierungSeite2_768.png");
     grid-auto-rows: minmax(30px, auto);
 
     grid-template-areas:
-    ". . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . ."
-    ". headline1 headline1 headline1 . . . . . . . . . ."
-    ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
-    ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . . . ."
-    ". . . . . . . . . . . . . ."
-    ". . . . mailname mailname . passname passname . . . . ."
-    ". . . . mail mail mail pass pass pass . . . ."
-    ". . . . notification notification notification notification notification notification . . . ."
-    ". . . . . . . . . . . . . ."
-    ". . . . . . . . . . . . . ."
-    ". . . . . . weiter weiter . . . . . ."
-    ". . . . . . . . . . . . . .";
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". headline1 headline1 headline1 . . . . . . . . . ."
+      ". headline2 headline2 headline2 headline2 headline2 headline2 headline2 . . . . . ."
+      ". headline3 headline3 headline3 headline3 headline3 headline3 headline3 headline3 . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . mailname mailname . passname passname . . . . ."
+      ". . . . mail mail mail pass pass pass . . . ."
+      ". . . . notification notification notification notification notification notification . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . . ."
+      ". . . . . . weiter weiter . . . . . ."
+      ". . . . . . . . . . . . . .";
   }
 }
 
 /*-_-_-_- Mobile-Geräten - bis 480ps -_-_-_-*/
 @media screen and (min-width: 50px) and (max-width: 480px) {
-
   h1 {
     font-size: 6.5vw;
     text-align: center;
   }
   /**Überschrift2 */
   h2 {
-  font-size: 5.1vw;
-  text-align: center;
+    font-size: 5.1vw;
+    text-align: center;
   }
 
   #notification h3 {
@@ -267,20 +259,20 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
 
   #weiter a {
     font-size: 20px;
-    }
+  }
 
   #anmeldeSection2 {
-    background-image: url("/Anmeldung/pictures/RegSeite2-min.png");
+    background-image: url("pictures/RegSeite2-min.png");
     background-position: center;
     background-size: 100% 100%;
     background-size: cover;
-  
+
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     grid-auto-rows: minmax(20px, auto);
     grid-gap: 10px;
     max-width: 100%;
-  
+
     grid-template-areas:
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
@@ -291,15 +283,11 @@ Bildschirmen mit unterschiedliche Auflösung wie z.B: iPad Pro 12" in horizontal
       ". . . . . . . . . . . . . ."
       ". . . . mailname mailname mailname mailname mailname mailname . . . ."
       ". . mail mail mail mail mail mail mail mail mail mail . ."
-    
       ". . . . passname passname passname passname passname passname . . . ."
       ". . pass pass pass pass pass pass pass pass pass pass . ."
       ". . . . . . . . . . . . . ."
       ". . notification notification notification notification notification notification notification notification notification notification . ."
       ". . . . weiter weiter weiter weiter weiter weiter . . . ."
-      
       ". . . . . . . . . . . . . .";
   }
-
-  
 }
