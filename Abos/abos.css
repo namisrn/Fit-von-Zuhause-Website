@@ -38,7 +38,7 @@ body {
 }
 
 #abosection {
-  background-image: url("/pictures/images_high/Startseite_05.jpg");
+  background-image: url("../pictures/images_high/Startseite_05.jpg");
   background-position: center;
   background-size: 100% 100%;
 
@@ -222,7 +222,7 @@ background {
   }
 
   #abosection {
-    background-image: url("/pictures/images_low/Startseite_low_05.jpg");
+    background-image: url("../pictures/images_low/Startseite_low_05.jpg");
 
     grid-template-areas:
       ". . . . . . . . . . . . . ."
